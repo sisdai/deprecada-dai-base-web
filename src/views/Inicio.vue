@@ -183,6 +183,56 @@
       <label for="">label</label><br>
       <textarea name="" id="" cols="30" rows="10"></textarea>
     </fieldset>
+    <hr>
+
+    <h2 class="titular-alto">
+      .titular alto Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </h2>
+    <h2 class="titular-bajo">
+      .titular bajo Labore possimus laudantium similique. Enim, maxime. Dolores, fugit.
+    </h2>
+
+    <h2 class="titulo">.titulo</h2>
+    <h2 class="subtitulo">.subtitulo</h2>
+
+    <p class="texto-alto">
+      .texto-alto
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Modi fugit eos nobis provident quas illo deleniti perspiciatis praesentium,
+      ea sapiente odio, iusto repudiandae cupiditate natus animi voluptas
+      harum placeat dolorum?
+    </p>
+    <p class="texto-primario">
+      .texto-primario
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Modi fugit eos nobis provident quas illo deleniti perspiciatis praesentium,
+      ea sapiente odio, iusto repudiandae cupiditate natus animi voluptas
+      harum placeat dolorum?
+    </p>
+    <p class="texto-secundario">
+      .texto-secundario
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Modi fugit eos nobis provident quas illo deleniti perspiciatis praesentium,
+      ea sapiente odio, iusto repudiandae cupiditate natus animi voluptas
+      harum placeat dolorum?
+    </p>
+    <p class="texto-notas">
+      .texto-notas
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      Modi fugit eos nobis provident quas illo deleniti perspiciatis praesentium,
+      ea sapiente odio, iusto repudiandae cupiditate natus animi voluptas
+      harum placeat dolorum?
+    </p>
+    <p>
+      <button type="button" class="btn-lg">.btn-lg</button>
+      <button type="button" class="btn-md">.btn-md</button>
+      <button type="button" class="btn">.btn</button>
+      <button type="button" class="btn-sm">.btn-sm</button>
+      <button type="button" class="btn-bold">.btn-bold</button>
+    </p>
+    <p>
+      <button type="button" class="btn-block">.btn-block</button>
+    </p>
   </LayoutContainer>
 </template>
 

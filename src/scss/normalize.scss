@@ -246,16 +246,18 @@ button,
 .btn {
   @extend %interact-base;
   box-shadow: none;
-  font-size: map-get($fuente, "size-alto");
+  font-size: map-get($size-btn, "normal");
   font-weight: 400;
   line-height: 20px;
   text-decoration: none;
   display: inline-flex;
-  padding: map-get($fuente, "size-alto")*.25 map-get($fuente, "size-alto")*.5;
+  padding: map-get($size-btn, "normal")*.25 map-get($size-btn, "normal")*.5;
   margin: 0;
   background: map-get($color-boton, "fondo");
   color: map-get($color-boton, "texto");
   border: none;
+  align-items: center;
+  justify-content: center;
   &:not(:last-child) {
     margin-right: $gap*.5;
   }
@@ -302,8 +304,19 @@ summary {
 
 //formularios
 fieldset {
+  box-sizing: content-box;
   background: transparent;
-  border: 1px solid map-get($color, "borde");
+  border: none;
+  display: block;
+  max-width: 100%;
+  padding: 0;
+}
+legend {
+  font-size: map-get($fuente, "size-alto");
+  font-weight: 600;
+  box-sizing: border-box;
+  margin-bottom: $gap*.5;
+  padding-right: $gap*.25;
 }
 
 input,
@@ -324,7 +337,6 @@ select {
   max-width: 100%;
   transition: all .27s ease-in-out;
   &:hover {
-    
     border-color: map-get($color-formulario, "hover-borde");
     box-shadow: 0 3px 9px rgba(0,0,0,.1);
     color: map-get($color-formulario, "hover-texto");
@@ -351,6 +363,7 @@ select {
   background-repeat: no-repeat;
   padding-right: $gap;
 }
+
 
 // listas
 ul,
@@ -418,7 +431,8 @@ table {
   margin-top: $gap;
   margin-bottom: $gap;
   caption {
-    font-size: map-get($fuente, "size-primario");    
+    font-size: map-get($fuente, "size-alto");
+    font-weight: 600; 
     text-align: left;
   }
   td,
@@ -446,4 +460,69 @@ table {
       opacity: .5;
     }
   }
+}
+
+// elementos con clases y media queries
+// titulos
+.titular-alto {
+  font-size: 46px;
+  font-weight: 800;
+  // line-height: 54px;
+  @media (min-width: map-get($media-queries-limit, "mobile")) {
+    font-size: 80px;
+    line-height: 86px;
+  }
+}
+.titular-bajo {
+  font-size: 30px;
+  font-weight: 800;
+  // line-height: 34px;
+  @media (min-width: map-get($media-queries-limit, "mobile")) {
+    font-size: 35px;
+    // line-height: 40px;
+  }
+}
+.titulo {
+  font-size: map-get($fuente, "size-titulo");
+  font-weight: 600;
+  line-height: 1.6em;
+}
+.subtitulo {
+  font-size: map-get($fuente, "size-subtitulo");
+  font-weight: 600;
+  line-height: 1.6em;
+}
+
+// texto
+.texto-alto {
+  font-size: map-get($fuente, "size-alto");
+}
+.texto-primario {
+  font-size: map-get($fuente, "size-primario");
+}
+.texto-secundario {
+  font-size: map-get($fuente, "size-secundario");
+}
+.texto-notas {
+  font-size: map-get($fuente, "size-notas");
+}
+
+// botones
+.btn-lg {
+  font-size: map-get($size-btn, "large");
+  padding: map-get($size-btn, "large")*.25 map-get($size-btn, "large")*.5;
+}
+.btn-md {
+  font-size: map-get($size-btn, "medium");
+  padding: map-get($size-btn, "medium")*.25 map-get($size-btn, "medium")*.5;
+}
+.btn-sm {
+  font-size: map-get($size-btn, "small");
+  padding: map-get($size-btn, "small")*.25 map-get($size-btn, "small")*.5;
+}
+.btn-block {
+  width: 100%;
+}
+.btn-bold {
+  font-weight: 800;
 }

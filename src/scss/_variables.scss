@@ -28,7 +28,13 @@ $color-boton: (
   "hover-fondo": #505050,
   "hover-texto": #fff,
   "focus-fondo": #e8e8e8,
-  "focus-texto": #141414
+  "focus-texto": #141414,
+);
+$size-btn: (
+  "large": 24px,
+  "medium": 20px,
+  "normal": 16px,
+  "small": 12px
 );
 
 $color-tabla: (
