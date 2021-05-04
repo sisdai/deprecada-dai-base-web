@@ -28,4 +28,29 @@
   src: url("~@/assets/fonts/Montserrat-SemiBold.ttf");
 }
 
-// colores
+// social
+
+@font-face {
+  font-family: "social";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src:url("~@/assets/fonts/social.ttf");
+}
+[class^="social-"]:before,
+[class*=" social-"]:before {
+  font-family: "social" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.social-facebook:before {
+  content: "\61";
+}
+.social-twitter:before {
+  content: "\63";
+}

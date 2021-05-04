@@ -57,8 +57,8 @@
           <p class="footer-titulo">
             Síguenos en <span class="a11y-solo-lectura">nuestras redes sociales:</span>
           </p>
-          <link-social url="https://www.facebook.com/gobmx" icono="facebook" spanglish="feisbuk " />
-          <link-social url="https://twitter.com/gobmx" icono="twitter" spanglish=" y tuiter." />
+          <link-social url="https://www.facebook.com/gobmx" icono="social-facebook" spanglish="feisbuk " />
+          <link-social url="https://twitter.com/gobmx" icono="social-twitter" spanglish=" y tuiter." />
         </nav>
       </div>
     </MainContainer>
