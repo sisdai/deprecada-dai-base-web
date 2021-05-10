@@ -59,11 +59,12 @@ $fuente: (
   "size-notas": 12px
 );
 
-$gap: 32px;
+$gap: 30px;
 
 $width: (
   'max-main': 1280px,
   'max-view': 1024px,
+  'max-text': 670px,
 );
 
 $media-queries-limit: (

@@ -12,8 +12,13 @@ body {
   font-family: 'Montserrat', Helvetica, Arial, Helvetica, sans-serif;
   font-size: map-get($fuente, "size-primario");
   font-weight: 400;
+  line-height: 1.333;
   margin: 0;
   padding: 0;
+}
+body * {
+  box-sizing: border-box;
+  line-height: 1.333;
 }
 
 article,
@@ -204,7 +209,7 @@ svg:not(:root) {
   touch-action: manipulation;
   -ms-touch-action: manipulation;
   text-rendering: optimizeLegibility;
-  transition: all .27s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 audio,
@@ -457,72 +462,6 @@ table {
     td,
     th {
       background: rgba(map-get($color-tabla, "borde"),.25);
-      opacity: .5;
     }
   }
-}
-
-// elementos con clases y media queries
-// titulos
-.titular-alto {
-  font-size: 46px;
-  font-weight: 800;
-  // line-height: 54px;
-  @media (min-width: map-get($media-queries-limit, "mobile")) {
-    font-size: 80px;
-    line-height: 86px;
-  }
-}
-.titular-bajo {
-  font-size: 30px;
-  font-weight: 800;
-  // line-height: 34px;
-  @media (min-width: map-get($media-queries-limit, "mobile")) {
-    font-size: 35px;
-    // line-height: 40px;
-  }
-}
-.titulo {
-  font-size: map-get($fuente, "size-titulo");
-  font-weight: 600;
-  line-height: 1.6em;
-}
-.subtitulo {
-  font-size: map-get($fuente, "size-subtitulo");
-  font-weight: 600;
-  line-height: 1.6em;
-}
-
-// texto
-.texto-alto {
-  font-size: map-get($fuente, "size-alto");
-}
-.texto-primario {
-  font-size: map-get($fuente, "size-primario");
-}
-.texto-secundario {
-  font-size: map-get($fuente, "size-secundario");
-}
-.texto-notas {
-  font-size: map-get($fuente, "size-notas");
-}
-
-// botones
-.btn-lg {
-  font-size: map-get($size-btn, "large");
-  padding: map-get($size-btn, "large")*.25 map-get($size-btn, "large")*.5;
-}
-.btn-md {
-  font-size: map-get($size-btn, "medium");
-  padding: map-get($size-btn, "medium")*.25 map-get($size-btn, "medium")*.5;
-}
-.btn-sm {
-  font-size: map-get($size-btn, "small");
-  padding: map-get($size-btn, "small")*.25 map-get($size-btn, "small")*.5;
-}
-.btn-block {
-  width: 100%;
-}
-.btn-bold {
-  font-weight: 800;
 }
