@@ -34,6 +34,9 @@ export default {
     background: map-get($color-gob, "dorado");
     color: map-get($color-gob, "verde-obscuro");
   }
+  &.pn-mx {
+    padding: $gap*.5;
+  }
   &.ph-mx {
     display: inline-flex;
     padding: $gap*.25 0;

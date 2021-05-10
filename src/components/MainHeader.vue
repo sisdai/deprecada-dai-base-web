@@ -2,7 +2,7 @@
   <header id="header-mx">
     <MainContainer class="header-flex">
       <nav>
-        <link-gob url="https://mivacuna.salud.gob.mx/index.php" parent="ph-mx">
+        <link-gob url="https://www.gob.mx/" parent="ph-mx">
           <img src="../assets/img/gobmx.svg" alt="Gobierno de México." width="124px" height="36px">
         </link-gob>
       </nav>

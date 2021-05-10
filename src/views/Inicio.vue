@@ -228,6 +228,8 @@
       <button type="button" class="btn-md">.btn-md</button>
       <button type="button" class="btn">.btn</button>
       <button type="button" class="btn-sm">.btn-sm</button>
+    </p>
+    <p>
       <button type="button" class="btn-bold">.btn-bold</button>
     </p>
     <p>
