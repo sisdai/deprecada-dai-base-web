@@ -384,6 +384,7 @@ ol {
     li {
       font-size: map-get($fuente, "size-secundario");
       margin-bottom: map-get($fuente, "size-secundario");
+      margin-left: 0;
       &::before {
         display: none;
       }
@@ -406,7 +407,7 @@ ul {
       display: inline-block;
       width: 10px;
       height: 10px;
-      margin-left: -15px;
+      margin-left: -10px;
       position: relative;
       top: -2px;
       left: -10px;
