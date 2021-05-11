@@ -62,6 +62,7 @@ export default {
   @media (min-width: map-get($media-queries-limit, "navegacion")) {
     position: sticky;
     top: 0;
+    height: auto;
     z-index: 9999;
   }
   &.show {
