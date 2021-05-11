@@ -90,7 +90,7 @@ export default {
   box-sizing: border-box;
   overflow: hidden;
   margin-top: $gap * 1.25;
-  padding-top: $gap * .25;
+  padding-top: $gap;
   padding-bottom: $gap * 1.5;
   color: #fff;
   .footer-titulo {
@@ -105,6 +105,7 @@ export default {
     margin-bottom: $gap * .5;
   }
   @media (min-width: map-get($media-queries-limit, "mobile")) {
+    padding-top: $gap * .25;
     padding-bottom: $gap * 3;
     .footer-flex {
       display: flex;
