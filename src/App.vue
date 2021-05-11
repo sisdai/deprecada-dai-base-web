@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <MainNav id="navbar-position" />
+    <MainNav id="navbar-position" :class="{'show':showNav}" />
     <router-view id="view-position" />
     <A11yMenu />
     <Footer />
@@ -22,6 +22,29 @@ export default {
     A11yMenu,
     Footer,
   },
+  data() {
+    return {
+      showNav: false,
+    };
+  },
+  methods: {
+    onScroll() {
+      if (this.$route.name === 'Inicio') {
+        if (window.pageYOffset < window.innerHeight) {
+          this.showNav = false;
+        }
+        if (window.pageYOffset > window.innerHeight) {
+          this.showNav = true;
+        }
+      }
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.onScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScroll);
+  },
 };
 </script>
 
@@ -30,20 +53,24 @@ export default {
 
 #navbar-position {
   position: fixed;
-  top: 0;
+  top: -66px;
   height: 66px;
   width: 100%;
   z-index: 9999;
+  transition: top .2s ease-in-out;
   @media (min-width: map-get($media-queries-limit, "navegacion")) {
     position: sticky;
-    top: 0px;
+    top: 0;
     z-index: 9999;
+  }
+  &.show {
+    top: 0;
   }
 }
 #view-position {
-  margin-top: 65px;
-  @media (min-width: map-get($media-queries-limit, "navegacion")) {
-    margin-top: 0;
-  }
+  // margin-top: 65px;
+  // @media (min-width: map-get($media-queries-limit, "navegacion")) {
+  //   margin-top: 0;
+  // }
 }
 </style>

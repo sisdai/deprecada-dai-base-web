@@ -52,7 +52,6 @@ export default {
   },
   methods: {
     toggleA11yMenu() {
-      console.log('click');
       this.$store.commit('toggleA11yMenu');
     },
   },
