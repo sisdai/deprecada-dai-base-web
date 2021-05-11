@@ -230,7 +230,6 @@ a,
   font-weight: 400;
   line-height: 20px;
   text-decoration: none;
-  word-break: break-all;
   &:hover {
     background: map-get($color-link, "hover-fondo");
     color: map-get($color-link, "hover-texto");
@@ -399,6 +398,7 @@ ol {
 ul {
   list-style: none;
   > li {
+    margin-left: 10px;
     &::before {
       content: " ";
       background: map-get($color, "texto");;
@@ -406,10 +406,10 @@ ul {
       display: inline-block;
       width: 10px;
       height: 10px;
-      margin-right: $gap*.25;
-      margin-left: - ( $gap*.5 );
+      margin-left: -15px;
       position: relative;
       top: -2px;
+      left: -10px;
     }
   }
 }

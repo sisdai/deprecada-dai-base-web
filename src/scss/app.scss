@@ -7,3 +7,10 @@
 @import "texto";
 @import "botones";
 @import "a11y";
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - #{$gap*2});
+  max-width: map-get($width, "max-view");
+}
