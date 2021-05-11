@@ -1,5 +1,5 @@
 <template>
-  <div class="a11y-container" :class="{'show':hasMenu}">
+  <div class="a11y-container" :class="{'show':hasA11yMenu}">
     <button class="a11y-toggle" :class="{'open':isOpenA11yMenu}" @click="toggleA11yMenu">
       <img alt="Herramientas de Accesibilidad" src="../assets/img/a11y-icono.png">
     </button>
@@ -41,14 +41,12 @@
 export default {
   name: 'A11yMenu',
   computed: {
+    hasA11yMenu() {
+      return this.$store.getters.hasA11yMenu;
+    },
     isOpenA11yMenu() {
       return this.$store.getters.isOpenA11yMenu;
     },
-  },
-  data() {
-    return {
-      hasMenu: true,
-    };
   },
   methods: {
     toggleA11yMenu() {

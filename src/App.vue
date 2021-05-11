@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Header />
+    <Header :class="{'main':!hasMainNav, 'show':showNav}" />
     <MainNav id="navbar-position" :class="{'show':showNav}" />
-    <router-view :class="{'view-margin-nav':showNav}" />
+    <router-view id="view-position" :class="{'margin-nav':showNav}" />
     <A11yMenu />
     <Footer />
   </div>
@@ -26,6 +26,14 @@ export default {
     return {
       showNav: false,
     };
+  },
+  computed: {
+    hasMainNav() {
+      return this.$store.getters.hasMainNav;
+    },
+    hasA11yMenu() {
+      return this.$store.getters.hasA11yMenu;
+    },
   },
   methods: {
     onScroll() {
@@ -51,7 +59,20 @@ export default {
 
 <style lang="scss">
 @import '@/scss/app.scss';
-
+#header-mx {
+  @media (min-width: map-get($media-queries-limit, "navegacion")) {
+    &.main {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: -66px;
+      transition: top .2s ease-in-out;
+    }
+    &.main.show {
+      top: 0;
+    }
+  }
+}
 #navbar-position {
   position: fixed;
   top: -66px;
@@ -69,10 +90,13 @@ export default {
     top: 0;
   }
 }
-.view-margin-nav {
-  margin-top: 65px;
-  @media (min-width: map-get($media-queries-limit, "navegacion")) {
-    margin-top: 0;
+#view-position {
+  &.margin-nav {
+    margin-top: 65px;
+    @media (min-width: map-get($media-queries-limit, "navegacion")) {
+      margin-top: 0;
+    }
   }
 }
+
 </style>

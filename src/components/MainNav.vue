@@ -4,23 +4,15 @@
       <link-gob url="https://www.gob.mx/" parent="pn-mx">
         <img src="../assets/img/gobmx.svg" alt="Gobierno de México." width="124px" height="36px">
       </link-gob>
-      <button id="nav-button" :class="{'show':hasMenu, 'open':isOpenMainNav}" @click="toggleMenu">
+      <button
+        id="nav-button"
+        :class="{'show':hasMainNav, 'open':isOpenMainNav}"
+        @click="toggleMenu"
+        type="button">
         <span class="nav-icon"></span>
       </button>
     </nav>
-    <nav id="nav-main" :class="{'show':hasMenu, 'open':isOpenMainNav}" @click="toggleMenu">
-      <router-link class="nm-link" to="/">Inicio1</router-link>
-      <router-link class="nm-link" to="/">Inicio2</router-link>
-      <router-link class="nm-link" to="/">Inicio3</router-link>
-      <router-link class="nm-link" to="/">Inicio4</router-link>
-      <router-link class="nm-link" to="/">Inicio1</router-link>
-      <router-link class="nm-link" to="/">Inicio2</router-link>
-      <router-link class="nm-link" to="/">Inicio3</router-link>
-      <router-link class="nm-link" to="/">Inicio4</router-link>
-      <router-link class="nm-link" to="/">Inicio1</router-link>
-      <router-link class="nm-link" to="/">Inicio2</router-link>
-      <router-link class="nm-link" to="/">Inicio3</router-link>
-      <router-link class="nm-link" to="/">Inicio4</router-link>
+    <nav id="nav-main" :class="{'show':hasMainNav, 'open':isOpenMainNav}" @click="toggleMenu">
       <router-link class="nm-link" to="/">Inicio1</router-link>
       <router-link class="nm-link" to="/">Inicio2</router-link>
       <router-link class="nm-link" to="/">Inicio3</router-link>
@@ -37,17 +29,15 @@ export default {
   components: {
     LinkGob,
   },
-  data() {
-    return {
-      hasMenu: true,
-    };
-  },
   methods: {
     toggleMenu() {
       this.$store.commit('toggleMainNav');
     },
   },
   computed: {
+    hasMainNav() {
+      return this.$store.getters.hasMainNav;
+    },
     isOpenMainNav() {
       return this.$store.getters.isOpenMainNav;
     },
