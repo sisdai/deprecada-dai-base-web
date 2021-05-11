@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <MainNav id="navbar-position" :class="{'show':showNav}" />
-    <router-view id="view-position" />
+    <router-view :class="{'view-margin-nav':showNav}" />
     <A11yMenu />
     <Footer />
   </div>
@@ -32,10 +32,11 @@ export default {
       if (this.$route.name === 'Inicio') {
         if (window.pageYOffset < window.innerHeight) {
           this.showNav = false;
-        }
-        if (window.pageYOffset > window.innerHeight) {
+        } else {
           this.showNav = true;
         }
+      } else {
+        this.showNav = true;
       }
     },
   },
@@ -67,10 +68,10 @@ export default {
     top: 0;
   }
 }
-#view-position {
-  // margin-top: 65px;
-  // @media (min-width: map-get($media-queries-limit, "navegacion")) {
-  //   margin-top: 0;
-  // }
+.view-margin-nav {
+  margin-top: 65px;
+  @media (min-width: map-get($media-queries-limit, "navegacion")) {
+    margin-top: 0;
+  }
 }
 </style>
