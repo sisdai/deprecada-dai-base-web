@@ -10,6 +10,16 @@ const routes = [
     name: 'Inicio',
     component: Inicio,
   },
+  {
+    path: '/ayuda',
+    name: 'Ayuda',
+    component: () => import('../views/Ayuda.vue'),
+  },
+  {
+    path: '**',
+    name: 'Página no encontrada',
+    component: () => import('../views/404.vue'),
+  },
 ];
 
 const router = new VueRouter({
