@@ -6,6 +6,20 @@ Para utilizar este proyecto necesitas tener previamente instalado
 * [npm](https://www.npmjs.com/get-npm) 6.14.12
 * [vue-cli](https://cli.vuejs.org/guide/installation.html) @vue/cli 4.5.12
 
+
+## Para comenzar
+1. Clonar éste repositorio
+2. Cambiar el nombre a la carpeta al nombre del proyecto
+3. Cambiar el nombre del proyecto en el package.json
+4. `git remote rename origin baseweb` para cambiar el nombre del link del repo 
+  * Este repo remoto solo se utilizará para jalar cambios del proyecto base con `git pull baseweb main`, nunca para subir.
+5. `git remote add origin https://scm.crip.conacyt.mx/grupo/repo.git` para agregar a origin el repo del proyecto 
+  * en este repositorio se debe actualizar el proyecto normal como siempre
+  * para subir cambios `git push origin main` 
+  * para jalar cambios `git pull origin main` 
+  * o en cualquiera que sea la rama en la que se este trabajando. `git push origin nombrerama` el punto es recordar siempre utilizar `origin` para lo relacionado al proyecto.
+
+
 ## Instalación
 Instala las dependencias del proyecto 
 ```
@@ -52,6 +66,7 @@ Esta guardada la configuracion del subfolder en la carpeta `public` del proyecto
 Nunca he tenido un servidor con nginx pero este tutorial que me encontré se ve bueno
 [deploy vue with nginx on sub path](https://medium.com/h-lab/how-to-deploy-vue-with-nginx-on-sub-path-ed8eadbc1bc5)
 
+___
 
 ## Scripts 
 ### Instalar dependencias
@@ -73,3 +88,7 @@ npm run dev
 ```
 npm run build
 ```
+___
+
+## Notas
+Tiene el eslint de airbnb, que es estricto. No es recomendable pero si les empieza a dar mucha lata de errores de sintaxis, pueden quitarlo comentando la linea 8 `'@vue/airbnb',` del archivo `.eslintrc.js` que está en raiz del proyecto.
