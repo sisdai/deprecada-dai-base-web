@@ -35,6 +35,8 @@ export default {
   @media (min-width: map-get($media-queries-limit, "navegacion")) {
     background: map-get($color-gob, "verde-obscuro");
     display: block;
+    position: relative;
+    z-index: 9999;
     .header-flex {
       display: flex;
       align-items: center;

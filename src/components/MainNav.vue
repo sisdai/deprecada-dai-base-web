@@ -33,6 +33,7 @@
 import LinkGob from '@/components/LinkGob.vue';
 
 export default {
+  name: 'MainNav',
   components: {
     LinkGob,
   },
@@ -116,6 +117,7 @@ export default {
 }
 #nav-main {
   display: none;
+  height: 0;
   &.show {
     background: map-get($color-gob, "verde-obscuro");
     display: block;
