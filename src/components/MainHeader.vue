@@ -1,5 +1,5 @@
 <template>
-  <header id="header-mx">
+  <header class="header-mx">
     <MainContainer class="header-flex">
       <nav>
         <link-gob url="https://www.gob.mx/" parent="ph-mx">
@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#header-mx {
+.header-mx {
   display: none;
   @media (min-width: map-get($media-queries-limit, "navegacion")) {
     background: map-get($color-gob, "verde-obscuro");
