@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <!-- <Header /> -->
-    <MainNav />
+    <Header />
+    <!-- <MainNav /> -->
     <router-view />
     <A11yMenu />
     <Footer />
@@ -9,16 +9,16 @@
 </template>
 
 <script>
-// import Header from '@/components/MainHeader.vue';
-import MainNav from '@/components/MainNav.vue';
+import Header from '@/components/MainHeader.vue';
+// import MainNav from '@/components/MainNav.vue';
 import A11yMenu from '@/components/A11yMenu.vue';
 import Footer from '@/components/MainFooter.vue';
 
 export default {
   name: 'App',
   components: {
-    // Header,
-    MainNav,
+    Header,
+    // MainNav,
     A11yMenu,
     Footer,
   },

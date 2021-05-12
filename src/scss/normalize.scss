@@ -224,7 +224,7 @@ a,
   color: map-get($color-link, "texto");
   border: none;
   display: inline-flex;
-  padding: 0 .25em;
+  padding: 0;
   margin: 0;
   font-size: map-get($fuente, "size-primario");
   font-weight: 400;
