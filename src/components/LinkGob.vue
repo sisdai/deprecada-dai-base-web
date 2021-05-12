@@ -39,10 +39,6 @@ export default {
   }
   &.ph-mx {
     display: inline-flex;
-    padding: $gap*.25 0;
-    &:not(:first-child) {
-      margin-left: $gap;
-    }
   }
   &.pf-mx {
     display: block;

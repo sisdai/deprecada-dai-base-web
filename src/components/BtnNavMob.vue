@@ -46,10 +46,10 @@ export default {
     .btn-icon {
       width: 0;
       &::after {
-        transform: translate3d(0,-5px,0) rotate(-135deg);
+        transform: translate3d(-10px,-5px,0) rotate(-135deg);
       }
       &::before {
-        transform: translate3d(0,5px,0) rotate(135deg);
+        transform: translate3d(-10px,5px,0) rotate(135deg);
       }
     }
   }

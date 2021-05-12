@@ -5,9 +5,9 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    hasMainNav: true,
+    hasMainNav: false,
     openMainNav: false,
-    hasA11yMenu: true,
+    hasA11yMenu: false,
     openA11yMenu: false,
   },
   getters: {
