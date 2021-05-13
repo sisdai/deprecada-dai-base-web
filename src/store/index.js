@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     hasMainNav: false,
     openMainNav: false,
-    hasA11yMenu: false,
+    hasA11yMenu: true,
     openA11yMenu: false,
   },
   getters: {

@@ -43,9 +43,13 @@ export default {
   overflow: hidden;
   position: relative;
   padding: 0;
-  margin-bottom: 30px;
+  &:not(:last-child){
+    margin-bottom: $gap*.5;
+  }
   @media (min-width: map-get($media-queries-limit, "mobile")) {
-    margin-bottom: 0;
+    &:not(:last-child){
+      margin-bottom: 0;
+    }
   }
   &:hover {
     .card-cover {
@@ -91,9 +95,9 @@ export default {
   }
 }
 .half {
-  max-width: calc(50% - #{$gap*.5});
+  max-width: calc(50% - #{$gap*.25});
   &:nth-of-type(odd) {
-    margin-left: $gap;
+    margin-left: $gap*.5;
   }
   @media (min-width: map-get($media-queries-limit, "mobile")) {
     max-width: calc(50% - 5px);

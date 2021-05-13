@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container m-t-5">
+    <div class="container text m-y-3">
       <h1>h1</h1>
       <h2>h2</h2>
       <h3>h3</h3>
@@ -8,8 +8,10 @@
       <h5>h5</h5>
       <h6>h6</h6>
 
-      <p class="m-y-3">
-        <b>Texto base m-y-3</b>
+      <hr>
+
+      <p>
+        <b>Texto base</b>
         Lorem ipsum dolor <a href="#ejeles">link</a> sit amet consectetur adipisicing elit.
         Iusto nulla beatae totam error assumenda voluptate sed dolorem voluptatibus et incidunt odio
         quos <i>delectus qui pariatur</i>, architecto reiciendis voluptatem officiis natus!
@@ -60,6 +62,9 @@
           </ol>
         </li>
       </ul>
+
+      <hr>
+
       <ol>
         <li>lista ordenada</li>
         <li>lista ordenada</li>
@@ -76,6 +81,9 @@
         <li>lista ordenada</li>
         <li>lista ordenada</li>
       </ol>
+
+      <hr>
+
       <dl>
         <dt>Lista de detalle</dt>
         <dd>Descipción</dd>
@@ -181,8 +189,9 @@
         <label for="">label</label><br>
         <textarea name="" id="" cols="30" rows="10"></textarea>
       </fieldset>
-    </div>
-    <div class="container">
+
+      <hr>
+
       <h2 class="titular-alto">
         .titular alto Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </h2>
@@ -233,24 +242,29 @@
       <p>
         <button type="button" class="btn-block">.btn-block</button>
       </p>
+
+      <hr>
+
+      <GridLinkCoverImg>
+        <h2>GridLinkCoverImg</h2>
+        <LinkCoverImg url="http://google.com" target="_blank" title="LinkCoverImg" size="full"/>
+        <LinkCoverImg url="http://google.com" target="_blank" title="size half" size="half" />
+        <LinkCoverImg url="ayuda" title="size half" size="half" />
+        <LinkCoverImg url="ayuda" title="size half-desk" size="half-desk" />
+        <LinkCoverImg url="ayuda" title="size half-desk" size="half-desk" />
+      </GridLinkCoverImg>
+
+      <hr>
+
+      <h2>Pruebas tipografica iconos</h2>
+      <span class="icono-acercar"></span>
+      <span class="icono-alejar"></span>
+      <span class="icono-centrar"></span>
+      <span class="icono-cerrar"></span>
+      <span class="icono-check"></span>
+      <span class="icono-descargar"></span>
+      <span class="icono-seleccion"></span>
     </div>
-    <div class="container text m-t-5">
-      <p>
-        <b>.container .text</b>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Illo eos doloribus suscipit inventore soluta obcaecati incidunt
-        officiis aliquid nostrum velit alias nisi eveniet, a sit
-        voluptatem perferendis? Reiciendis, iure? At!
-      </p>
-    </div>
-    <GridLinkCoverImg class="m-b-5">
-      <h1>GridLinkCoverImg</h1>
-      <LinkCoverImg url="http://google.com" target="_blank" title="LinkCoverImg" size="full"/>
-      <LinkCoverImg url="http://google.com" target="_blank" title="size half" size="half" />
-      <LinkCoverImg url="ayuda" title="size half" size="half" />
-      <LinkCoverImg url="ayuda" title="size half-desk" size="half-desk" />
-      <LinkCoverImg url="ayuda" title="size half-desk" size="half-desk" />
-    </GridLinkCoverImg>
   </div>
 </template>
 
