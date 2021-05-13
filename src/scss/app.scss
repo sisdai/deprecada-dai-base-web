@@ -6,6 +6,7 @@
 @import "titulares";
 @import "texto";
 @import "botones";
+@import "margin";
 @import "a11y";
 
 .container {
@@ -15,5 +16,8 @@
   max-width: map-get($width, "max-view");
   &.text {
     max-width: map-get($width, "max-text");
+  }
+  .container {
+    width: 100%;
   }
 }

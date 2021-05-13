@@ -384,7 +384,6 @@ ol {
     li {
       font-size: map-get($fuente, "size-secundario");
       margin-bottom: map-get($fuente, "size-secundario");
-      margin-left: 0;
       &::before {
         display: none;
       }
@@ -399,7 +398,6 @@ ol {
 ul {
   list-style: none;
   > li {
-    margin-left: 10px;
     &::before {
       content: " ";
       background: map-get($color, "texto");;

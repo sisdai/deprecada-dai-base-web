@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container">
+    <div class="container m-t-5">
       <h1>h1</h1>
       <h2>h2</h2>
       <h3>h3</h3>
@@ -8,10 +8,8 @@
       <h5>h5</h5>
       <h6>h6</h6>
 
-      <hr>
-
-      <p>
-        <b>Texto base</b>
+      <p class="m-y-3">
+        <b>Texto base m-y-3</b>
         Lorem ipsum dolor <a href="#ejeles">link</a> sit amet consectetur adipisicing elit.
         Iusto nulla beatae totam error assumenda voluptate sed dolorem voluptatibus et incidunt odio
         quos <i>delectus qui pariatur</i>, architecto reiciendis voluptatem officiis natus!
@@ -183,8 +181,8 @@
         <label for="">label</label><br>
         <textarea name="" id="" cols="30" rows="10"></textarea>
       </fieldset>
-      <hr>
-
+    </div>
+    <div class="container">
       <h2 class="titular-alto">
         .titular alto Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </h2>
@@ -236,12 +234,22 @@
         <button type="button" class="btn-block">.btn-block</button>
       </p>
     </div>
-    <GridLinkCoverImg>
-      <LinkCoverImg url="asdf" title="titulo tarjeta" size="full"/>
-      <LinkCoverImg url="asdf" title="mitad" size="half" />
-      <LinkCoverImg url="asdf" title="mitad" size="half" />
-      <LinkCoverImg url="asdf" title="mitad solo en escritorio" size="half-desk" />
-      <LinkCoverImg url="asdf" title="mitad solo en escritorio" size="half-desk" />
+    <div class="container text m-t-5">
+      <p>
+        <b>.container .text</b>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Illo eos doloribus suscipit inventore soluta obcaecati incidunt
+        officiis aliquid nostrum velit alias nisi eveniet, a sit
+        voluptatem perferendis? Reiciendis, iure? At!
+      </p>
+    </div>
+    <GridLinkCoverImg class="m-b-5">
+      <h1>GridLinkCoverImg</h1>
+      <LinkCoverImg url="asdf" title="LinkCoverImg" size="full"/>
+      <LinkCoverImg url="asdf" title="LinkCoverImg size half" size="half" />
+      <LinkCoverImg url="asdf" title="LinkCoverImg size half" size="half" />
+      <LinkCoverImg url="asdf" title="LinkCoverImg size half-desk" size="half-desk" />
+      <LinkCoverImg url="asdf" title="LinkCoverImg size half-desk" size="half-desk" />
     </GridLinkCoverImg>
   </div>
 </template>

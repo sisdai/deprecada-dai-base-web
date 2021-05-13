@@ -10,3 +10,7 @@
 .texto-notas {
   font-size: map-get($fuente, "size-notas");
 }
+
+.texto-centrado {
+  text-align: center;
+}
