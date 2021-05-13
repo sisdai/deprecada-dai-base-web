@@ -16,11 +16,9 @@ export default {
   flex-wrap: wrap;
   gap: 0;
   max-width: map-get($width, "max-text");
-  @media (min-width: map-get($width, "max-text")) {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   @media (min-width: map-get($media-queries-limit, "mobile")) {
     gap: 10px;
   }

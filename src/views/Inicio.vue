@@ -1,5 +1,6 @@
 <template>
   <div>
+    <CoverImg title="titulo eni" img="ims" />
     <div class="container text m-y-3">
       <h1>h1</h1>
       <h2>h2</h2>
@@ -271,12 +272,14 @@
 <script>
 import GridLinkCoverImg from '@/components/GridLinkCoverImg.vue';
 import LinkCoverImg from '@/components/LinkCoverImg.vue';
+import CoverImg from '@/components/CoverImg.vue';
 
 export default {
   name: 'App',
   components: {
     GridLinkCoverImg,
     LinkCoverImg,
+    CoverImg,
   },
 };
 </script>
