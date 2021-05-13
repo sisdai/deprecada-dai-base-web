@@ -3,8 +3,8 @@
     :class=size
     :href=url
     :target=target
-    :rel="{'noopener':target=='_blank'}">
-    <img class="card-cover" src="https://picsum.photos/1200/800" alt="">
+    :rel="target?'noopener noreferrer':false">
+    <img class="card-cover" :src=cover alt="">
     <h3 class="card-title titulo">{{title}}</h3>
   </a>
 </template>
@@ -18,6 +18,10 @@ export default {
       required: true,
     },
     title: {
+      type: String,
+      required: true,
+    },
+    cover: {
       type: String,
       required: true,
     },

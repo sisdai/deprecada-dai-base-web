@@ -247,11 +247,11 @@
 
       <GridLinkCoverImg>
         <h2>GridLinkCoverImg</h2>
-        <LinkCoverImg url="http://google.com" target="_blank" title="LinkCoverImg" size="full"/>
-        <LinkCoverImg url="http://google.com" target="_blank" title="size half" size="half" />
-        <LinkCoverImg url="ayuda" title="size half" size="half" />
-        <LinkCoverImg url="ayuda" title="size half-desk" size="half-desk" />
-        <LinkCoverImg url="ayuda" title="size half-desk" size="half-desk" />
+        <LinkCoverImg cover="https://picsum.photos/1200/800" url="http://google.com" target="_blank" title="LinkCoverImg" size="full"/>
+        <LinkCoverImg cover="https://picsum.photos/1200/800" url="http://google.com" target="_blank" title="size half" size="half" />
+        <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="size half" size="half" />
+        <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="half-desk" size="half-desk"/>
+        <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="half-desk" size="half-desk"/>
       </GridLinkCoverImg>
 
       <hr>
