@@ -245,11 +245,11 @@
     </div>
     <GridLinkCoverImg class="m-b-5">
       <h1>GridLinkCoverImg</h1>
-      <LinkCoverImg url="asdf" title="LinkCoverImg" size="full"/>
-      <LinkCoverImg url="asdf" title="LinkCoverImg size half" size="half" />
-      <LinkCoverImg url="asdf" title="LinkCoverImg size half" size="half" />
-      <LinkCoverImg url="asdf" title="LinkCoverImg size half-desk" size="half-desk" />
-      <LinkCoverImg url="asdf" title="LinkCoverImg size half-desk" size="half-desk" />
+      <LinkCoverImg url="http://google.com" target="_blank" title="LinkCoverImg" size="full"/>
+      <LinkCoverImg url="http://google.com" target="_blank" title="size half" size="half" />
+      <LinkCoverImg url="ayuda" title="size half" size="half" />
+      <LinkCoverImg url="ayuda" title="size half-desk" size="half-desk" />
+      <LinkCoverImg url="ayuda" title="size half-desk" size="half-desk" />
     </GridLinkCoverImg>
   </div>
 </template>

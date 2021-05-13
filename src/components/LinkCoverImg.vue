@@ -1,5 +1,9 @@
 <template>
-  <a class="link-cover-img" :class=size :href=url target="_blank" rel="noopener">
+  <a class="link-cover-img"
+    :class=size
+    :href=url
+    :target=target
+    :rel="{'noopener':target=='_blank'}">
     <img class="card-cover" src="https://picsum.photos/1200/800" alt="">
     <h3 class="card-title titulo">{{title}}</h3>
   </a>
@@ -19,7 +23,11 @@ export default {
     },
     size: {
       type: String,
-      required: true,
+      required: false,
+    },
+    target: {
+      type: String,
+      required: false,
     },
   },
 };

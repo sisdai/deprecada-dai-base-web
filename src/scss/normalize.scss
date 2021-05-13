@@ -372,7 +372,8 @@ select {
 // listas
 ul,
 ol {
-  padding-left: $gap*.5;
+  list-style-position: outside;
+  padding-left: 20px;
   margin-top: $gap;
   margin-bottom: $gap;
   ul,
@@ -380,8 +381,8 @@ ol {
     margin-top: map-get($fuente, "size-secundario");
     margin-bottom: 0;
     list-style: none;
-    padding-left: 20px;
     li {
+      padding-left: 0;
       font-size: map-get($fuente, "size-secundario");
       margin-bottom: map-get($fuente, "size-secundario");
       &::before {
@@ -408,7 +409,7 @@ ul {
       margin-left: -10px;
       position: relative;
       top: -2px;
-      left: -10px;
+      left: -9px;
     }
   }
 }
