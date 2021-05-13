@@ -13,4 +13,7 @@
   margin-right: auto;
   width: calc(100% - #{$gap*2});
   max-width: map-get($width, "max-view");
+  &.text {
+    max-width: map-get($width, "max-text");
+  }
 }

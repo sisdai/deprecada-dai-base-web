@@ -236,5 +236,25 @@
         <button type="button" class="btn-block">.btn-block</button>
       </p>
     </div>
+    <GridLinkCoverImg>
+      <LinkCoverImg url="asdf" title="titulo tarjeta" size="full"/>
+      <LinkCoverImg url="asdf" title="mitad" size="half" />
+      <LinkCoverImg url="asdf" title="mitad" size="half" />
+      <LinkCoverImg url="asdf" title="mitad solo en escritorio" size="half-desk" />
+      <LinkCoverImg url="asdf" title="mitad solo en escritorio" size="half-desk" />
+    </GridLinkCoverImg>
   </div>
 </template>
+
+<script>
+import GridLinkCoverImg from '@/components/GridLinkCoverImg.vue';
+import LinkCoverImg from '@/components/LinkCoverImg.vue';
+
+export default {
+  name: 'App',
+  components: {
+    GridLinkCoverImg,
+    LinkCoverImg,
+  },
+};
+</script>
