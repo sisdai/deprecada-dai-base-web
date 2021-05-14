@@ -1,5 +1,10 @@
 <template>
   <div>
+    <div class="cover">
+      <div class="cover-gradient">
+        <h1 class="cover-title titular-alto">Título de portada</h1>
+      </div>
+    </div>
     <div class="container text m-y-3">
       <h1>h1</h1>
       <h2>h2</h2>
