@@ -101,12 +101,12 @@ export default {
 .half {
   max-width: calc(50% - #{$gap*.25});
   &:nth-of-type(odd) {
-    margin-left: $gap*.5;
+    margin-right: $gap*.5;
   }
   @media (min-width: map-get($media-queries-limit, "mobile")) {
     max-width: calc(50% - 5px);
     &:nth-of-type(odd) {
-      margin-left: 0;
+      margin-right: 0;
     }
   }
 }
