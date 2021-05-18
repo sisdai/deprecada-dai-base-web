@@ -262,13 +262,13 @@
       <hr>
 
       <h2>Pruebas tipografica iconos</h2>
-      <span class="icono-acercar"></span>
-      <span class="icono-alejar"></span>
-      <span class="icono-centrar"></span>
-      <span class="icono-cerrar"></span>
+      <button class="btn-icono icono-acercar"></button>
+      <button class="btn-icono icono-alejar"></button>
+      <button class="btn-icono icono-centrar"></button>
+      <button class="btn-icono icono-cerrar"></button>
+      <button class="btn-icono icono-seleccion"></button>
       <span class="icono-check"></span>
       <span class="icono-descargar"></span>
-      <span class="icono-seleccion"></span>
     </div>
   </div>
 </template>
