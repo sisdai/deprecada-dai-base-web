@@ -2,7 +2,11 @@
   <div>
     <div class="cover">
       <div class="cover-gradient">
+        <img class="img-logos" src="../assets/img/logos-gob-conacyt.svg"/>
         <h1 class="cover-title titular-alto">Título de portada</h1>
+        <h2 class="cover-subtitle">
+          Un capítulo del Ecosistema Nacional Informático de PRONACE
+        </h2>
       </div>
     </div>
     <div class="container text m-y-3">
@@ -256,7 +260,7 @@
         <LinkCoverImg cover="https://picsum.photos/1200/800" url="http://google.com" target="_blank" title="size half" size="half" />
         <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="size half" size="half" />
         <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="half-desk" size="half-desk"/>
-        <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="half-desk" size="half-desk"/>
+        <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="half-desk sin degradado" size="half-desk" :degradado_activo="false"/>
       </GridLinkCoverImg>
 
       <hr>
@@ -285,3 +289,12 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+  .img-logos{
+    margin-top:200px;
+    @media (min-width: map-get($media-queries-limit, "mobile")) {
+      width: 400px;
+    }
+  }
+</style>

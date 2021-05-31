@@ -5,7 +5,7 @@
     :target=target
     :rel="target?'noopener noreferrer':false">
     <img class="card-cover" :src=cover alt="">
-    <h3 class="card-title titulo">{{title}}</h3>
+    <h3 class="card-title titulo" :class='{"degradado-activo":degradado_activo}'>{{title}}</h3>
   </a>
 </template>
 
@@ -32,6 +32,10 @@ export default {
     target: {
       type: String,
       required: false,
+    },
+    degradado_activo: {
+      type: Boolean,
+      default: true,
     },
   },
 };
@@ -82,7 +86,7 @@ export default {
       opacity .3s ease-in-out;
   }
   .card-title {
-    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.9));
+    font-size:22px;
     box-sizing: content-box;
     color: #fff;
     display: flex;
@@ -96,6 +100,9 @@ export default {
     left: 0;
     z-index: 9;
     line-height: 1.2;
+    &.degradado-activo{
+      background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.9));
+    }
   }
 }
 .half {
