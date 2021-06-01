@@ -2,8 +2,8 @@
   <div>
     <div class="cover">
       <div class="cover-gradient">
-        <img class="img-logos" src="../assets/img/logos-gob-conacyt.svg"/>
-        <h1 class="cover-title titular-alto">Título de portada</h1>
+        <img class="cover-logos" src="../assets/img/logos-gob-conacyt.svg"/>
+        <h1 class="cover-title">Título de portada</h1>
         <h2 class="cover-subtitle">
           Un capítulo del Ecosistema Nacional Informático de PRONACE
         </h2>
@@ -289,12 +289,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-  .img-logos{
-    margin-top:200px;
-    @media (min-width: map-get($media-queries-limit, "mobile")) {
-      width: 400px;
-    }
-  }
-</style>
