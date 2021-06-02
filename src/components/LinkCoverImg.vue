@@ -4,7 +4,11 @@
     :href=url
     :target=target
     :rel="target?'noopener noreferrer':false">
-    <img class="card-cover" :src=cover alt="">
+    <img v-if="size!='full'" class="card-cover" :src=cover alt="">
+    <picture class="card-cover-picture" v-if="size=='full'" >
+      <source :srcset="cover_escritorio ? cover_escritorio : cover" media="(min-width: 769px)">
+      <img class=card-cover :srcset="cover_movil ? cover_movil : cover" alt="">
+    </picture>
     <h3 class="card-title titulo" :class='{"degradado-activo":degradado_activo}'>{{title}}</h3>
   </a>
 </template>
@@ -25,6 +29,14 @@ export default {
       type: String,
       required: true,
     },
+    cover_movil: {
+      type: String,
+      required: false,
+    },
+    cover_escritorio: {
+      type: String,
+      required: false,
+    },
     size: {
       type: String,
       required: false,
@@ -42,11 +54,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$altura_card: 240px;
 .link-cover-img {
   background-color: #505050;
   box-sizing: border-box;
   border-radius: 5px;
-  height: 240px;
+  height: $altura_card;
   flex: 1 0 100%;
   overflow: hidden;
   position: relative;
@@ -72,7 +85,11 @@ export default {
       opacity: .8;
     }
   }
+  .card-cover-picture {
+    width: 100%;
+  }
   .card-cover {
+    height: $altura_card;
     box-sizing: border-box;
     border: 0 solid #505050;
     border-radius: 5px;
