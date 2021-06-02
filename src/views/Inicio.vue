@@ -256,7 +256,7 @@
 
       <GridLinkCoverImg>
         <h2>GridLinkCoverImg</h2>
-        <LinkCoverImg cover="https://picsum.photos/1200/800" url="http://google.com" target="_blank" title="LinkCoverImg" size="full"/>
+        <LinkCoverImg cover_escritorio="https://picsum.photos/1200/800" cover_movil="https://picsum.photos/1200/800" url="http://google.com" target="_blank" title="LinkCoverImg" size="full"/>
         <LinkCoverImg cover="https://picsum.photos/1200/800" url="http://google.com" target="_blank" title="size half" size="half" />
         <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="size half" size="half" />
         <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="half-desk" size="half-desk"/>
