@@ -13,6 +13,7 @@ export default {
 <style scoped lang="scss">
 .btn-nav-mob {
   background: transparent;
+  border-radius: 0;
   display: flex;
   margin: 0;
   position: relative;
