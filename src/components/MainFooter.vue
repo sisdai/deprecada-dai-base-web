@@ -56,8 +56,11 @@
         <p class="footer-titulo">
           Síguenos en <span class="a11y-solo-lectura">nuestras redes sociales:</span>
         </p>
-        <link-social url="https://www.facebook.com/gobmx" icono="social-facebook" spanglish="feisbuk " />
-        <link-social url="https://twitter.com/gobmx" icono="social-twitter" spanglish=" y tuiter." />
+        <p>
+          <link-social url="https://www.facebook.com/gobmx" icono="social-facebook" spanglish="feisbuk " />
+          <link-social url="https://twitter.com/gobmx" icono="social-twitter" spanglish=" y tuiter." />
+        </p>
+        <img src="../assets/img/gobmx-2021.png" alt="" class="footer-2021">
       </nav>
     </MainContainer>
   </footer>
@@ -102,9 +105,16 @@ export default {
   .footer-descripcion {
     margin-bottom: $gap * .5;
   }
+  .footer-2021 {
+    float: right;
+    margin: -100px -15px 20px 0;
+  }
   @media (min-width: map-get($media-queries-limit, "mobile")) {
     padding-top: $gap * .25;
     padding-bottom: $gap * 3;
+    .footer-2021 {
+      margin: 0 -10px 0 0;
+    }
     .footer-flex {
       display: flex;
       gap: $gap;
