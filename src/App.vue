@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Header id="navbar-position" :class="{'show':showNav}" />
+    <Header id="header" :class="{'show':showNav}" />
+    <MainNav id="navigation" :class="{'show':showNav}" />
     <router-view />
     <A11yMenu />
     <Footer />
@@ -9,6 +10,7 @@
 
 <script>
 import Header from '@/components/MainHeader.vue';
+import MainNav from '@/components/MainNav.vue';
 import A11yMenu from '@/components/A11yMenu.vue';
 import Footer from '@/components/MainFooter.vue';
 
@@ -16,6 +18,7 @@ export default {
   name: 'App',
   components: {
     Header,
+    MainNav,
     A11yMenu,
     Footer,
   },
@@ -28,6 +31,12 @@ export default {
     onScroll() {
       if (window.pageYOffset < window.innerHeight) {
         this.showNav = false;
+        if (this.$store.getters.isOpenGobNav) {
+          this.$store.commit('closeGobNav');
+        }
+        if (this.$store.getters.isOpenMainNav) {
+          this.$store.commit('closeMainNav');
+        }
       } else {
         this.showNav = true;
       }
@@ -44,7 +53,7 @@ export default {
 
 <style lang="scss">
 @import '@/scss/app.scss';
-#navbar-position {
+#header {
   position: fixed;
   top: -50px;
   width: 100%;
@@ -52,6 +61,16 @@ export default {
   transition: top .2s ease-in-out;
   &.show {
     top: 0;
+  }
+}
+#navigation {
+  position: fixed;
+  top: -50px;
+  z-index: 9998;
+  width: 100%;
+  transition: top .2s ease-in-out;
+  &.show {
+    top: 50px;
   }
 }
 </style>

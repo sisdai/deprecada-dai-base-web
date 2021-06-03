@@ -5,9 +5,9 @@
         <link-gob url="https://www.gob.mx/" class="logo-gob">
           <img src="../assets/img/gobmx.svg" alt="Gobierno de México." width="124px" height="36px">
         </link-gob>
-        <BtnNavMob @click.native="toggleMenu" :class="{'open':isOpenMenu}" />
+        <BtnNavMob @click.native="toggleMenu" :class="{'open':isOpenGobNav}" />
       </nav>
-      <nav class="nav-gob" :class="{'open':isOpenMenu}">
+      <nav class="nav-gob" :class="{'open':isOpenGobNav}">
         <link-gob url="https://mivacuna.salud.gob.mx/index.php" parent="ph-mx">Registro para vacunación</link-gob>
         <link-gob url="https://coronavirus.gob.mx/" parent="ph-mx">Información sobre COVID-19</link-gob>
         <link-gob url="https://www.gob.mx/tramites/" parent="ph-mx">Tramites</link-gob>
@@ -30,14 +30,21 @@ export default {
     LinkGob,
     BtnNavMob,
   },
-  data() {
-    return {
-      isOpenMenu: false,
-    };
+  computed: {
+    isOpenGobNav() {
+      return this.$store.getters.isOpenGobNav;
+    },
   },
   methods: {
     toggleMenu() {
-      this.isOpenMenu = !this.isOpenMenu;
+      if (this.$store.getters.isOpenGobNav) {
+        this.$store.commit('closeGobNav');
+      } else {
+        if (this.$store.getters.isOpenMainNav) {
+          this.$store.commit('closeMainNav');
+        }
+        this.$store.commit('openGobNav');
+      }
     },
   },
 };
@@ -64,6 +71,7 @@ export default {
     padding: $gap*.25 $gap*.5;
   }
   .nav-gob {
+    background: map-get($color-gob, "verde-obscuro");
     border-top: 1px solid map-get($color-gob, "dorado");
     box-shadow: 0 0 10px rgba(0,0,0,.7);
     display: flex;
@@ -74,11 +82,10 @@ export default {
     top: -160px;
     padding-top: $gap*.25;
     padding-bottom: $gap*.25;
-    background: map-get($color-gob, "verde-obscuro");
     z-index: 1;
     transition: top .3s ease-in-out;
     .link-gob {
-      padding: $gap*.25 $gap;
+      padding: $gap*.25 $gap*.5;
     }
     &.open {
       top: 51px;
