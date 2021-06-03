@@ -9,7 +9,10 @@
       <source :srcset="cover_escritorio ? cover_escritorio : cover" media="(min-width: 769px)">
       <img class=card-cover :srcset="cover_movil ? cover_movil : cover" alt="">
     </picture>
-    <h3 class="card-title titulo" :class='{"degradado-activo":degradado_activo}'>{{title}}</h3>
+    <h3 class="card-title"
+      :class="{'degradado-activo':degradado_activo, 'titulo-visible':titulo_visible}">
+      {{title}}
+    </h3>
   </a>
 </template>
 
@@ -27,25 +30,24 @@ export default {
     },
     cover: {
       type: String,
-      required: true,
     },
     cover_movil: {
       type: String,
-      required: false,
     },
     cover_escritorio: {
       type: String,
-      required: false,
     },
     size: {
       type: String,
-      required: false,
     },
     target: {
       type: String,
-      required: false,
     },
     degradado_activo: {
+      type: Boolean,
+      default: true,
+    },
+    titulo_visible: {
       type: Boolean,
       default: true,
     },
@@ -103,9 +105,11 @@ $altura_card: 240px;
       opacity .3s ease-in-out;
   }
   .card-title {
-    font-size:22px;
     box-sizing: content-box;
-    color: #fff;
+    font-size: map-get($fuente, "size-subtitulo");
+    font-weight: 600;
+    line-height: 1.2em;
+    color: transparent;
     display: flex;
     align-items: flex-end;
     padding: $gap*.35 $gap*.5;
@@ -116,22 +120,18 @@ $altura_card: 240px;
     right: 0;
     left: 0;
     z-index: 9;
-    line-height: 1.2;
     &.degradado-activo{
       background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.9));
+    }
+    &.titulo-visible {
+      color: #fff;
     }
   }
 }
 .half {
   max-width: calc(50% - #{$gap*.25});
-  &:nth-child(odd) {
-    margin-right: $gap*.5;
-  }
   @media (min-width: map-get($media-queries-limit, "mobile")) {
     max-width: calc(50% - 5px);
-    &:nth-child(odd) {
-      margin-right: 0;
-    }
   }
 }
 .half-desk {

@@ -254,11 +254,11 @@
 
       <hr>
 
+      <h2>GridLinkCoverImg</h2>
       <GridLinkCoverImg>
-        <h2>GridLinkCoverImg</h2>
         <LinkCoverImg cover_escritorio="https://picsum.photos/1200/800" cover_movil="https://picsum.photos/1200/800" url="http://google.com" target="_blank" title="LinkCoverImg" size="full"/>
         <LinkCoverImg cover="https://picsum.photos/1200/800" url="http://google.com" target="_blank" title="size half" size="half" />
-        <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="size half" size="half" />
+        <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="titulo oculto" :titulo_visible="false" size="half" />
         <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="half-desk" size="half-desk"/>
         <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="half-desk sin degradado" size="half-desk" :degradado_activo="false"/>
       </GridLinkCoverImg>

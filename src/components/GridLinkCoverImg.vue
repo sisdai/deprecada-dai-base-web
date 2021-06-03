@@ -13,6 +13,7 @@ export default {
 <style scoped lang="scss">
 .grid-link-cover-img {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 0;
   max-width: map-get($width, "max-text");
