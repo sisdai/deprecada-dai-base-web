@@ -9,6 +9,11 @@
         </h2>
       </div>
     </div>
+
+    <div class="container text m-y-3">
+      <img src="@/assets/img/firma_compuesta.svg" alt="">
+    </div>
+
     <div class="container text m-y-3">
       <h1>h1</h1>
       <h2>h2</h2>
