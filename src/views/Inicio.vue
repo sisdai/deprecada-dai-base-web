@@ -3,281 +3,44 @@
     <div class="cover">
       <div class="cover-gradient">
         <img class="cover-logos" src="@/assets/img/base/logos-gob-conacyt.svg"/>
-        <h1 class="cover-title">Título de portada</h1>
-        <h2 class="cover-subtitle">
-          Un capítulo del Ecosistema Nacional Informático de PRONACE
-        </h2>
+        <h1 class="cover-title">Inicio</h1>
+        <h2 class="cover-subtitle">Un capítulo del Ecosistema Nacional Informático de PRONACE</h2>
       </div>
     </div>
-
     <div class="container text m-y-3">
-      <img src="@/assets/img/base/firma_compuesta.svg" alt="">
-    </div>
-
-    <div class="container text m-y-3">
-      <h1>h1</h1>
-      <h2>h2</h2>
-      <h3>h3</h3>
-      <h4>h4</h4>
-      <h5>h5</h5>
-      <h6>h6</h6>
-
-      <hr>
-
-      <p>
-        <b>Texto base</b>
-        Lorem ipsum dolor <a href="#ejeles">link</a> sit amet consectetur adipisicing elit.
-        Iusto nulla beatae totam error assumenda voluptate sed dolorem voluptatibus et incidunt odio
-        quos <i>delectus qui pariatur</i>, architecto reiciendis voluptatem officiis natus!
-        Iusto nulla beatae totam error assumenda voluptate sed dolorem voluptatibus et incidunt odio
-        quos delectus qui pariatur, architecto reiciendis voluptatem officiis natus!
-        Iusto nulla beatae totam error assumenda voluptate sed dolorem voluptatibus et incidunt odio
-        quos delectus qui pariatur, <button class="link">boton clase .link</button> reiciendis.
-        Iusto nulla beatae totam error assumenda voluptate sed dolorem voluptatibus et incidunt odio
-        quos delectus qui pariatur, architecto reiciendis voluptatem officiis natus!
-        Iusto nulla totam sed dolorem voluptatibus et incidunt
-        quos delectus qui pariatur, architecto reiciendis voluptatem officiis natus!
-        Iusto nulla beatae totam error assumenda voluptate sed dolorem voluptatibus et incidunt odio
-        quos delectus qui pariatur, architecto reiciendis voluptatem officiis natus!
-      </p>
-
-      <hr>
-
-      <button type="button">boton</button>
-      <a href="#ejeles" class="btn">link class .btn</a>
-
-      <hr>
-
-      <details>
-        <summary>details summary</summary>
-        <p>
-          Details. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Et debitis necessitatibus quia eaque maxime magnam sint unde repellendus,
-          odit dolor repellat recusandae dolores, odio quod iusto doloribus ducimus omnis animi.
-        </p>
-      </details>
-
-      <hr>
-
-      <ul>
-        <li>lista desordenada</li>
-        <li>lista desordenada texto para que se vea el interlineado.
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        </li>
-        <li>lista desordenada
-          <ul>
-            <li>lista desordenada segundo nivel</li>
-            <li>lista desordenada segundo nivel</li>
-          </ul>
-          <ol>
-            <li>lista ordenada segundo nivel</li>
-            <li>lista ordenada segundo nivel</li>
-          </ol>
-        </li>
-      </ul>
-
-      <hr>
-
-      <ol>
-        <li>lista ordenada</li>
-        <li>lista ordenada</li>
-        <li>lista ordenada
-          <ul>
-            <li>lista desordenada segundo nivel</li>
-            <li>lista desordenada segundo nivel</li>
-          </ul>
-          <ol>
-            <li>lista ordenada segundo nivel</li>
-            <li>lista ordenada segundo nivel</li>
-          </ol>
-        </li>
-        <li>lista ordenada</li>
-        <li>lista ordenada</li>
-      </ol>
-
-      <hr>
-
-      <dl>
-        <dt>Lista de detalle</dt>
-        <dd>Descipción</dd>
-        <dt>Título</dt>
-        <dd>Descripción</dd>
-      </dl>
-
-      <hr>
-
-      <table>
-        <caption>Titulo de la tabla</caption>
-        <thead>
-          <tr>
-            <th>Título</th>
-            <th>Título</th>
-            <th>Título</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Contenido fila uno.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Perferendis est provident velit eaque in placeat harum unde,
-              delectus ipsa eius labore magnam iusto!
-              Voluptatem saepe beatae id pariatur itaque tempora?
-            </td>
-            <td>Contenito fila uno.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Perferendis est provident velit eaque in placeat harum unde,
-              delectus ipsa eius labore magnam iusto!
-              Voluptatem saepe beatae id pariatur itaque tempora?
-            </td>
-            <td>Contenito fila uno.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Perferendis est provident velit eaque in placeat harum unde,
-              delectus ipsa eius labore magnam iusto!
-              Voluptatem saepe beatae id pariatur itaque tempora?
-            </td>
-          </tr>
-          <tr>
-            <td>Contenido fila dos</td>
-            <td>Contenito fila dos</td>
-            <td>Contenito fila dos</td>
-          </tr>
-          <tr>
-            <td>Contenido fila tres</td>
-            <td>Contenito fila tres</td>
-            <td>Contenito fila tres</td>
-          </tr>
-        </tbody>
-        <tfoot>
-          <tr>
-            <td>Foot</td>
-            <td>Foot</td>
-            <td>Foot</td>
-          </tr>
-        </tfoot>
-      </table>
-      <table>
-        <caption>Titulo de la tabla</caption>
-        <thead>
-          <tr>
-            <td></td>
-            <th scope="col">Título</th>
-            <th scope="col">Título</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Títuo</th>
-            <td>Contenito fila uno</td>
-            <td>Contenito fila uno</td>
-          </tr>
-          <tr>
-            <th scope="row">Títuo</th>
-            <td>Contenito fila dos</td>
-            <td>Contenito fila dos</td>
-          </tr>
-          <tr>
-            <th scope="row">Título</th>
-            <td>Contenito fila tres</td>
-            <td>Contenito fila tres</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <hr>
-
-      <fieldset>
-        <legend>fielset legend</legend>
-        <label for="">label</label><br>
-        <select name="" id="">
-          <option value="">option</option>
-          <option value="">option</option>
-        </select>
-        <br>
-        <label for="">label</label><br>
-        <input type="text">
-        <br>
-        <label for="">label</label><br>
-        <input type="text">
-        <br>
-        <label for="">label</label><br>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-      </fieldset>
-
-      <hr>
-
-      <h2 class="titular-alto">
-        .titular alto Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </h2>
-      <h2 class="titular-bajo">
-        .titular bajo Labore possimus laudantium similique. Enim, maxime. Dolores, fugit.
-      </h2>
-
-      <h2 class="titulo">.titulo</h2>
-      <h2 class="subtitulo">.subtitulo</h2>
-
-      <p class="texto-alto">
-        .texto-alto
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Modi fugit eos nobis provident quas illo deleniti perspiciatis praesentium,
-        ea sapiente odio, iusto repudiandae cupiditate natus animi voluptas
-        harum placeat dolorum?
-      </p>
-      <p class="texto-primario">
-        .texto-primario
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Modi fugit eos nobis provident quas illo deleniti perspiciatis praesentium,
-        ea sapiente odio, iusto repudiandae cupiditate natus animi voluptas
-        harum placeat dolorum?
-      </p>
-      <p class="texto-secundario">
-        .texto-secundario
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Modi fugit eos nobis provident quas illo deleniti perspiciatis praesentium,
-        ea sapiente odio, iusto repudiandae cupiditate natus animi voluptas
-        harum placeat dolorum?
-      </p>
-      <p class="texto-notas">
-        .texto-notas
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Modi fugit eos nobis provident quas illo deleniti perspiciatis praesentium,
-        ea sapiente odio, iusto repudiandae cupiditate natus animi voluptas
-        harum placeat dolorum?
-      </p>
-      <p>
-        <button type="button" class="btn-lg">.btn-lg</button>
-        <button type="button" class="btn-md">.btn-md</button>
-        <button type="button" class="btn">.btn</button>
-        <button type="button" class="btn-sm">.btn-sm</button>
-      </p>
-      <p>
-        <button type="button" class="btn-bold">.btn-bold</button>
-      </p>
-      <p>
-        <button type="button" class="btn-block">.btn-block</button>
-      </p>
-
-      <hr>
-
-      <h2>GridLinkCoverImg</h2>
       <GridLinkCoverImg>
-        <LinkCoverImg cover_escritorio="https://picsum.photos/1200/800" cover_movil="https://picsum.photos/1200/800" url="http://google.com" target="_blank" title="LinkCoverImg" size="full"/>
-        <LinkCoverImg cover="https://picsum.photos/1200/800" url="http://google.com" target="_blank" title="size half" size="half" />
-        <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="titulo oculto" :titulo_visible="false" size="half" />
-        <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="half-desk" size="half-desk"/>
-        <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="half-desk sin degradado" size="half-desk" :degradado_activo="false"/>
+        <LinkCoverImg
+          cover_escritorio="https://picsum.photos/1200/800"
+          cover_movil="https://picsum.photos/777/777"
+          url="http://google.com"
+          target="_blank"
+          title="LinkCoverImg size full"
+          size="full"/>
+        <LinkCoverImg
+          cover="https://picsum.photos/900/800"
+          url="guia-estilos"
+          title="size half"
+          size="half" />
+        <LinkCoverImg
+          cover="https://picsum.photos/800/800"
+          url="guia-estilos"
+          title="titulo oculto"
+          :titulo_visible="false"
+          size="half" />
+        <LinkCoverImg
+          cover="https://picsum.photos/700/800"
+          url="guia-estilos"
+          title="texto oculto sin degradado"
+          :titulo_visible="false"
+          :degradado_activo="false"
+          size="half-desk"/>
+        <LinkCoverImg
+          cover="https://picsum.photos/600/800"
+          url="ayuda"
+          title="size half-desk degradado_activo false"
+          size="half-desk"
+          :degradado_activo="false"/>
       </GridLinkCoverImg>
-
-      <hr>
-
-      <h2>Pruebas tipografica iconos</h2>
-      <button class="btn-icono icono-acercar"></button>
-      <button class="btn-icono icono-alejar"></button>
-      <button class="btn-icono icono-centrar"></button>
-      <button class="btn-icono icono-cerrar"></button>
-      <button class="btn-icono icono-seleccion"></button>
-      <span class="icono-check"></span>
-      <span class="icono-descargar"></span>
     </div>
   </div>
 </template>
@@ -287,7 +50,7 @@ import GridLinkCoverImg from '@/components/base/GridLinkCoverImg.vue';
 import LinkCoverImg from '@/components/base/LinkCoverImg.vue';
 
 export default {
-  name: 'App',
+  name: 'GuiaEstilos',
   components: {
     GridLinkCoverImg,
     LinkCoverImg,

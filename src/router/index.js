@@ -17,6 +17,11 @@ const routes = [
     component: () => import('../views/Ayuda.vue'),
   },
   {
+    path: '/guia-estilos',
+    name: 'GuiaEstilos',
+    component: () => import('../views/GuiaEstilos.vue'),
+  },
+  {
     path: '**',
     name: 'Página no encontrada',
     component: () => import('../views/404.vue'),

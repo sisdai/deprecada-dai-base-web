@@ -5,10 +5,8 @@
     </div>
     <div class="main-nav-menu" :class="{'open':isOpenMainNav}" @click="toggleMenu">
       <router-link class="main-nav-link" to="/">Inicio</router-link>
-      <router-link class="main-nav-link" to="/">Menu uno</router-link>
-      <router-link class="main-nav-link" to="/">Menu dos</router-link>
-      <router-link class="main-nav-link" to="/">Menu tres</router-link>
-      <router-link class="main-nav-link" to="/">Menu cuatro</router-link>
+      <router-link class="main-nav-link" to="/guia-estilos">Guia de estilos</router-link>
+      <router-link class="main-nav-link" to="/ayuda">Ayuda</router-link>
     </div>
   </nav>
 </template>

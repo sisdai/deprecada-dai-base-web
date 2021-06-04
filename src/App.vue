@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     onScroll() {
-      if (window.pageYOffset < window.innerHeight) {
+      if (window.pageYOffset < (window.innerHeight - 100)) {
         this.showNav = false;
         if (this.$store.getters.isOpenGobNav) {
           this.$store.commit('closeGobNav');
