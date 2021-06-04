@@ -13,6 +13,13 @@
     font-size: 35px;
   }
 }
+.titular-portada {
+  @extend .titular-bajo;
+  max-width: 550px;
+  @media (min-width: map-get($media-queries-limit, "mobile")) {
+    text-align: center;
+  }
+}
 .titulo {
   font-size: map-get($fuente, "size-titulo");
   font-weight: 600;

@@ -74,3 +74,9 @@ $media-queries-limit: (
   "tablet": 1025px,
   "navegacion": 1025px,
 );
+
+$media-queries-since: (
+  "sm": 0,
+  "md": 769px,
+  "lg": 1025px,
+);

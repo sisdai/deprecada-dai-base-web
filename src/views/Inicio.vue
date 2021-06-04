@@ -7,8 +7,18 @@
         <h2 class="cover-subtitle">Un capítulo del Ecosistema Nacional Informático de PRONACE</h2>
       </div>
     </div>
-    <div class="container text m-y-3">
-      <GridLinkCoverImg>
+    <div class="container text">
+      <h2 class="titular-portada m-t-sm-3 m-t-4-md m-b-sm-1 m-b-2-md m-x-auto" >
+        Ecosistema Nacional Informático de
+        Tecnología e innovación abierta
+      </h2>
+      <p class="texto-alto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Dolor modi molestiae a similique, quae cumque. Rerum vitae,
+        animi architecto eligendi quibusdam hic, dolor delectus
+        dignissimos doloribus reprehenderit maxime, cupiditate nobis.
+      </p>
+      <GridLinkCoverImg class="m-t-1 m-t-2-md m-b-4-md">
         <LinkCoverImg
           cover_escritorio="https://picsum.photos/1200/800"
           cover_movil="https://picsum.photos/777/777"
