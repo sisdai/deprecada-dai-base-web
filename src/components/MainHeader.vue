@@ -3,7 +3,11 @@
     <MainContainer class="flex">
       <nav class="nav-gob-top flex">
         <link-gob url="https://www.gob.mx/" class="logo-gob">
-          <img src="../assets/img/gobmx.svg" alt="Gobierno de México." width="124px" height="36px">
+          <img
+          src="@/assets/img/base/gobmx.svg"
+          alt="Gobierno de México."
+          width="124px"
+          height="36px">
         </link-gob>
         <BtnNavMob @click.native="toggleMenu" :class="{'open':isOpenGobNav}" />
       </nav>

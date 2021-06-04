@@ -2,7 +2,11 @@
   <footer class="footer-mx">
     <MainContainer class="footer-flex">
       <div class="flex">
-        <img src="../assets/img/gobmx.svg" alt="Gobierno de México." width="200px" height="60px">
+        <img
+          src="@/assets/img/base/gobmx.svg"
+          alt="Gobierno de México."
+          width="200px"
+          height="60px">
       </div>
       <nav class="flex">
         <p class="footer-titulo">
@@ -60,7 +64,7 @@
           <link-social url="https://www.facebook.com/gobmx" icono="social-facebook" spanglish="feisbuk " />
           <link-social url="https://twitter.com/gobmx" icono="social-twitter" spanglish=" y tuiter." />
         </p>
-        <img src="../assets/img/gobmx-2021.png" alt="" class="footer-2021">
+        <img src="@/assets/img/base/gobmx-2021.png" alt="" class="footer-2021">
       </nav>
     </MainContainer>
   </footer>
@@ -84,7 +88,7 @@ export default {
 <style scoped lang="scss">
 .footer-mx {
   background: map-get($color-gob, "verde");
-  background-image: url('../assets/img/gobmxpleca.svg');
+  background-image: url('../assets/img/base/gobmxpleca.svg');
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: 100% auto;

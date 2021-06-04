@@ -1,36 +1,36 @@
 <template>
   <div class="a11y-container" :class="{'show':hasA11yMenu}">
     <button class="a11y-toggle" :class="{'open':isOpenA11yMenu}" @click="toggleA11yMenu">
-      <img alt="Herramientas de Accesibilidad" src="../assets/img/a11y-icono.png">
+      <img alt="Herramientas de Accesibilidad" src="@/assets/img/base/a11y-icono.png">
     </button>
     <div class="a11y-menu" :class="{'open':isOpenA11yMenu}" @click="toggleA11yMenu">
       <p class="a11y-title">Herramientas de accesibilidad</p>
       <button class="a11y-opt" type="button">
-        <span class="icon"><img src="../assets/img/a11y-contraste.png" alt=""></span>
+        <span class="icon"><img src="@/assets/img/base/a11y-contraste.png" alt=""></span>
         <span class="text">Alto contraste</span>
       </button>
       <button class="a11y-opt" type="button">
-        <span class="icon"><img src="../assets/img/a11y-texto.png" alt=""></span>
+        <span class="icon"><img src="@/assets/img/base/a11y-texto.png" alt=""></span>
         <span class="text">Crecer texto</span>
       </button>
       <button class="a11y-opt" type="button">
-        <span class="icon"><img src="../assets/img/a11y-texturas.png" alt=""></span>
+        <span class="icon"><img src="@/assets/img/base/a11y-texturas.png" alt=""></span>
         <span class="text">Texturas en visualizaciones</span>
       </button>
       <button class="a11y-opt" type="button">
-        <span class="icon"><img src="../assets/img/a11y-simplificada.png" alt=""></span>
+        <span class="icon"><img src="@/assets/img/base/a11y-simplificada.png" alt=""></span>
         <span class="text">Vista simplificada</span>
       </button>
       <button class="a11y-opt" type="button">
-        <span class="icon"><img src="../assets/img/a11y-enlaces.png" alt=""></span>
+        <span class="icon"><img src="@/assets/img/base/a11y-enlaces.png" alt=""></span>
         <span class="text">Enlaces subrayados</span>
       </button>
       <button class="a11y-opt" type="button">
-        <span class="icon"><img src="../assets/img/a11y-restablecer.png" alt=""></span>
+        <span class="icon"><img src="@/assets/img/base/a11y-restablecer.png" alt=""></span>
         <span class="text">Restablecer</span>
       </button>
       <router-link class="a11y-opt" to="/ayuda">
-        <span class="icon"><img src="../assets/img/a11y-ayuda.png" alt=""></span>
+        <span class="icon"><img src="@/assets/img/base/a11y-ayuda.png" alt=""></span>
         <span class="text">Ayuda</span>
       </router-link>
     </div>
