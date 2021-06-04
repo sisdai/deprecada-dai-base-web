@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import Header from '@/components/MainHeader.vue';
-import MainNav from '@/components/MainNav.vue';
-import A11yMenu from '@/components/A11yMenu.vue';
-import Footer from '@/components/MainFooter.vue';
+import Header from '@/components/base/MainHeader.vue';
+import MainNav from '@/components/base/MainNav.vue';
+import A11yMenu from '@/components/base/A11yMenu.vue';
+import Footer from '@/components/base/MainFooter.vue';
 
 export default {
   name: 'App',

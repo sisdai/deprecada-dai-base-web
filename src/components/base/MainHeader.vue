@@ -23,9 +23,9 @@
 </template>
 
 <script>
-import MainContainer from '@/components/MainContainer.vue';
-import LinkGob from '@/components/LinkGob.vue';
-import BtnNavMob from '@/components/BtnNavMob.vue';
+import MainContainer from '@/components/base/MainContainer.vue';
+import LinkGob from '@/components/base/LinkGob.vue';
+import BtnNavMob from '@/components/base/BtnNavMob.vue';
 
 export default {
   name: 'MainHeader',

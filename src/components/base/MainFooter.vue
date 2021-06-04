@@ -71,9 +71,9 @@
 </template>
 
 <script>
-import MainContainer from '@/components/MainContainer.vue';
-import LinkGob from '@/components/LinkGob.vue';
-import LinkSocial from '@/components/LinkSocial.vue';
+import MainContainer from '@/components/base/MainContainer.vue';
+import LinkGob from '@/components/base/LinkGob.vue';
+import LinkSocial from '@/components/base/LinkSocial.vue';
 
 export default {
   name: 'Footer',
@@ -88,7 +88,7 @@ export default {
 <style scoped lang="scss">
 .footer-mx {
   background: map-get($color-gob, "verde");
-  background-image: url('../assets/img/base/gobmxpleca.svg');
+  background-image: url('../../assets/img/base/gobmxpleca.svg');
   background-position-y: bottom;
   background-repeat: no-repeat;
   background-size: 100% auto;

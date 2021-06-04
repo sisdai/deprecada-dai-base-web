@@ -283,8 +283,8 @@
 </template>
 
 <script>
-import GridLinkCoverImg from '@/components/GridLinkCoverImg.vue';
-import LinkCoverImg from '@/components/LinkCoverImg.vue';
+import GridLinkCoverImg from '@/components/base/GridLinkCoverImg.vue';
+import LinkCoverImg from '@/components/base/LinkCoverImg.vue';
 
 export default {
   name: 'App',

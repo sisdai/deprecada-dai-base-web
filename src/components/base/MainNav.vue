@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import BtnNavMob from '@/components/BtnNavMob.vue';
+import BtnNavMob from '@/components/base/BtnNavMob.vue';
 
 export default {
   name: 'MainNav',
