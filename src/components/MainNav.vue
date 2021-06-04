@@ -67,6 +67,9 @@ export default {
     flex-direction: row;
     height: auto;
     top: 0px;
+    &.open {
+      top: 0;
+    }
   }
 }
 .main-nav-link {
