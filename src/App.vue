@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
-    <Header id="header" :class="{'show':showNav}" />
-    <MainNav id="navigation" :class="{'show':showNav}" />
-    <router-view />
+  <div id="app" :class="[scrollingNav ? 'scrollingNav': 'normalNav']">
+    <Header class="header" :class="{'show':showNav}" />
+    <MainNav class="navigation" :class="{'show':showNav}" />
+    <router-view class="view" />
     <A11yMenu />
     <Footer />
   </div>
@@ -25,6 +25,7 @@ export default {
   data() {
     return {
       showNav: false,
+      scrollingNav: true,
     };
   },
   methods: {
@@ -45,6 +46,14 @@ export default {
   mounted() {
     window.addEventListener('scroll', this.onScroll);
   },
+  updated() {
+    console.log(this.$route.name);
+    if (this.$route.name === 'Inicio') {
+      this.scrollingNav = true;
+    } else {
+      this.scrollingNav = false;
+    }
+  },
   beforeDestroy() {
     window.removeEventListener('scroll', this.onScroll);
   },
@@ -53,24 +62,51 @@ export default {
 
 <style lang="scss">
 @import '@/scss/app.scss';
-#header {
-  position: fixed;
-  top: -50px;
-  width: 100%;
-  z-index: 9999;
-  transition: top .2s ease-in-out;
-  &.show {
-    top: 0;
+.scrollingNav {
+  .header {
+    position: fixed;
+    top: -50px;
+    width: 100%;
+    z-index: 9999;
+    transition: top .2s ease-in-out;
+    &.show {
+      top: 0;
+    }
+  }
+  .navigation {
+    position: fixed;
+    top: -50px;
+    z-index: 9998;
+    width: 100%;
+    transition: top .2s ease-in-out;
+    &.show {
+      top: 50px;
+    }
   }
 }
-#navigation {
-  position: fixed;
-  top: -50px;
-  z-index: 9998;
-  width: 100%;
-  transition: top .2s ease-in-out;
-  &.show {
+.normalNav {
+  .header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: top .2s ease-in-out;
+    &.show {
+      top: 0;
+    }
+  }
+  .navigation {
+    position: fixed;
     top: 50px;
+    z-index: 9998;
+    width: 100%;
+    transition: top .2s ease-in-out;
+    &.show {
+      top: 50px;
+    }
+  }
+  .view {
+    padding-top: 50px;
   }
 }
 </style>

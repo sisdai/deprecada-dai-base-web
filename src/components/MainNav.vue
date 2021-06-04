@@ -41,11 +41,15 @@ export default {
 .main-nav {
   background: map-get($color-gob, "verde");
   position: relative;
+  // position: sticky;
+  // top: 50px;
+  // z-index: 9998;
 }
 .main-nav-top {
   background: map-get($color-gob, "verde");
   position: relative;
   z-index: 2;
+  box-shadow: 0 0 20px rgba(0,0,0,.2);
 }
 .main-nav-menu {
   background: map-get($color-gob, "verde");
