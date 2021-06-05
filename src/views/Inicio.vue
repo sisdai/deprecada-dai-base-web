@@ -4,13 +4,15 @@
       <div class="cover-gradient">
         <img class="cover-logos" src="@/assets/img/base/logos-gob-conacyt.svg"/>
         <h1 class="cover-title">Inicio</h1>
-        <h2 class="cover-subtitle">Un capítulo del Ecosistema Nacional Informático de PRONACE</h2>
+        <h2 class="cover-subtitle">
+          Un capítulo del Ecosistema Nacional Informático de PRONACE<br>
+          (el subtitulo solo va en capítulos)*
+        </h2>
       </div>
     </div>
     <div class="container text">
       <h2 class="titular-portada m-t-sm-3 m-t-4-md m-b-sm-1 m-b-2-md m-x-auto" >
-        Ecosistema Nacional Informático de
-        Tecnología e innovación abierta
+        Ecosistema Nacional Informático de PRONACE (este titulo solo va en portadas de ENIs)*
       </h2>
       <p class="texto-alto">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -60,7 +62,7 @@ import GridLinkCoverImg from '@/components/base/GridLinkCoverImg.vue';
 import LinkCoverImg from '@/components/base/LinkCoverImg.vue';
 
 export default {
-  name: 'GuiaEstilos',
+  name: 'Inicio',
   components: {
     GridLinkCoverImg,
     LinkCoverImg,
