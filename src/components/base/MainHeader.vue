@@ -14,7 +14,7 @@
       <nav class="nav-gob" :class="{'open':isOpenGobNav}">
         <link-gob url="https://mivacuna.salud.gob.mx/index.php" parent="ph-mx">Registro para vacunación</link-gob>
         <link-gob url="https://coronavirus.gob.mx/" parent="ph-mx">Información sobre COVID-19</link-gob>
-        <link-gob url="https://www.gob.mx/tramites/" parent="ph-mx">Tramites</link-gob>
+        <link-gob url="https://www.gob.mx/tramites/" parent="ph-mx">Trámites</link-gob>
         <link-gob url="https://www.gob.mx/" parent="ph-mx">Gobierno</link-gob>
         <link-gob url="https://www.gob.mx/busqueda?utf8=%E2%9C%93" parent="ph-mx">Búsqueda</link-gob>
       </nav>
