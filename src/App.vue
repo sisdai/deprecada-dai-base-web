@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     onScroll() {
-      if (window.pageYOffset < (window.innerHeight - 100)) {
+      if (window.pageYOffset < (window.innerHeight - 150)) {
         this.showNav = false;
         if (this.$store.getters.isOpenGobNav) {
           this.$store.commit('closeGobNav');
@@ -42,9 +42,13 @@ export default {
         this.showNav = true;
       }
     },
+    calHeight() {
+      const innerheight = window.innerHeight / 100;
+      document.querySelector(':root').style.setProperty('--vh', `${innerheight.toString()}px`);
+    },
   },
-  mounted() {
-    window.addEventListener('scroll', this.onScroll);
+  created() {
+    this.calHeight();
   },
   updated() {
     console.log(this.$route.name);
@@ -54,8 +58,13 @@ export default {
       this.scrollingNav = false;
     }
   },
-  beforeDestroy() {
+  mounted() {
+    window.addEventListener('scroll', this.onScroll);
+    window.addEventListener('resize', this.calHeight);
+  },
+  beforeUnmount() {
     window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('resize', this.calHeight);
   },
 };
 </script>

@@ -5,13 +5,13 @@
   background-position: center;
   color: #fff;
   height: 100vh;
+  height: calc(100 * var(--vh));
   width: 100%;
   text-align: center;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   @media (min-width: map-get($media-queries-limit, "mobile")) {
-    height: 100vh;
     background-image: url(https://picsum.photos/1200/1000);
   }
 }

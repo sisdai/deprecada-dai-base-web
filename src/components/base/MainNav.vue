@@ -59,6 +59,7 @@ export default {
   position: absolute;
   top: -100vh;
   height: calc(100vh - 100px);
+  height: calc((100 * var(--vh)) - 100px);
   width: 100%;
   transition: top .3s ease-in-out;
   z-index: 1;

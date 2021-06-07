@@ -10,6 +10,9 @@
         </h2>
       </div>
     </div>
+    <div class="container text m-y-3">
+      <img src="@/assets/img/base/firma_compuesta.svg" alt="">
+    </div>
     <div class="container text">
       <h2 class="titular-portada m-t-sm-3 m-t-4-md m-b-sm-1 m-b-2-md m-x-auto" >
         Ecosistema Nacional Informático de PRONACE (este titulo solo va en portadas de ENIs)*
