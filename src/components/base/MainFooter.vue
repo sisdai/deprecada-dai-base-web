@@ -89,9 +89,9 @@ export default {
 .footer-mx {
   background: map-get($color-gob, "verde");
   background-image: url('../../assets/img/base/gobmxpleca.svg');
-  background-position-y: bottom;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: auto 50px;
   box-sizing: border-box;
   overflow: hidden;
   margin-top: $gap * 1.25;
@@ -115,9 +115,9 @@ export default {
   }
   @media (min-width: map-get($media-queries-limit, "mobile")) {
     padding-top: $gap * .25;
-    padding-bottom: $gap * 3;
+    padding-bottom: $gap * 2.5;
     .footer-2021 {
-      margin: 0 -10px 0 0;
+      margin: 5px -10px 0 0;
     }
     .footer-flex {
       display: flex;
