@@ -4,6 +4,9 @@
       <BtnNavMob @click.native="toggleMenu" :class="{'open':isOpenMainNav}" />
     </div>
     <div class="main-nav-menu" :class="{'open':isOpenMainNav}" @click="toggleMenu">
+      <a class="main-nav-external-link" href="#" target="_blank" rel="noopener">
+        Ir a ENI (nombre)
+      </a>
       <router-link class="main-nav-link" to="/">Inicio</router-link>
       <router-link class="main-nav-link" to="/guia-estilos">Guia de estilos</router-link>
       <router-link class="main-nav-link" to="/ayuda">Ayuda</router-link>
@@ -73,7 +76,26 @@ export default {
     &.open {
       top: 0;
     }
+    a:first-child {
+      margin-left: $gap*.5;
+    }
   }
+}
+.main-nav-external-link {
+  font-size: map-get($fuente, "size-notas");
+  text-transform: uppercase;
+  display: flex;
+  padding: $gap*.5;
+  white-space: nowrap;
+  color: map-get($color-gob, "dorado");
+  &:hover {
+      background: darken(map-get($color-gob, "verde"), 2%);
+      color: map-get($color-gob, "beige");
+    }
+    &:focus {
+      background: map-get($color-gob, "verde-obscuro");
+      color: map-get($color-gob, "beige");
+    }
 }
 .main-nav-link {
   font-size: map-get($fuente, "size-secundario");
@@ -84,19 +106,19 @@ export default {
   white-space: nowrap;
   @media (min-width: map-get($media-queries-limit, "navegacion")) {
     display: inline-flex;
-    &:first-child {
-      margin-left: auto;
-    }
-    &:last-child {
-      margin-right: auto;
-    }
+    // &:first-child {
+    //   margin-left: auto;
+    // }
+    // &:last-child {
+    //   margin-right: auto;
+    // }
     &:hover {
       background: darken(map-get($color-gob, "verde"), 2%);
       color: map-get($color-gob, "beige");
     }
     &:focus {
-      background: map-get($color-gob, "verde");
-      color: map-get($color-gob, "dorado");
+      background: map-get($color-gob, "verde-obscuro");
+      color: map-get($color-gob, "beige");
     }
   }
 }
