@@ -39,20 +39,17 @@
         <LinkCoverImg
           cover="https://picsum.photos/800/800"
           url="guia-estilos"
-          title="titulo oculto"
-          :titulo_visible="false"
+          title="size half"
           size="half" />
         <LinkCoverImg
           cover="https://picsum.photos/700/800"
           url="guia-estilos"
-          title="texto oculto sin degradado"
-          :titulo_visible="false"
-          :degradado_activo="false"
+          title="size half-desk"
           size="half-desk"/>
         <LinkCoverImg
           cover="https://picsum.photos/600/800"
           url="ayuda"
-          title="size half-desk degradado_activo false"
+          title="sin degradado no se muestra el titulo"
           size="half-desk"
           :degradado_activo="false"/>
       </GridLinkCoverImg>

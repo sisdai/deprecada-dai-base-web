@@ -9,8 +9,7 @@
       <source :srcset="cover_escritorio ? cover_escritorio : cover" media="(min-width: 769px)">
       <img class=card-cover :srcset="cover_movil ? cover_movil : cover" alt="">
     </picture>
-    <h3 class="card-title"
-      :class="{'degradado-activo':degradado_activo, 'titulo-visible':titulo_visible}">
+    <h3 class="card-title" :class="{'degradado-activo':degradado_activo}">
       {{title}}
     </h3>
   </a>
@@ -44,10 +43,6 @@ export default {
       type: String,
     },
     degradado_activo: {
-      type: Boolean,
-      default: true,
-    },
-    titulo_visible: {
       type: Boolean,
       default: true,
     },
@@ -122,8 +117,6 @@ $altura_card: 240px;
     z-index: 9;
     &.degradado-activo{
       background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.9));
-    }
-    &.titulo-visible {
       color: #fff;
     }
   }

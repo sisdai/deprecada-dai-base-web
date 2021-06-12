@@ -261,11 +261,41 @@
 
       <h2>GridLinkCoverImg</h2>
       <GridLinkCoverImg>
-        <LinkCoverImg cover_escritorio="https://picsum.photos/1200/800" cover_movil="https://picsum.photos/1200/800" url="http://google.com" target="_blank" title="LinkCoverImg" size="full"/>
-        <LinkCoverImg cover="https://picsum.photos/1200/800" url="http://google.com" target="_blank" title="size half" size="half" />
-        <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="titulo oculto" :titulo_visible="false" size="half" />
-        <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="half-desk" size="half-desk"/>
-        <LinkCoverImg cover="https://picsum.photos/1200/800" url="ayuda" title="half-desk sin degradado" size="half-desk" :degradado_activo="false"/>
+        <LinkCoverImg
+          cover_escritorio="https://picsum.photos/1200/800"
+          cover_movil="https://picsum.photos/1200/800"
+          url="http://google.com"
+          target="_blank"
+          title="LinkCoverImg size full. cover_escritorio + cover_movil"
+          size="full"
+        />
+        <LinkCoverImg
+          cover="https://picsum.photos/1200/800"
+          url="http://google.com"
+          target="_blank"
+          title="size half. cover"
+          size="half"
+        />
+        <LinkCoverImg
+          cover="https://picsum.photos/1200/800"
+          url="#"
+          title="titulo oculto"
+          size="size half"
+          :degradado_activo="false"
+        />
+        <LinkCoverImg
+          cover="https://picsum.photos/1200/800"
+          url="#"
+          title="size half-desk. cover"
+          size="half-desk"
+        />
+        <LinkCoverImg
+          cover="https://picsum.photos/1200/800"
+          url="#"
+          title="half-desk sin degradado"
+          size="half-desk"
+          :degradado_activo="false"
+        />
       </GridLinkCoverImg>
 
       <hr>
