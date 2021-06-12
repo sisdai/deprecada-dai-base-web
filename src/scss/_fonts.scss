@@ -33,7 +33,7 @@
   font-style: normal;
   font-weight: 200;
   font-display: swap;
-  src: url("~@/assets/fonts/Montserrat-R.ttf");
+  src: url("~@/assets/fonts/Montserrat-R_V3.ttf");
 }
 [class^="icono-"]:before,
 [class*=" icono-"]:before {
@@ -42,37 +42,32 @@
   font-weight: normal !important;
   font-variant: normal !important;
   text-transform: none !important;
-  line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 .icono-acercar::before {
   content: "Ɓ";
-  font-size: 40px;
 }
 .icono-alejar::before {
   content: "Ƃ";
-  font-size: 40px;
 }
 .icono-centrar::before {
   content: "ƃ";
-  font-size: 40px;
 }
 .icono-cerrar::before {
   content: "Ƅ";
-  font-size: 40px;
 }
 .icono-check::before {
   content: "ƅ";
-  font-size: 40px;
 }
 .icono-descargar::before {
   content: "Ɔ";
-  font-size: 40px;
 }
 .icono-seleccion::before {
   content: "Ƈ";
-  font-size: 40px;
+}
+.icono-atras::before {
+  content: "ƈ";
 }
 
 // social

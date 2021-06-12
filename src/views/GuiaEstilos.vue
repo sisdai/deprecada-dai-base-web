@@ -306,8 +306,9 @@
       <button class="btn-icono icono-centrar"></button>
       <button class="btn-icono icono-cerrar"></button>
       <button class="btn-icono icono-seleccion"></button>
-      <span class="icono-check"></span>
-      <span class="icono-descargar"></span>
+      <span class="icono-sm icono-check"></span>
+      <span class="icono-sm icono-descargar"></span>
+      <span class="icono-sm icono-atras"></span>
     </div>
   </div>
 </template>
