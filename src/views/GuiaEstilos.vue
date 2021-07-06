@@ -327,11 +327,11 @@
           </p>
         </template>
         <template v-slot:cuerpo>
-          <LinkCoverImg
+          <LinkCoverImgButton
             cover="https://picsum.photos/1200/800"
             url="http://google.com"
             target="_blank"
-            title="LinkCoverImg full"
+            title="Lorem"
             size="full"
           />
         </template>
@@ -352,11 +352,11 @@
           </div>
         </template>
         <template v-slot:cuerpo>
-          <LinkCoverImg
+          <LinkCoverImgButton
             cover="https://picsum.photos/1200/800"
             url="http://google.com"
             target="_blank"
-            title="LinkCoverImg full"
+            title="Lorem"
             size="full"
           />
         </template>
@@ -372,6 +372,7 @@
 import GridLinkCoverImg from '@/components/base/GridLinkCoverImg.vue';
 import LinkCoverImg from '@/components/base/LinkCoverImg.vue';
 import Modal from '@/components/base/Modal.vue';
+import LinkCoverImgButton from '@/components/base/LinkCoverImgButton.vue';
 
 export default {
   name: 'GuiaEstilos',
@@ -379,6 +380,7 @@ export default {
     GridLinkCoverImg,
     LinkCoverImg,
     Modal,
+    LinkCoverImgButton,
   },
 };
 </script>
