@@ -21,7 +21,7 @@
         <span class="icon"><img src="@/assets/img/base/a11y-simplificada.png" alt=""></span>
         <span class="text">Vista simplificada</span>
       </button>
-      <button class="a11y-opt" type="button">
+      <button class="a11y-opt" type="button" @click="alternarEnlacesSubrayados">
         <span class="icon"><img src="@/assets/img/base/a11y-enlaces.png" alt=""></span>
         <span class="text">Enlaces subrayados</span>
       </button>
@@ -51,6 +51,9 @@ export default {
   methods: {
     toggleA11yMenu() {
       this.$store.commit('toggleA11yMenu');
+    },
+    alternarEnlacesSubrayados() {
+      this.$store.commit('alternarEnlacesSubrayados');
     },
   },
 };

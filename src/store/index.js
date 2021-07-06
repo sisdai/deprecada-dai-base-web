@@ -10,6 +10,7 @@ export default new Vuex.Store({
     openGobNav: false,
     hasA11yMenu: true,
     openA11yMenu: false,
+    enlaces_subrayados: false,
   },
   getters: {
     hasMainNav(state) {
@@ -26,6 +27,9 @@ export default new Vuex.Store({
     },
     isOpenA11yMenu(state) {
       return state.openA11yMenu;
+    },
+    tieneEnlacesSubrayados(state) {
+      return state.enlaces_subrayados;
     },
   },
   mutations: {
@@ -49,6 +53,9 @@ export default new Vuex.Store({
     },
     toggleA11yMenu(state) {
       state.openA11yMenu = !state.openA11yMenu;
+    },
+    alternarEnlacesSubrayados(state) {
+      state.enlaces_subrayados = !state.enlaces_subrayados;
     },
   },
   actions: {

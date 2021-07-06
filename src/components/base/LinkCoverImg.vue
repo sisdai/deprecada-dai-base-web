@@ -9,7 +9,7 @@
       <source :srcset="cover_escritorio ? cover_escritorio : cover" media="(min-width: 769px)">
       <img class=card-cover :srcset="cover_movil ? cover_movil : cover" alt="">
     </picture>
-    <h3 class="card-title" :class="{'degradado-activo':degradado_activo}">
+    <h3 class="card-title link" :class="{'degradado-activo':degradado_activo}">
       {{title}}
     </h3>
   </a>
@@ -115,7 +115,8 @@ $altura_card: 240px;
     right: 0;
     left: 0;
     z-index: 9;
-    &.degradado-activo{
+    background: rgba(0,0,0,0);
+    &.degradado-activo {
       background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.9));
       color: #fff;
     }

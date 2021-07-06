@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="[scrollingNav ? 'scrollingNav': 'normalNav']">
+  <div id="app" :class="appClass">
     <Header class="header" :class="{'show':showNav}" />
     <MainNav class="navigation" :class="{'show':showNav}" />
     <router-view class="view" />
@@ -27,6 +27,15 @@ export default {
       showNav: false,
       scrollingNav: true,
     };
+  },
+  computed: {
+    appClass() {
+      return {
+        'scrolling-nav': this.scrollingNav,
+        'normal-nav': !this.scrollingNav,
+        'a11y-enlace': this.$store.getters.tieneEnlacesSubrayados,
+      };
+    },
   },
   methods: {
     onScroll() {
@@ -71,7 +80,7 @@ export default {
 
 <style lang="scss">
 @import '@/scss/app.scss';
-.scrollingNav {
+.scrolling-nav {
   .header {
     position: fixed;
     top: -50px;
@@ -93,7 +102,7 @@ export default {
     }
   }
 }
-.normalNav {
+.normal-nav {
   .header {
     position: sticky;
     top: 0;
