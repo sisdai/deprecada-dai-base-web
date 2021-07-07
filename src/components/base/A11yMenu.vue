@@ -34,7 +34,7 @@
         <span class="icon"><img src="@/assets/img/base/a11y-enlaces.png" alt=""></span>
         <span class="text">Enlaces subrayados</span>
       </button>
-      <button class="a11y-opt" type="button">
+      <button class="a11y-opt" type="button" @click="restablecerEstilo">
         <span class="icon"><img src="@/assets/img/base/a11y-restablecer.png" alt=""></span>
         <span class="text">Restablecer</span>
       </button>
@@ -66,6 +66,10 @@ export default {
     },
     alternarEnlacesSubrayados() {
       this.$store.commit('alternarEnlacesSubrayados');
+    },
+    restablecerEstilo() {
+      this.$store.commit('quitarVistaSimplificada');
+      this.$store.commit('quitarEnlacesSubrayados');
     },
   },
 };

@@ -61,8 +61,14 @@ export default new Vuex.Store({
     alternarVistaSimplificada(state) {
       state.vista_simplificada = !state.vista_simplificada;
     },
+    quitarVistaSimplificada(state) {
+      state.vista_simplificada = false;
+    },
     alternarEnlacesSubrayados(state) {
       state.enlaces_subrayados = !state.enlaces_subrayados;
+    },
+    quitarEnlacesSubrayados(state) {
+      state.enlaces_subrayados = false;
     },
   },
   actions: {
