@@ -2,7 +2,10 @@
   <div>
     <div class="cover">
       <div class="cover-gradient">
-        <img class="cover-logos" src="@/assets/img/base/logos-gob-conacyt.svg"/>
+        <img
+          class="cover-logos"
+          src="@/assets/img/base/logos-gob-conacyt.svg"
+          alt="Gobierno de México y CONACYT"/>
         <h1 class="cover-title">Inicio</h1>
         <h2 class="cover-subtitle">
           Un capítulo del Ecosistema Nacional Informático de PRONACE<br>
@@ -11,7 +14,7 @@
       </div>
     </div>
     <div class="container text m-t-3 m--b-2">
-      <img src="@/assets/img/base/firma_compuesta.svg" alt="">
+      <img src="@/assets/img/base/firma_compuesta.svg" alt="Gobierno de México y CONACYT">
     </div>
     <div class="container text">
       <h2 class="titular-portada m-t-3-sm m-t-4-md m-b-1-sm m-b-2-md m-x-auto" >
@@ -31,16 +34,6 @@
           target="_blank"
           title="LinkCoverImg size full"
           size="full"/>
-        <LinkCoverImg
-          cover="https://picsum.photos/900/800"
-          url="guia-estilos"
-          title="size half"
-          size="half" />
-        <LinkCoverImg
-          cover="https://picsum.photos/800/800"
-          url="guia-estilos"
-          title="size half"
-          size="half" />
         <LinkCoverImg
           cover="https://picsum.photos/700/800"
           url="guia-estilos"

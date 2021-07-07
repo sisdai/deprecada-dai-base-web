@@ -1,10 +1,19 @@
 <template>
   <div class="a11y-container" :class="{'show':hasA11yMenu}">
-    <button class="a11y-toggle" :class="{'open':isOpenA11yMenu}" @click="toggleA11yMenu">
-      <img alt="Herramientas de Accesibilidad" src="@/assets/img/base/a11y-icono.png">
+    <button
+      aria-labelledby="a11y-titulo"
+      data-target="menu-accesibilidad"
+      class="a11y-toggle"
+      :class="{'open':isOpenA11yMenu}"
+      @click="toggleA11yMenu">
+      <img alt="" src="@/assets/img/base/a11y-icono.png">
     </button>
-    <div class="a11y-menu" :class="{'open':isOpenA11yMenu}" @click="toggleA11yMenu">
-      <p class="a11y-title">Herramientas de accesibilidad</p>
+    <div
+      id="menu-accesibilidad"
+      class="a11y-menu"
+      :class="{'open':isOpenA11yMenu}"
+      @click="toggleA11yMenu">
+      <p id="a11y-titulo" class="a11y-title">Herramientas de accesibilidad</p>
       <button class="a11y-opt" type="button">
         <span class="icon"><img src="@/assets/img/base/a11y-contraste.png" alt=""></span>
         <span class="text">Alto contraste</span>
@@ -72,6 +81,7 @@ export default {
 }
 .a11y-toggle {
   background: transparent;
+  border-radius: 50px;
   display: block;
   height: 50px;
   width: 50px;
@@ -85,6 +95,10 @@ export default {
     @media (min-width: map-get($media-queries-limit, "mobile")) {
       margin: -25px;
     }
+  }
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 0 5px rgba(19,113,233,.5);
   }
 }
 .a11y-menu {
@@ -120,6 +134,16 @@ export default {
     .text {
       display: block;
       width: 140px;
+    }
+    &:hover,
+    &:focus {
+      background: rgba(0,0,0,.1);
+      .icon {
+        filter: drop-shadow(0 2px 2px rgba(0,0,0,.4));
+      }
+      .text {
+        text-shadow: 0 1px 1px #fff;
+      }
     }
   }
 }

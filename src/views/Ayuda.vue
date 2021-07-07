@@ -43,7 +43,7 @@
           facilitar el acceso a la información.
         </p>
       </details>
-      <details>
+      <details open>
         <summary>Navegación por medio del teclado</summary>
         <dl class="dl-glosario">
           <dt>
@@ -79,7 +79,7 @@
           </dd>
         </dl>
       </details>
-      <details>
+      <details open>
         <summary>Plugins de lectura</summary>
         <ul class="ul-lista">
           <li>Android Accessibility Suite</li>
@@ -101,14 +101,14 @@
           <li>Zoom Page WE (Firefox)</li>
         </ul>
       </details>
-      <details>
+      <details open>
         <summary>Glosario de términos</summary>
         <dl class="dl-glosario">
           <dt>Término:</dt>
           <dd>Descripción.</dd>
         </dl>
       </details>
-      <details>
+      <details open>
         <summary>Glosario de abreviaturas</summary>
         <ul class="ul-glosario">
           <li>
@@ -180,7 +180,7 @@
       content: "";
     }
     &[open] {
-      font-size: .85rem;
+      font-size: 1rem;
       summary {
         font-size: 1.7rem;
       }

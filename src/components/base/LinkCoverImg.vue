@@ -4,8 +4,7 @@
     :href=url
     :target=target
     :rel="target?'noopener noreferrer':false">
-    <img v-if="size!='full'" class="card-cover" :src=cover alt="">
-    <picture class="card-cover-picture" v-if="size=='full'" >
+    <picture class="card-cover-picture">
       <source :srcset="cover_escritorio ? cover_escritorio : cover" media="(min-width: 769px)">
       <img class=card-cover :srcset="cover_movil ? cover_movil : cover" alt="">
     </picture>

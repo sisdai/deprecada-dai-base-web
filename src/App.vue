@@ -1,9 +1,9 @@
 <template>
   <div id="app" :class="appClass">
+    <A11yMenu />
     <Header class="header" :class="{'show':showNav}" />
     <MainNav class="navigation" :class="{'show':showNav}" />
     <router-view class="view" />
-    <A11yMenu />
     <Footer />
   </div>
 </template>
