@@ -26,7 +26,7 @@
         <span class="icon"><img src="@/assets/img/base/a11y-texturas.png" alt=""></span>
         <span class="text">Texturas en visualizaciones</span>
       </button>
-      <button class="a11y-opt" type="button">
+      <button class="a11y-opt" type="button" @click="alternarVistaSimplificada">
         <span class="icon"><img src="@/assets/img/base/a11y-simplificada.png" alt=""></span>
         <span class="text">Vista simplificada</span>
       </button>
@@ -60,6 +60,9 @@ export default {
   methods: {
     toggleA11yMenu() {
       this.$store.commit('toggleA11yMenu');
+    },
+    alternarVistaSimplificada() {
+      this.$store.commit('alternarVistaSimplificada');
     },
     alternarEnlacesSubrayados() {
       this.$store.commit('alternarEnlacesSubrayados');

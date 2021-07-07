@@ -10,6 +10,7 @@ export default new Vuex.Store({
     openGobNav: false,
     hasA11yMenu: true,
     openA11yMenu: false,
+    vista_simplificada: false,
     enlaces_subrayados: false,
   },
   getters: {
@@ -27,6 +28,9 @@ export default new Vuex.Store({
     },
     isOpenA11yMenu(state) {
       return state.openA11yMenu;
+    },
+    tieneVistaSimplificada(state) {
+      return state.vista_simplificada;
     },
     tieneEnlacesSubrayados(state) {
       return state.enlaces_subrayados;
@@ -53,6 +57,9 @@ export default new Vuex.Store({
     },
     toggleA11yMenu(state) {
       state.openA11yMenu = !state.openA11yMenu;
+    },
+    alternarVistaSimplificada(state) {
+      state.vista_simplificada = !state.vista_simplificada;
     },
     alternarEnlacesSubrayados(state) {
       state.enlaces_subrayados = !state.enlaces_subrayados;

@@ -17,9 +17,52 @@
       text-decoration: underline;
     }
   }
-  // componentes
   .link-cover-img .link:not(.degradado-activo) {
-    background: linear-gradient(rgba(0,0,0,0) 70%, rgba(0,0,0,.9));
+    background: linear-gradient(rgba(0,0,0,0) 60%, rgba(0,0,0,.1) 70%, rgba(0,0,0,.9));
     color: #fff;
+  }
+}
+
+#app.a11y-simplificada {
+  &.scrolling-nav {
+    .header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 9999;
+      transition: top .2s ease-in-out;
+      &.show {
+        top: 0;
+      }
+    }
+    .navigation {
+      position: fixed;
+      top: 50px;
+      z-index: 9998;
+      width: 100%;
+      transition: top .2s ease-in-out;
+      &.show {
+        top: 50px;
+      }
+    }
+    .view {
+      padding-top: 50px;
+    }
+  }
+  .cover {
+    display: none;
+  }
+  .link-cover-img {
+    height: 100px;
+  }
+  .link-cover-img .link,
+  .link-cover-img .link:not(.degradado-activo) {
+    background: map-get($color-link, "focus-fondo");
+    color: map-get($color-link, "focus-texto");
+    &:hover,
+    &:focus {
+      background: map-get($color-link, "hover-fondo");
+      color: map-get($color-link, "hover-texto");
+    }
   }
 }
