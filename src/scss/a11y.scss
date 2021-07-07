@@ -23,7 +23,13 @@
   }
 }
 
+.ally-simplificada-block {
+  display: none;
+}
 #app.a11y-simplificada {
+  .ally-simplificada-block {
+    display: block;
+  }
   &.scrolling-nav {
     .header {
       position: sticky;

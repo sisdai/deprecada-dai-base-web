@@ -13,7 +13,7 @@
         </h2>
       </div>
     </div>
-    <div class="container text m-t-3 m--b-2">
+    <div class="container text m-t-3 m--b-2 ally-simplificada-block">
       <img src="@/assets/img/base/firma_compuesta.svg" alt="Gobierno de México y CONACYT">
     </div>
     <div class="container text">
