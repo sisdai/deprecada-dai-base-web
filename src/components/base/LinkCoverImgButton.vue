@@ -4,19 +4,25 @@
     :href=url
     :target=target
     :rel="target?'noopener noreferrer':false">
-    <picture class="card-cover-picture">
+    <img v-if="size!='full'" class="card-cover" :src=cover alt="">
+    <picture class="card-cover-picture" v-if="size=='full'" >
       <source :srcset="cover_escritorio ? cover_escritorio : cover" media="(min-width: 769px)">
       <img class=card-cover :srcset="cover_movil ? cover_movil : cover" alt="">
     </picture>
-    <h3 class="card-title link" :class="{'degradado-activo':degradado_activo}">
-      <span class="a11y-contraste-fondo">{{title}}</span>
-    </h3>
+    <span class="card-button">
+      <span class="card-title">
+        {{ title }}
+      </span>
+      <span class="btn-ir">
+        <span class="icono-descargar"></span>
+      </span>
+    </span>
   </a>
 </template>
 
 <script>
 export default {
-  name: 'LinkCoverImg',
+  name: 'LinkCoverImgButton',
   props: {
     url: {
       type: String,
@@ -52,12 +58,12 @@ export default {
 <style scoped lang="scss">
 $altura_card: 240px;
 .link-cover-img {
-  background-color: #505050;
+  border-radius: 0;
+  background-color: transparent;
   box-sizing: border-box;
-  border-radius: 5px;
-  height: $altura_card;
-  flex: 1 0 100%;
+  display: block;
   overflow: hidden;
+  height: auto;
   position: relative;
   padding: 0;
   &:not(:last-child){
@@ -66,12 +72,6 @@ $altura_card: 240px;
   @media (min-width: map-get($media-queries-limit, "mobile")) {
     &:not(:last-child){
       margin-bottom: 0;
-    }
-  }
-  &:hover {
-    .card-cover {
-      border-width: 5px;
-      opacity: .9;
     }
   }
   &:focus {
@@ -88,38 +88,56 @@ $altura_card: 240px;
     height: $altura_card;
     box-sizing: border-box;
     border: 0 solid #505050;
-    border-radius: 5px;
     object-fit: cover;
     object-position: 50% 50%;
     opacity: 1;
     width: 100%;
-    transition:
-      border-color .27s ease-in-out,
-      border-width .27s ease-in-out,
-      opacity .3s ease-in-out;
   }
-  .card-title {
-    box-sizing: content-box;
-    font-size: map-get($fuente, "size-subtitulo");
-    font-weight: 600;
-    line-height: 1.2em;
-    color: transparent;
+  .card-button {
+    margin-bottom: 0;
     display: flex;
-    align-items: flex-end;
-    padding: $gap*.35 $gap*.5;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 9;
-    background: rgba(0,0,0,0);
-    &.degradado-activo {
-      background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,.9));
+    position: relative;
+    top: -5px;
+    background: #000;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 6.5px 13px;
+    border-radius: 5px;
+    max-width: 100%;
+    width: max-content;
+    transform: translateY(-50%);
+    span.card-title{
       color: #fff;
+      flex: 1;
+    }
+    span.btn-ir{
+      background: #F0F0F0;
+      border-radius: 50%;
+      width: 30px;
+      min-width:30px;
+      height: 30px;
+      margin-left: 20px;
+      display:inline-block;
+      position: relative;
+      transition: margin-left .27s ease-in-out;
+      span.icono-descargar{
+        color: #000;
+        font-size: 32px;
+        transform: rotate(-90deg);
+        display: block;
+        position:absolute;
+        left: 6px;
+        top: -6px;
+      }
     }
   }
+
+  &:hover,
+    &:focus {
+      span.btn-ir{
+        margin-left: 50px;
+      }
+    }
 }
 .half {
   max-width: calc(50% - #{$gap*.25});

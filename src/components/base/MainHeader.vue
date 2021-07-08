@@ -9,9 +9,17 @@
           width="124px"
           height="36px">
         </link-gob>
-        <BtnNavMob @click.native="toggleMenu" :class="{'open':isOpenGobNav}" />
+        <BtnNavMob
+          aria-expanded="false"
+          aria-controls="navegacion-gobierno"
+          @click.native="toggleMenu"
+          :class="{'open':isOpenGobNav}" />
       </nav>
-      <nav class="nav-gob" :class="{'open':isOpenGobNav}">
+      <nav
+        id="navegacion-gobierno"
+        aria-label="Navegación del Gobierno de México"
+        class="nav-gob"
+        :class="{'open':isOpenGobNav}">
         <link-gob url="https://mivacuna.salud.gob.mx/index.php" parent="ph-mx">Registro para vacunación</link-gob>
         <link-gob url="https://coronavirus.gob.mx/" parent="ph-mx">Información sobre COVID-19</link-gob>
         <link-gob url="https://www.gob.mx/tramites/" parent="ph-mx">Trámites</link-gob>

@@ -4,13 +4,13 @@
       <div class="flex">
         <img
           src="@/assets/img/base/gobmx.svg"
-          alt="Gobierno de México."
+          alt="Gobierno de México"
           width="200px"
           height="60px">
       </div>
       <nav class="flex">
         <p class="footer-titulo">
-          Enlaces <span class="a11y-solo-lectura">del Gobierno de México.</span>
+          Enlaces<span class="a11y-solo-lectura">.</span>
         </p>
         <link-gob url="https://participa.gob.mx/" parent="pf-mx">
           Participa
@@ -18,10 +18,10 @@
         <link-gob url="https://www.gob.mx/publicaciones" parent="pf-mx">
           Publicaciones Oficiales
         </link-gob>
-        <link-gob url="https://participa.gob.mx/" parent="pf-mx">
+        <link-gob url="http://www.ordenjuridico.gob.mx/" parent="pf-mx">
           Marco Jurídico
         </link-gob>
-        <link-gob url="https://participa.gob.mx/" parent="pf-mx">
+        <link-gob url="https://consultapublicamx.inai.org.mx/vut-web/faces/view/consultaPublica.xhtml" parent="pf-mx">
           Plataforma Nacional de Transparencia
         </link-gob>
       </nav>
@@ -64,7 +64,10 @@
           <link-social url="https://www.facebook.com/gobmx" icono="social-facebook" spanglish="feisbuk " />
           <link-social url="https://twitter.com/gobmx" icono="social-twitter" spanglish=" y tuiter." />
         </p>
-        <img src="@/assets/img/base/gobmx-2021.png" alt="" class="footer-2021">
+        <img
+          src="@/assets/img/base/gobmx-2021.png"
+          alt="México 2021. Año de la independencia."
+          class="footer-2021">
       </nav>
     </MainContainer>
   </footer>

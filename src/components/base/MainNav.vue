@@ -2,9 +2,18 @@
   <nav v-if="hasMainNav" class="main-nav">
     <MainContainer class="flex">
       <div class="main-nav-top">
-        <BtnNavMob @click.native="toggleMenu" :class="{'open':isOpenMainNav}" />
+        <BtnNavMob
+          @click.native="toggleMenu"
+          :class="{'open':isOpenMainNav}"
+          aria-expanded="false"
+          aria-controls="navegacion-principal"/>
       </div>
-      <div class="main-nav-menu" :class="{'open':isOpenMainNav}" @click="toggleMenu">
+      <div
+        aria-label="Navegación principal"
+        id="navegacion-principal"
+        class="main-nav-menu"
+        :class="{'open':isOpenMainNav}"
+        @click="toggleMenu">
         <a class="main-nav-external-link" href="#" target="_blank" rel="noopener">
           Ir a ENI (nombre)
         </a>

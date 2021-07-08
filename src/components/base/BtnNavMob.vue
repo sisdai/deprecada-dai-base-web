@@ -1,5 +1,6 @@
 <template>
   <button class="btn-nav-mob" type="button">
+    <span class="a11y-solo-lectura">Menú</span>
     <span class="btn-icon"></span>
   </button>
 </template>

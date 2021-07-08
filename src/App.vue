@@ -1,9 +1,9 @@
 <template>
-  <div id="app" :class="[scrollingNav ? 'scrollingNav': 'normalNav']">
+  <div id="app" :class="appClass">
+    <A11yMenu />
     <Header class="header" :class="{'show':showNav}" />
     <MainNav class="navigation" :class="{'show':showNav}" />
     <router-view class="view" />
-    <A11yMenu />
     <Footer />
   </div>
 </template>
@@ -27,6 +27,17 @@ export default {
       showNav: false,
       scrollingNav: true,
     };
+  },
+  computed: {
+    appClass() {
+      return {
+        'scrolling-nav': this.scrollingNav,
+        'normal-nav': !this.scrollingNav,
+        'a11y-contraste': this.$store.getters.tieneAltoContraste,
+        'a11y-simplificada': this.$store.getters.tieneVistaSimplificada,
+        'a11y-enlace': this.$store.getters.tieneEnlacesSubrayados,
+      };
+    },
   },
   methods: {
     onScroll() {
@@ -71,7 +82,7 @@ export default {
 
 <style lang="scss">
 @import '@/scss/app.scss';
-.scrollingNav {
+.scrolling-nav {
   .header {
     position: fixed;
     top: -50px;
@@ -93,7 +104,7 @@ export default {
     }
   }
 }
-.normalNav {
+.normal-nav {
   .header {
     position: sticky;
     top: 0;
@@ -117,5 +128,9 @@ export default {
   .view {
     padding-top: 50px;
   }
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 </style>
