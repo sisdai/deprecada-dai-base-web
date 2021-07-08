@@ -10,16 +10,17 @@
     </button>
     <div
       id="menu-accesibilidad"
-      class="a11y-menu"
-      :class="{'abierto':isOpenA11yMenu}"
+      :class="{'a11y-menu':true, 'abierto':isOpenA11yMenu}"
       @click="toggleA11yMenu">
       <p id="a11y-titulo" class="a11y-title">Herramientas de accesibilidad</p>
       <button
-        class="a11y-opcion"
-        :class="{'prendido':tieneAltoContraste}"
+        :class="{'a11y-opcion':true, 'prendido':tieneAltoContraste}"
         type="button"
         @click="alternarAltoContraste">
-        <span class="icono"><img src="@/assets/img/base/a11y-contraste.png" alt=""></span>
+        <span class="icono">
+          <img v-if="tieneAltoContraste" src="@/assets/img/base/a11y-contraste.svg" alt="">
+          <img v-else src="@/assets/img/base/a11y-contraste.png" alt="">
+        </span>
         <span class="nombre">Alto contraste</span>
       </button>
       <!-- <button class="a11y-opcion" type="button">
@@ -35,7 +36,10 @@
         :class="{'prendido':tieneVistaSimplificada}"
         type="button"
         @click="alternarVistaSimplificada">
-        <span class="icono"><img src="@/assets/img/base/a11y-simplificada.png" alt=""></span>
+        <span class="icono">
+          <img v-if="tieneVistaSimplificada" src="@/assets/img/base/a11y-simplificada.svg" alt="">
+          <img v-else src="@/assets/img/base/a11y-simplificada.png" alt="">
+        </span>
         <span class="nombre">Vista simplificada</span>
       </button>
       <button
@@ -43,7 +47,10 @@
         :class="{'prendido':tieneEnlacesSubrayados}"
         type="button"
         @click="alternarEnlacesSubrayados">
-        <span class="icono"><img src="@/assets/img/base/a11y-enlaces.png" alt=""></span>
+        <span class="icono">
+          <img v-if="tieneEnlacesSubrayados" src="@/assets/img/base/a11y-enlaces.svg" alt="">
+          <img v-else src="@/assets/img/base/a11y-enlaces.png" alt="">
+        </span>
         <span class="nombre">Enlaces subrayados</span>
       </button>
       <button class="a11y-opcion" type="button" @click="restablecerEstilo">
@@ -155,7 +162,7 @@ export default {
     font-size: map-get($fuente, "size-primario");
     background: transparent;
     border-radius: 0;
-    color: #141414;
+    color: map-get($color-boton, "fondo");
     align-items: center;
     padding: 10px 40px 5px;
     margin: 0;
@@ -163,25 +170,26 @@ export default {
     .icono {
       display: block;
       width: 70px;
+      transition: all .3s ease-in-out;
     }
     .nombre {
       display: block;
       width: 140px;
     }
     &.prendido {
-      background: rgba(0,0,0,.1);
-      .icono {
-        filter: drop-shadow(0 2px 2px rgba(0,0,0,.4));
-      }
+      background: map-get($color-boton, "hover-fondo");
       .nombre {
-        text-shadow: 0 1px 1px #fff;
-        font-weight: bold;
+        color: map-get($color-boton, "hover-texto");
       }
     }
     &:hover,
     &:focus {
-      background: rgba(0,0,0,.15);
+      background: rgba(0,0,0,.2);
+      .icono {
+        filter: drop-shadow(0 2px 2px rgba(0,0,0,.5));
+      }
       .nombre {
+        color: map-get($color-boton, "fondo");
         text-shadow: 0 1px 1px #fff;
       }
     }
