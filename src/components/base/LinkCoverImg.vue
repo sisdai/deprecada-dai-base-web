@@ -9,7 +9,7 @@
       <img class=card-cover :srcset="cover_movil ? cover_movil : cover" alt="">
     </picture>
     <h3 class="card-title link" :class="{'degradado-activo':degradado_activo}">
-      {{title}}
+      <span class="a11y-contraste-fondo">{{title}}</span>
     </h3>
   </a>
 </template>

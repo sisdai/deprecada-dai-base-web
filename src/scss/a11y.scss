@@ -8,9 +8,27 @@
   white-space: nowrap;
 }
 
+// .a11y-contraste-fondo,
+// .a11y-contraste-fondo-inverso {
+// }
+#app.a11y-contraste {
+  .a11y-contraste-fondo {
+    background: map-get($a11y-contraste, "fondo");
+    color: map-get($a11y-contraste, "texto");
+  }
+  .a11y-contraste-fondo-inverso {
+    background: map-get($a11y-contraste, "texto");
+    color: map-get($a11y-contraste, "fondo");
+  }
+}
+
+.a11y-enlace-subrayado {
+  text-decoration: inherit;
+}
 #app.a11y-enlace {
   a,
-  .link {
+  .link,
+  .a11y-enlace-subrayado {
     text-decoration: underline;
     &:hover,
     &:focus {
@@ -23,11 +41,11 @@
   }
 }
 
-.ally-simplificada-block {
+.a11y-simplificada-block {
   display: none;
 }
 #app.a11y-simplificada {
-  .ally-simplificada-block {
+  .a11y-simplificada-block {
     display: block;
   }
   &.scrolling-nav {
@@ -69,6 +87,11 @@
     &:focus {
       background: map-get($color-link, "hover-fondo");
       color: map-get($color-link, "hover-texto");
+    }
+    .a11y-contraste-fondo,
+    .a11y-contraste-fondo-inverso {
+      background: inherit;
+      color: inherit;
     }
   }
 }

@@ -3,17 +3,17 @@
     <div class="cover">
       <div class="cover-gradient">
         <img
-          class="cover-logos"
+          class="cover-logos a11y-contraste-fondo"
           src="@/assets/img/base/logos-gob-conacyt.svg"
           alt="Gobierno de México y CONACYT"/>
-        <h1 class="cover-title">Inicio</h1>
-        <h2 class="cover-subtitle">
+        <h1 class="cover-title a11y-contraste-fondo">Inicio</h1>
+        <h2 class="cover-subtitle a11y-contraste-fondo">
           Un capítulo del Ecosistema Nacional Informático de PRONACE<br>
           (el subtitulo solo va en capítulos)*
         </h2>
       </div>
     </div>
-    <div class="container text m-t-3 m--b-2 ally-simplificada-block">
+    <div class="container text m-t-3 m--b-2 a11y-simplificada-block">
       <img src="@/assets/img/base/firma_compuesta.svg" alt="Gobierno de México y CONACYT">
     </div>
     <div class="container text">
