@@ -7,7 +7,7 @@
           <slot name="encabezado"/>
           <button v-if="posicion_boton == 'arriba'"
             class="btn-icono icono-cerrar modal-cerrar"
-            @click="cerrarModal()">
+           @click="cerrarModal()">
           </button>
         </div>
 
@@ -91,25 +91,25 @@ export default {
     box-shadow: none;
     color:#000;
     font-weight: 700;
+    margin-left: auto;
     &:hover{
       color:#000
     }
   }
   &-encabezado {
-    padding: 20px 20px 10px;
+    padding: 0 20px 0 20px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
   }
   &-cuerpo {
-    padding: 10px 20px 10px;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    padding: 0 20px 0 20px;
+    //display: flex;
+    //flex-direction: column;
+    //align-items: stretch;
   }
   &-pie {
-    padding: 10px 20px 20px;
+    padding: 0 20px 10px 20px;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
