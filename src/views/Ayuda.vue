@@ -8,44 +8,6 @@
     <div class="container">
       <div class="ayuda-contenido m-b-4-md">
         <h2 class="sub-titulo m-t-2 m-t-3-md">
-          Declaración de Accesibilidad
-        </h2>
-        <p>
-          CONACYT tiene el compromiso de facilitar el uso y acceso a la información
-          al mayor número de público posible. Nuestro sitio web cuenta con diversos
-          recursos de accesibilidad apegados a las estrategias, estándares y recursos
-          de Apoyo de la Iniciativa para la Accesibilidad Web* (WAI por sus siglas
-          en inglés) y continuamos trabajando en ello. Los recursos de accesibilidad
-          con los que contamos son:
-        </p>
-        <ul>
-          <li>
-            Navegación por teclado
-          </li>
-          <li>
-            Accesibilidad de lectores de pantalla para describir el contenido que
-            estamos navegando en el sitio
-          </li>
-          <li>
-            Paleta de color para facilitar la lectura para personas que padecen la
-            mayoría de las variantes de daltonismo
-          </li>
-          <li>
-            Tamaño y contraste de texto legible para personas que tienen
-            dificultades de visión
-          </li>
-          <li>
-            Contenido que puede aumentarse el tamaño utilizando los controles
-            estándar de los navegadores
-          </li>
-        </ul>
-        <p>
-          Si tienes algún comentario o sugerencia relacionada con la accesibilidad
-          de nuestro sitio ponte en contacto, tus comentarios ayudarán a mejorar y
-          facilitar el acceso a la información.
-        </p>
-
-        <h2 class="sub-titulo m-t-2 m-t-4-md">
           Navegación por medio del teclado
         </h2>
         <dl>
@@ -81,6 +43,27 @@
             Desplaza contenido, mueve o selecciona botones de radio dentro de un grupo.
           </dd>
         </dl>
+
+        <h2 class="sub-titulo m-t-2 m-t-4-md">Plugins de lectura</h2>
+        <ul>
+          <li>Android Accessibility Suite</li>
+          <li>Job Access With Speech (JAWS)</li>
+          <li>NonVisual Desktop Access</li>
+          <li>Orca</li>
+          <li>VoiceOver (iOS)</li>
+          <li>VoiceOver (macOS)</li>
+          <li>Emacspeak (Linux)</li>
+          <li>Spoken Web (Internet Explorer)</li>
+          <li>ChromeVox (Google Chrome)</li>
+        </ul>
+        <p>
+          Otros para ayudar a personas que no han perdido completamente la vista son para
+          agrandar el texto y agregar contraste.
+        </p>
+        <ul>
+          <li>A+ FontSize Changer Lite (Chrome)</li>
+          <li>Zoom Page WE (Firefox)</li>
+        </ul>
       </div>
     </div>
     <!-- <div class="help-grid container">
