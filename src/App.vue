@@ -129,4 +129,8 @@ export default {
     padding-top: 50px;
   }
 }
+
+.overflow-hidden {
+  overflow: hidden;
+}
 </style>

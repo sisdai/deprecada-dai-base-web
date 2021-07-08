@@ -309,6 +309,79 @@
       <span class="icono-sm icono-check"></span>
       <span class="icono-sm icono-descargar"></span>
       <span class="icono-sm icono-atras"></span>
+
+      <hr>
+      <h2>Modales</h2>
+      <button type="button" class="btn-bold" @click="$refs.nombre_modal_1.abrirModal()">
+        Ejemplo 1
+      </button>
+      <button type="button" class="btn-bold" @click="$refs.nombre_modal_2.abrirModal()">
+        Ejemplo 2
+      </button>
+      <button type="button" class="btn-bold" @click="$refs.nombre_modal_3.abrirModal()">
+        Ejemplo 3
+      </button>
+      <modal ref="nombre_modal_1" :posicion_boton="'arriba'">
+        <template v-slot:cuerpo>
+          <Carousel
+            :id='"carrusel_1"'
+            :lista='[["https://picsum.photos/300/300","pie de foto 1"],
+              ["https://picsum.photos/300/301","pie de foto 2"],
+              ["https://picsum.photos/300/302","pie de foto 3"],
+              ["https://picsum.photos/300/303","pie de foto 4"],]'
+          />
+        </template>
+        <template v-slot:pie>
+          <div>
+          </div>
+        </template>
+      </modal>
+      <modal ref="nombre_modal_2" :posicion_boton="'arriba'">
+        <template v-slot:encabezado>
+          <p class="texto-alto">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit,
+            integer habitasse taciti facilisi per rhoncus, aliquet
+            dis fringilla faucibus parturient elementum.
+          </p>
+        </template>
+        <template v-slot:cuerpo>
+          <LinkCoverImgButton
+            cover="https://picsum.photos/1200/800"
+            url="http://google.com"
+            target="_blank"
+            title="Lorem"
+            size="full"
+          />
+        </template>
+        <template v-slot:pie>
+          <div>
+          </div>
+        </template>
+      </modal>
+
+      <modal ref="nombre_modal_3" :posicion_boton="'abajo'">
+        <template v-slot:encabezado>
+          <div>
+            <p class="texto-alto">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit,
+              integer habitasse taciti facilisi per rhoncus, aliquet
+              dis fringilla faucibus parturient elementum.
+            </p>
+          </div>
+        </template>
+        <template v-slot:cuerpo>
+          <LinkCoverImgButton
+            cover="https://picsum.photos/1200/800"
+            url="http://google.com"
+            target="_blank"
+            title="Lorem"
+            size="full"
+          />
+        </template>
+        <template v-slot:pie>
+          <a href="#">Leer documentos fundamentales</a>
+        </template>
+      </modal>
     </div>
   </div>
 </template>
@@ -316,12 +389,18 @@
 <script>
 import GridLinkCoverImg from '@/components/base/GridLinkCoverImg.vue';
 import LinkCoverImg from '@/components/base/LinkCoverImg.vue';
+import Modal from '@/components/base/Modal.vue';
+import LinkCoverImgButton from '@/components/base/LinkCoverImgButton.vue';
+import Carousel from '@/components/base/Carousel.vue';
 
 export default {
   name: 'GuiaEstilos',
   components: {
     GridLinkCoverImg,
     LinkCoverImg,
+    Modal,
+    LinkCoverImgButton,
+    Carousel,
   },
 };
 </script>
