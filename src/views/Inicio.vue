@@ -8,17 +8,26 @@
           alt="Gobierno de México y CONACYT"/>
         <h1 class="cover-title a11y-contraste-fondo">Inicio</h1>
         <h2 class="cover-subtitle a11y-contraste-fondo">
-          Un capítulo del Ecosistema Nacional Informático de PRONACE<br>
-          (el subtitulo solo va en capítulos)*
+          Un capítulo del Ecosistema Nacional Informático de {{obtenerNombreEni}}
+          <!-- borrenme --><br>(el subtitulo solo va en capítulos)*
         </h2>
       </div>
     </div>
     <div class="container text m-t-3 m--b-2 a11y-simplificada-block">
       <img src="@/assets/img/base/firma_compuesta.svg" alt="Gobierno de México y CONACYT">
+      <h2 class="titular-portada m-t-3-sm m-t-4-md m-x-auto">
+        Inicio
+        <!-- borrenme --><br>(el titulo en vista simplificada solo va en capítulos)*
+      </h2>
+      <h2 class="titular-portada sub m-x-auto">
+        Un capítulo del Ecosistema Nacional Informático de {{obtenerNombreEni}}
+        <!-- borrenme --><br>(el subtitulo solo va en capítulos)*
+      </h2>
     </div>
     <div class="container text">
       <h2 class="titular-portada m-t-3-sm m-t-4-md m-b-1-sm m-b-2-md m-x-auto" >
-        Ecosistema Nacional Informático de PRONACE (este titulo solo va en portadas de ENIs)*
+        Ecosistema Nacional Informático de {{obtenerNombreEni}}
+        <br>(este titulo solo va en portadas de ENIs)*
       </h2>
       <p class="texto-alto">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -59,6 +68,11 @@ export default {
   components: {
     GridLinkCoverImg,
     LinkCoverImg,
+  },
+  computed: {
+    obtenerNombreEni() {
+      return this.$store.getters.obtenerNombreEni;
+    },
   },
 };
 </script>
