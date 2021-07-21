@@ -27,6 +27,15 @@ npm install
 ```
 
 ## Configuración
+### Metadados
+El `index.html` dentro de la carpeta `public/` tiene en el `head` los meta tags de OpenGraph y TwCard para compartir en redes. Los metadatos de titulo y descripcion se cargan con las variables de entorno. Pero es necesario escribir los siguientes datos, dependiendo de las rutas absolutas del proyecto en producción.
+
+```html
+<meta property="og:url" content=" " />
+<meta property="og:image" content=" " />
+<meta name="twitter:image" content=" ">
+```
+
 ### Título y Descripción
 Las variables de título y descripción se utilizan en los meta tags de la cabecera del html y como parte del mensaje de alerta cuando no se tiene activado javascript en el navegador.
 
