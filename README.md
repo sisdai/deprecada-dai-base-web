@@ -53,6 +53,14 @@ Edita las variables en el archivo `.env`, `.env.pruebas` y `env.production` en l
 VUE_APP_ENI_DOMAIN = https://url-del-eni.conacyt.mx
 ```
 
+### Matomo siteId
+Si esta variable `VUE_APP_MATOMO_SITEID` es diferente de 0 se configura la libreria de vue-matomo para la aplicación. Se puede utilizar en cualquier ambiente, por si se necesitaran hacer pruebas en el sitio de desarrollo.
+
+Edita la variable en el archivo `.env`, `.env.pruebas` y `env.production` en la raiz del proyecto.
+```
+VUE_APP_MATOMO_SITEID = 0
+```
+
 ### Configuración para entorno local
 La variable `VUE_APP_BASE_ROUTE` en el archivo `.env` apuntando a raiz.
 ```
