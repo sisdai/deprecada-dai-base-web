@@ -45,6 +45,14 @@ VUE_APP_TITLE = titulo nuevo del proyecto
 VUE_APP_DESCRIPTION = descripción del proyecto
 ```
 
+### ENI domain
+Esta variable se utilizan en los meta tags de la cabecera del html. Para escribir la base de rutas de los capítulos y subcapítulos, ligandolos al entorno para el que se compila
+
+Edita las variables en el archivo `.env`, `.env.pruebas` y `env.production` en la raiz del proyecto.
+```
+VUE_APP_ENI_DOMAIN = https://url-del-eni.conacyt.mx
+```
+
 ### Configuración para entorno local
 La variable `VUE_APP_BASE_ROUTE` en el archivo `.env` apuntando a raiz.
 ```

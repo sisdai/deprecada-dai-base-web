@@ -13,6 +13,8 @@ export default new Vuex.Store({
     alto_contraste: false,
     vista_simplificada: false,
     enlaces_subrayados: false,
+
+    nombre_eni: 'nombre_eni_var_store',
   },
   getters: {
     hasMainNav(state) {
@@ -38,6 +40,10 @@ export default new Vuex.Store({
     },
     tieneEnlacesSubrayados(state) {
       return state.enlaces_subrayados;
+    },
+
+    obtenerNombreEni(state) {
+      return state.nombre_eni;
     },
   },
   mutations: {
