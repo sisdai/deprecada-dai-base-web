@@ -1,26 +1,29 @@
 <template>
   <div id="app" :class="appClass">
     <A11yMenu />
-    <Header class="header" :class="{'show':showNav}" />
+    <MainHeader class="header" :class="{'show':showNav}" />
     <MainNav class="navigation" :class="{'show':showNav}" />
     <router-view class="view" />
-    <Footer />
+    <MainInfo />
+    <MainFooter />
   </div>
 </template>
 
 <script>
-import Header from '@/components/base/MainHeader.vue';
+import MainHeader from '@/components/base/MainHeader.vue';
 import MainNav from '@/components/base/MainNav.vue';
 import A11yMenu from '@/components/base/A11yMenu.vue';
-import Footer from '@/components/base/MainFooter.vue';
+import MainInfo from '@/components/base/MainInfo.vue';
+import MainFooter from '@/components/base/MainFooter.vue';
 
 export default {
   name: 'App',
   components: {
-    Header,
+    MainHeader,
     MainNav,
     A11yMenu,
-    Footer,
+    MainInfo,
+    MainFooter,
   },
   data() {
     return {
@@ -62,7 +65,6 @@ export default {
     this.calHeight();
   },
   updated() {
-    console.log(this.$route.name);
     if (this.$route.name === 'Inicio') {
       this.scrollingNav = true;
     } else {

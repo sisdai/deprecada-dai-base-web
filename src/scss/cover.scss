@@ -1,6 +1,5 @@
 .cover {
   background: #223;
-  background-image: url(https://picsum.photos/1200/1000);
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -11,15 +10,14 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  @media (min-width: map-get($media-queries-limit, "mobile")) {
-    background-image: url(https://picsum.photos/1200/1000);
-  }
 }
 .cover-gradient {
   background: linear-gradient( rgba(0,0,0,.0), rgba(0,0,0,1));
   box-sizing: border-box;
   padding: $gap*3 $gap*.5;
   flex: 1;
+  position: relative;
+  z-index: 2;
   .cover-logos {
     margin-top: 200px;
     @media (min-width: map-get($media-queries-limit, "mobile")) {

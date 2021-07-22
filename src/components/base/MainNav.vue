@@ -14,8 +14,8 @@
         class="main-nav-menu"
         :class="{'open':isOpenMainNav}"
         @click="toggleMenu">
-        <a class="main-nav-external-link" href="#" target="_blank" rel="noopener">
-          Ir a ENI (nombre)
+        <a class="main-nav-external-link" :href="domain" target="_blank" rel="noopener">
+          Ir a ENI {{obtenerNombreEni}}
         </a>
         <router-link class="main-nav-link" to="/">Inicio</router-link>
         <router-link class="main-nav-link" to="/guia-estilos">Guia de estilos</router-link>
@@ -35,6 +35,11 @@ export default {
     MainContainer,
     BtnNavMob,
   },
+  data() {
+    return {
+      domain: process.env.VUE_APP_ENI_DOMAIN,
+    };
+  },
   methods: {
     toggleMenu() {
       this.$store.commit('toggleMainNav');
@@ -46,6 +51,9 @@ export default {
     },
     isOpenMainNav() {
       return this.$store.getters.isOpenMainNav;
+    },
+    obtenerNombreEni() {
+      return this.$store.getters.obtenerNombreEni;
     },
   },
 };

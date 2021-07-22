@@ -27,6 +27,15 @@ npm install
 ```
 
 ## Configuración
+### Metadados
+El `index.html` dentro de la carpeta `public/` tiene en el `head` los meta tags de OpenGraph y TwCard para compartir en redes. Los metadatos de titulo y descripcion se cargan con las variables de entorno. Pero es necesario escribir los siguientes datos, dependiendo de las rutas absolutas del proyecto en producción.
+
+```html
+<meta property="og:url" content=" " />
+<meta property="og:image" content=" " />
+<meta name="twitter:image" content=" ">
+```
+
 ### Título y Descripción
 Las variables de título y descripción se utilizan en los meta tags de la cabecera del html y como parte del mensaje de alerta cuando no se tiene activado javascript en el navegador.
 
@@ -34,6 +43,22 @@ Edita las variables en el archivo `.env`, `.env.pruebas` y `env.production` en l
 ```
 VUE_APP_TITLE = titulo nuevo del proyecto
 VUE_APP_DESCRIPTION = descripción del proyecto
+```
+
+### ENI domain
+Esta variable se utilizan en los meta tags de la cabecera del html. Para escribir la base de rutas de los capítulos y subcapítulos, ligandolos al entorno para el que se compila
+
+Edita las variables en el archivo `.env`, `.env.pruebas` y `env.production` en la raiz del proyecto.
+```
+VUE_APP_ENI_DOMAIN = https://url-del-eni.conacyt.mx
+```
+
+### Matomo siteId
+Si esta variable `VUE_APP_MATOMO_SITEID` es diferente de 0 se configura la libreria de vue-matomo para la aplicación. Se puede utilizar en cualquier ambiente, por si se necesitaran hacer pruebas en el sitio de desarrollo.
+
+Edita la variable en el archivo `.env`, `.env.pruebas` y `env.production` en la raiz del proyecto.
+```
+VUE_APP_MATOMO_SITEID = 0
 ```
 
 ### Configuración para entorno local

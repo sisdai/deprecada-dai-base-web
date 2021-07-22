@@ -13,6 +13,12 @@ export default new Vuex.Store({
     alto_contraste: false,
     vista_simplificada: false,
     enlaces_subrayados: false,
+
+    nombre_eni: 'nombre_eni_var_store',
+
+    version_proyecto: process.env.PACKAGE_VERSION,
+    actualizacion_proyecto: process.env.DATE_DEPLOY,
+    entorno_proyecto: process.env.ENV_DEPLOY,
   },
   getters: {
     hasMainNav(state) {
@@ -38,6 +44,20 @@ export default new Vuex.Store({
     },
     tieneEnlacesSubrayados(state) {
       return state.enlaces_subrayados;
+    },
+
+    obtenerNombreEni(state) {
+      return state.nombre_eni;
+    },
+
+    versionProyecto(state) {
+      return state.version_proyecto;
+    },
+    actualizacionProyecto(state) {
+      return state.actualizacion_proyecto;
+    },
+    entornoProyecto(state) {
+      return state.entorno_proyecto;
     },
   },
   mutations: {

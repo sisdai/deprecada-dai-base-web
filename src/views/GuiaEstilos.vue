@@ -404,3 +404,12 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.cover {
+  background-image: url(https://picsum.photos/800/800);
+  @media (min-width: map-get($media-queries-limit, "mobile")) {
+    background-image: url(https://picsum.photos/1600/1000);
+  }
+}
+</style>
