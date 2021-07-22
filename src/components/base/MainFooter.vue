@@ -79,7 +79,7 @@ import LinkGob from '@/components/base/LinkGob.vue';
 import LinkSocial from '@/components/base/LinkSocial.vue';
 
 export default {
-  name: 'Footer',
+  name: 'MainFooter',
   components: {
     MainContainer,
     LinkGob,
