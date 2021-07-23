@@ -28,6 +28,12 @@
     margin: 10px auto;
     font-size: 36px;
     line-height: 38px;
+    @media (max-width: map-get($media-queries-limit, "mobile") - 1px) {
+      &.cover-title-large {
+        font-size: 30px;
+        line-height: 34px;
+      }
+    }
     @media (min-width: map-get($media-queries-limit, "mobile")) {
       max-width: 700px;
       font-size: 52px;
