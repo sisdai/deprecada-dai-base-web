@@ -39,7 +39,7 @@ export default {
   dt, dd {
     color: #999;
     font-size: 10px;
-    display: inline-block;
+    line-height: 12px;
     padding: 0;
     margin: 0;
     text-align: left;
@@ -48,8 +48,16 @@ export default {
     text-transform: uppercase;
   }
   dd {
-    padding-left: 5px;
-    padding-right: 15px;
+    padding-bottom: 10px;
+  }
+  @media (min-width: map-get($media-queries-limit, "mobile")) {
+    dt, dd {
+      display: inline-block;
+    }
+    dd {
+      padding-left: 5px;
+      padding-right: 30px;
+    }
   }
 }
 </style>
