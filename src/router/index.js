@@ -9,22 +9,21 @@ const routes = [
     path: '/',
     name: 'Inicio',
     component: Inicio,
-    props: { hideMenu: true },
   },
   {
     path: '/ayuda',
     name: 'Ayuda',
-    component: () => import('../views/Ayuda.vue'),
+    component: () => import('@/views/Ayuda.vue'),
   },
   {
     path: '/guia-estilos',
     name: 'GuiaEstilos',
-    component: () => import('../views/GuiaEstilos.vue'),
+    component: () => import('@/views/GuiaEstilos.vue'),
   },
   {
     path: '**',
     name: 'Página no encontrada',
-    component: () => import('../views/404.vue'),
+    component: () => import('@/views/404.vue'),
   },
 ];
 
