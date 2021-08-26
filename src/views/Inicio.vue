@@ -39,18 +39,18 @@
         <LinkCoverImg
           cover_escritorio="https://picsum.photos/1200/800"
           cover_movil="https://picsum.photos/777/777"
-          url="http://google.com"
+          :url="`${domain}${base_route}capitulo`"
           target="_blank"
           title="LinkCoverImg size full"
           size="full"/>
         <LinkCoverImg
           cover="https://picsum.photos/700/800"
-          url="guia-estilos"
+          :url="`${domain}${base_route}otrocapitulo`"
           title="size half-desk"
           size="half-desk"/>
         <LinkCoverImg
           cover="https://picsum.photos/600/800"
-          url="ayuda"
+          :url="`${domain}${base_route}yotrocapitulo`"
           title="sin degradado no se muestra el titulo"
           size="half-desk"
           :degradado_activo="false"/>
@@ -68,6 +68,12 @@ export default {
   components: {
     GridLinkCoverImg,
     LinkCoverImg,
+  },
+  data() {
+    return {
+      domain: process.env.VUE_APP_ENI_DOMAIN,
+      base_route: process.env.VUE_APP_BASE_ROUTE,
+    };
   },
   computed: {
     obtenerNombreEni() {
