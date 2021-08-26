@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 const webpack = require('webpack');
 const fs = require('fs');
 
