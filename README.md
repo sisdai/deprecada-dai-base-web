@@ -113,7 +113,3 @@ npm run dev
 ```
 npm run build
 ```
-___
-
-## Notas
-Tiene el eslint de airbnb, que es estricto. No es recomendable pero si les empieza a dar mucha lata de errores de sintaxis, pueden quitarlo comentando la linea 8 `'@vue/airbnb',` del archivo `.eslintrc.js` que está en raiz del proyecto.
