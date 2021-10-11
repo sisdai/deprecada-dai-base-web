@@ -382,6 +382,54 @@
           <a href="#">Leer documentos fundamentales</a>
         </template>
       </modal>
+      
+      <h2>Tarjetas</h2>
+    <div class="tarjetas-layout m-t-2">
+      <TarjetaLista 
+        titulo="Presentaciones"
+        :portada="require('@/assets/img/dialogo1.jpg')"
+        :elementos=presentaciones
+      />
+      <TarjetaLista 
+        titulo="Minutas"
+        :elementos=minutas
+      />
+      <TarjetaLista 
+        titulo="Órdenes del día"
+        :elementos=ordenes
+      />
+      <TarjetaLista 
+        titulo="Perfiles de suelo"
+        :portada="require('@/assets/img/dialogo2.jpg')"
+        :elementos=suelo
+      />
+    </div>
+    <figure class="mesa-anp-pelt">
+      <img src="@/assets/img/20-12-20_MesaANP_PELT.jpg" alt="">
+      <figcaption class="a11y-solo-lectura">
+        <h2>MESA ANP-PELT. Área natural protegida "Lago de Texcoco".</h2>
+        <p>
+          Instalada el 3 de diciembre de 2020.
+          Se efectuaron 4 reuniones, 3 recorridos de campo y 18 acuerdos, 
+          de los cuales 14 han sido cumplidos, 3 se encuentran en proceso y uno está pendiente.
+        </p>
+        <p>Acuerdos:</p>
+        <ul>
+          <li>Elaboración del Estudio Previo Justificativo (EPJ) de manera participativa para la declaratoria del Área Natural Protegida (ANP).</li>
+          <li>Definición de un primer polígono para iniciar el proceso de análisis.</li>
+          <li>Integración del equipo técnico de trabajo multidisciplinario con un fuerte componente social representado a través del FPDT.</li>
+          <li>Entrega del primer borrador para su revisión en marzo del 2021.</li>
+        </ul>
+        <p>Valor del territorio propuesto como ANP:</p>
+        <ul>
+          <li>Principal cuerpo captador de aguas en la región Nororiente del Valle de México.</li>
+          <li>Humedales con sitios de importancia para la conservación de las aves acuáticas migratorias y otras especies residentes.</li>
+          <li>Sitio estratégico para fomentar una cultura ambiental en una región altamente poblada.</li>
+          <li>Territorio de importancia para la regulación hídrica y climática en esta región del país ante escenarios de Cambio Climático.</li>
+          <li>Ubicación estratégica para aumentar la conectividad entre las Áreas Naturales Protegidas del centro de México para mantener los servicios ecosistémicos que se proveen a través de estos territorios para el bienestar.</li>
+        </ul>
+      </figcaption>
+    </figure>
     </div>
   </div>
 </template>
@@ -392,6 +440,8 @@ import LinkCoverImg from '@/components/base/LinkCoverImg.vue';
 import Modal from '@/components/base/Modal.vue';
 import LinkCoverImgButton from '@/components/base/LinkCoverImgButton.vue';
 import Carousel from '@/components/base/Carousel.vue';
+import TarjetaLista from '@/components/base/TarjetaLista.vue';
+import TarjetaListaLink from '@/components/base/TarjetaListaLink.vue';
 
 export default {
   name: 'GuiaEstilos',
@@ -401,7 +451,55 @@ export default {
     Modal,
     LinkCoverImgButton,
     Carousel,
+    TarjetaLista,
   },
+  data() {
+    return {
+      presentaciones: [
+        {
+          id: 1,
+          nombre: 'Política Pública y Estrategia de Ordenamiento Territorial para el Oriente del Valle de México',
+          url: 'https://onedrive.live.com/?authkey=%21AIUVWIjO5no0k6k&cid=FE0A06BA9FA06629&id=FE0A06BA9FA06629%2118445&parId=FE0A06BA9FA06629%2118471&o=OneUp'
+        },
+      ],
+      minutas: [
+        {
+          id: 1,
+          nombre: 'Minuta PRONACES Conacyt',
+          url: 'https://onedrive.live.com/?authkey=%21AIUVWIjO5no0k6k&cid=FE0A06BA9FA06629&id=FE0A06BA9FA06629%2118444&parId=FE0A06BA9FA06629%2118471&o=OneUp'
+        },
+        {
+          id: 2,
+          nombre: 'Minuta Comisión 1',
+          url: 'https://onedrive.live.com/?authkey=%21AIUVWIjO5no0k6k&cid=FE0A06BA9FA06629&id=FE0A06BA9FA06629%2118447&parId=FE0A06BA9FA06629%2118471&o=OneUp'
+        },
+        {
+          id: 3,
+          nombre: 'Minuta Comisión 2',
+          url: 'https://onedrive.live.com/?authkey=%21AIUVWIjO5no0k6k&cid=FE0A06BA9FA06629&id=FE0A06BA9FA06629%2118435&parId=FE0A06BA9FA06629%2118471&o=OneUp'
+        },
+        {
+          id: 4,
+          nombre: 'Minuta Comisión 3',
+          url: 'https://onedrive.live.com/?authkey=%21AIUVWIjO5no0k6k&cid=FE0A06BA9FA06629&id=FE0A06BA9FA06629%2118448&parId=FE0A06BA9FA06629%2118471&o=OneUp'
+        },
+      ],
+      ordenes: [
+        {
+          id: 1,
+          nombre: 'Comisiones de trabajo para la restauración de la región oriente de la cuenca de México',
+          url: 'https://onedrive.live.com/?authkey=%21AIUVWIjO5no0k6k&cid=FE0A06BA9FA06629&id=FE0A06BA9FA06629%2118442&parId=FE0A06BA9FA06629%2118471&o=OneUp'
+        },
+      ],
+      suelo: [
+        {
+          id: 1,
+          nombre: 'agun link',
+          url: '#'
+        },
+      ]
+    };
+  }
 };
 </script>
 
@@ -410,6 +508,24 @@ export default {
   background-image: url(https://picsum.photos/800/800);
   @media (min-width: map-get($media-queries-limit, "mobile")) {
     background-image: url(https://picsum.photos/1600/1000);
+  }
+}
+.tarjetas-layout {
+  > * {
+    margin-bottom: $gap;
+  }
+  @media (min-width: map-get($media-queries-limit, "mobile")) {
+    display: grid;
+    gap: $gap*2;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: auto;
+  }
+}
+.mesa-anp-pelt {
+  margin: $gap*2 0;
+  padding: 0;
+  img {
+    max-width: 100%;
   }
 }
 </style>
