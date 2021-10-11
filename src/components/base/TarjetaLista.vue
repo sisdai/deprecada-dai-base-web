@@ -55,6 +55,7 @@ $espacio_md: $gap;
 .tarjeta {
   display: flex;
   height: $tarjeta-alto;
+  margin-bottom: $gap;
   
   .tarjeta-portada {
     padding-right: $espacio*1;
