@@ -13,8 +13,8 @@ module.exports = {
   filenameHashing: process.env.VUE_APP_HASH || false,
   css: {
     loaderOptions: {
-      sass: {
-        prependData: '@import \'@/scss/_variables.scss\';',
+      scss: {
+        additionalData: `@import "~@/scss/_variables.scss";`,
       },
     },
   },
