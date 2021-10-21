@@ -6,7 +6,7 @@
     <SubNav class="sub-navigation" :class="{'show':showNav}" />
     <router-view class="view" />
     <MainInfo />
-    <MainFooter />    
+    <MainFooter />
   </div>
 </template>
 

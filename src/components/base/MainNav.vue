@@ -19,6 +19,14 @@
         </a>
         <router-link class="main-nav-link" to="/">Inicio</router-link>
         <router-link class="main-nav-link" to="/guia-estilos">Guia de estilos</router-link>
+        <ul>
+          <li> menu
+            <ul>
+              <li><router-link class="main-nav-link" to="/guia-estilos">Guia de estilos</router-link></li>
+              <li><router-link class="main-nav-link" to="/guia-estilos">Guia de estilos</router-link></li>
+            </ul>
+          </li>
+        </ul>
         <router-link class="main-nav-link" to="/ayuda">Ayuda</router-link>
       </div>
     </MainContainer>
@@ -60,6 +68,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+ul li::before {
+  content: inherit;
+}
 .main-nav {
   background: map-get($color-gob, "verde");
   box-shadow: 0 0 10px rgba(0,0,0,.7);
@@ -92,8 +103,9 @@ export default {
   }
   @media (min-width: map-get($media-queries-limit, "navegacion")) {
     position: relative;
+    overflow: inherit;
     flex-direction: row;
-    height: auto;
+    height: 50px;
     top: 0px;
     margin-right: - ($gap);
     margin-left: - ($gap);
@@ -102,6 +114,19 @@ export default {
     }
     a:first-child {
       margin-left: $gap*.5;
+    }
+    ul {
+      margin: 0;
+      position: relative;
+    }
+    ul li ul { display:none}
+    ul li:hover ul {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50px;
+      z-index: 2;
+      background: #f00;
     }
   }
 }
