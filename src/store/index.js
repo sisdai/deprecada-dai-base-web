@@ -6,6 +6,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     hasMainNav: true,
+    hasSubNav: true,
+    openSubNav: false,
     openMainNav: false,
     openGobNav: false,
     hasA11yMenu: true,
@@ -23,6 +25,12 @@ export default new Vuex.Store({
   getters: {
     hasMainNav(state) {
       return state.hasMainNav;
+    },
+    hasSubNav(state) {
+      return state.hasSubNav;
+    },
+    isOpenSubNav(state) {
+      return state.openSubNav;
     },
     isOpenMainNav(state) {
       return state.openMainNav;
@@ -61,6 +69,15 @@ export default new Vuex.Store({
     },
   },
   mutations: {
+    openSubNav(state) {
+      state.openSubNav = true;
+    },
+    closeSubNav(state) {
+      state.openSubNav = false;
+    },
+    toggleSubNav(state) {
+      state.openSubNav = !state.openSubNav;
+    },
     openMainNav(state) {
       state.openMainNav = true;
     },
