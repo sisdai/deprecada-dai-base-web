@@ -3,7 +3,6 @@
     <A11yMenu />
     <MainHeader class="header" :class="{'show':showNav}" />
     <MainNav class="navigation" :class="{'show':showNav}" />
-    <SubNav class="sub-navigation" :class="{'show':showNav}" />
     <router-view class="view" />
     <MainInfo />
     <MainFooter />
@@ -17,8 +16,6 @@ import A11yMenu from '@/components/base/A11yMenu.vue';
 import MainInfo from '@/components/base/MainInfo.vue';
 import MainFooter from '@/components/base/MainFooter.vue';
 
-import SubNav from '@/components/base/SubNav.vue';
-
 export default {
   name: 'App',
   components: {
@@ -27,7 +24,6 @@ export default {
     A11yMenu,
     MainInfo,
     MainFooter,
-    SubNav,
   },
   data() {
     return {
@@ -55,9 +51,6 @@ export default {
         }
         if (this.$store.getters.isOpenMainNav) {
           this.$store.commit('closeMainNav');
-        }
-        if (this.$store.getters.isOpenSubNav) {
-          this.$store.commit('closeSubNav');
         }
       } else {
         this.showNav = true;
@@ -112,16 +105,6 @@ export default {
       top: 50px;
     }
   }
-  .sub-navigation {
-    position: fixed;
-    top: -50px;
-    z-index: 9997;
-    width: 100%;
-    transition: top .2s ease-in-out;
-    &.show {
-      top: 100px;
-    }
-  }
 }
 .normal-nav {
   .header {
@@ -144,18 +127,8 @@ export default {
       top: 50px;
     }
   }
-  .sub-navigation {
-    position: fixed;
-    top: 100px;
-    z-index: 9997;
-    width: 100%;
-    transition: top .2s ease-in-out;
-    &.show {
-      top: 100px;
-    }
-  }
   .view {
-    padding-top: 500px;
+    padding-top: 50px;
   }
 }
 

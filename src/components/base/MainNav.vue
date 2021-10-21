@@ -19,11 +19,12 @@
         </a>
         <router-link class="main-nav-link" to="/">Inicio</router-link>
         <router-link class="main-nav-link" to="/guia-estilos">Guia de estilos</router-link>
-        <ul>
-          <li> menu
-            <ul>
-              <li><router-link class="main-nav-link" to="/guia-estilos">Guia de estilos</router-link></li>
-              <li><router-link class="main-nav-link" to="/guia-estilos">Guia de estilos</router-link></li>
+        <ul class="subnav">
+          <li>
+            <router-link class="main-nav-link" to="/">Menu</router-link>
+            <ul class="dropdown">
+              <li><router-link class="main-nav-link" to="/">Sublink 1</router-link></li>
+              <li><router-link class="main-nav-link" to="/">Sublink 2</router-link></li>
             </ul>
           </li>
         </ul>
@@ -68,7 +69,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-ul li::before {
+ul.subnav li::before {
   content: inherit;
 }
 .main-nav {
@@ -101,32 +102,63 @@ ul li::before {
   &.open {
     top: 50px;
   }
+  ul.subnav {
+    margin: 0 !important;
+    padding-left: 0 !important;
+    position: relative;
+    cursor: pointer;
+    li {
+      margin: 0 !important;      
+    }
+    ul {
+      margin: 0 !important;
+    }
+  }
+  ul.subnav li ul.dropdown {      
+    li a {
+      border: none;
+    }
+  }
   @media (min-width: map-get($media-queries-limit, "navegacion")) {
     position: relative;
     overflow: inherit;
     flex-direction: row;
-    height: 50px;
+    height: auto;
     top: 0px;
     margin-right: - ($gap);
     margin-left: - ($gap);
     &.open {
       top: 0;
     }
-    a:first-child {
+    // a:first-child {
+    //   margin-left: $gap*.5;
+    // }
+    a {
       margin-left: $gap*.5;
     }
-    ul {
-      margin: 0;
+    ul.subnav ul {
+      margin: 0 !important;
+      padding-left: 0 !important;
       position: relative;
     }
-    ul li ul { display:none}
-    ul li:hover ul {
+    ul.subnav li ul.dropdown { 
+      display:none;
+      li a {
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+      li:hover{
+        background: map-get($color-gob, "verde-obscuro");
+        color: map-get($color-gob, "beige");
+      }
+    }
+    ul.subnav li:hover ul.dropdown {
+      background-color: map-get($color-gob, "verde-claro");
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
       display: block;
       position: absolute;
-      left: 0;
+      left: 0px;
       top: 50px;
-      z-index: 2;
-      background: #f00;
+      z-index: 3;
     }
   }
 }
@@ -153,6 +185,7 @@ ul li::before {
   display: flex;
   padding: $gap*.5;
   white-space: nowrap;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
   @media (min-width: map-get($media-queries-limit, "navegacion")) {
     display: inline-flex;
     // &:first-child {
