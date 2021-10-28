@@ -88,7 +88,7 @@ export default {
   .header {
     position: fixed;
     top: -50px;
-    width: 100%;
+    width: calc(100% - .01px);
     z-index: 9999;
     transition: top .2s ease-in-out;
     &.show {
@@ -98,8 +98,8 @@ export default {
   .navigation {
     position: fixed;
     top: -50px;
+    width: calc(100% - .01px);
     z-index: 9998;
-    width: 100%;
     transition: top .2s ease-in-out;
     &.show {
       top: 50px;
@@ -110,7 +110,7 @@ export default {
   .header {
     position: sticky;
     top: 0;
-    width: 100%;
+    width: calc(100% - .01px);
     z-index: 9999;
     transition: top .2s ease-in-out;
     &.show {
@@ -120,15 +120,15 @@ export default {
   .navigation {
     position: fixed;
     top: 50px;
+    width: calc(100% - .01px);
     z-index: 9998;
-    width: 100%;
     transition: top .2s ease-in-out;
     &.show {
       top: 50px;
     }
   }
   .view {
-    padding-top: 50px;
+    padding-top: 49px;
   }
 }
 
