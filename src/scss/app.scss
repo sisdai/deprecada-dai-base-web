@@ -23,7 +23,7 @@
   &.text {
     max-width: map-get($width, "max-text");
   }
-  .container
+  .container,
   .grid-link-cover-img {
     width: 100%;
   }
