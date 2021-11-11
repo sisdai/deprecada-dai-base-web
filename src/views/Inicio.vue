@@ -29,12 +29,29 @@
         Ecosistema Nacional Informático de {{obtenerNombreEni}}
         <br>(este titulo solo va en portadas de ENIs)*
       </h2>
-      <p class="texto-alto">
+      <!--p class="texto-alto">
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Dolor modi molestiae a similique, quae cumque. Rerum vitae,
         animi architecto eligendi quibusdam hic, dolor delectus
         dignissimos doloribus reprehenderit maxime, cupiditate nobis.
-      </p>
+      </p-->
+      <LeerMasMenos>
+        <template v-slot:texto-corto>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, iusto quia eligendi 
+            soluta quos eaque aliquam officia quo neque unde reiciendis assumenda maiores magnam 
+            quidem ex dignissimos laborum quibusdam sapiente.
+          </p>
+        </template>
+        <template v-slot:texto-largo>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, eligendi? 
+            Dolores, nobis! Odit atque veniam cumque porro tempore odio, fuga pariatur nulla 
+            natus veritatis <small>sint temporibus error</small> <strong>ducimus ut explicabo?</strong> 🤓
+          </p>
+          <img src="@/assets/img/base/gobmx-2021.png" alt="Gobierno de México.">
+        </template>
+      </LeerMasMenos>
       <GridLinkCoverImg class="m-t-1 m-t-2-md m-b-4-md">
         <LinkCoverImg
           cover_escritorio="https://picsum.photos/1200/800"
@@ -60,12 +77,14 @@
 </template>
 
 <script>
+import LeerMasMenos from '@/components/base/LeerMasMenos.vue';
 import GridLinkCoverImg from '@/components/base/GridLinkCoverImg.vue';
 import LinkCoverImg from '@/components/base/LinkCoverImg.vue';
 
 export default {
   name: 'Inicio',
   components: {
+    LeerMasMenos,
     GridLinkCoverImg,
     LinkCoverImg,
   },
