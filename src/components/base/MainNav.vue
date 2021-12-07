@@ -17,13 +17,13 @@
         <a class="main-nav-external-link" :href="domain" target="_blank" rel="noopener">
           Ir a ENI {{obtenerNombreEni}}
         </a>
-        <router-link class="main-nav-link" to="/">Inicio</router-link>
+        <router-link class="main-nav-link" to="/" exact>Inicio</router-link>
         <router-link class="main-nav-link" to="/guia-estilos">Guia de estilos</router-link>
 
         <div class="main-nav-submenu">
-          <span class="main-nav-link">Elemento con submenu</span>
+          <span class="main-nav-link">Submenu</span>
           <div class="submenu">
-            <router-link class="main-nav-link" to="/ayuda">Link en el submenu</router-link>
+            <router-link class="main-nav-link nowrap" to="/ayuda">Link en el submenu</router-link>
             <router-link class="main-nav-link" to="/ayuda">Otro link con un texto larguisimo para probar que se pueda ir a varias lineas</router-link>
           </div>
         </div>
@@ -120,6 +120,7 @@ export default {
   display: block;
   padding: $gap*.5;
   line-height: 20px;
+  &.router-link-active,
   &:active,
   &:focus,
   &:hover {
@@ -166,6 +167,10 @@ export default {
         padding-right: 0;
         display: block;
         white-space: inherit;
+        .nowrap,
+        &.nowrap {
+          white-space: nowrap;
+        }
         &:active,
         &:focus,
         &:hover {
