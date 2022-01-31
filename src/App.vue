@@ -86,8 +86,6 @@ export default {
 @import '@/scss/app.scss';
 .scrolling-nav {
   .header {
-    position: fixed;
-    top: -50px;
     width: calc(100% - .01px);
     z-index: 9999;
     transition: top .2s ease-in-out;
@@ -96,19 +94,18 @@ export default {
     }
   }
   .navigation {
-    position: fixed;
-    top: -50px;
+    position: sticky;
+    top: 0px;
     width: calc(100% - .01px);
     z-index: 9998;
     transition: top .2s ease-in-out;
     &.show {
-      top: 50px;
+      top: 0;
     }
   }
 }
 .normal-nav {
   .header {
-    position: sticky;
     top: 0;
     width: calc(100% - .01px);
     z-index: 9999;
@@ -118,17 +115,14 @@ export default {
     }
   }
   .navigation {
-    position: fixed;
-    top: 50px;
+    position: sticky;
+    top: 0px;
     width: calc(100% - .01px);
     z-index: 9998;
     transition: top .2s ease-in-out;
     &.show {
-      top: 50px;
+      top: 0;
     }
-  }
-  .view {
-    padding-top: 49px;
   }
 }
 
