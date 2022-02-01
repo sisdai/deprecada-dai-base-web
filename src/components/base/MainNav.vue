@@ -1,13 +1,17 @@
 <template>
   <nav v-if="hasMainNav" class="main-nav">
-    <MainContainer class="flex">
-      <div class="main-nav-top">
-        <BtnNavMob
-          @click.native="toggleMenu"
-          :class="{'open':isOpenMainNav}"
+    <MainContainerTxt class="flex">
+      <nav class="nav-gob-top flex">
+        <div class="main-nav-current">
+          <span class="seccion">Seccion</span>
+          {{currentRouteName}}
+        </div>
+        <BtnTxtNavMob
           aria-expanded="false"
-          aria-controls="navegacion-principal"/>
-      </div>
+          aria-controls="navegacion-gobierno"
+          @click.native="toggleMenu"
+          :class="{'open':isOpenGobNav}" />
+      </nav>
       <div
         aria-label="Navegación principal"
         id="navegacion-principal"
@@ -30,19 +34,19 @@
 
         <router-link class="main-nav-link" to="/ayuda">Ayuda</router-link>
       </div>
-    </MainContainer>
+    </MainContainerTxt>
   </nav>
 </template>
 
 <script>
-import MainContainer from '@/components/base/MainContainer.vue';
-import BtnNavMob from '@/components/base/BtnNavMob.vue';
+import MainContainerTxt from '@/components/base/MainContainerTxt.vue';
+import BtnTxtNavMob from '@/components/base/BtnTextNavMob.vue';
 
 export default {
   name: 'MainNav',
   components: {
-    MainContainer,
-    BtnNavMob,
+    MainContainerTxt,
+    BtnTxtNavMob,
   },
   data() {
     return {
@@ -64,11 +68,30 @@ export default {
     obtenerNombreEni() {
       return this.$store.getters.obtenerNombreEni;
     },
+    currentRouteName() {
+      return this.$route.name;
+    }
   },
 };
 </script>
 
 <style scoped lang="scss">
+.nav-gob-top.flex {
+    display: flex;
+    justify-content: space-between;
+
+    .nombre-seccion {
+      color: white;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+
+  @media (min-width: map-get($media-queries-limit, "navegacion")) {
+    display: none;
+    
+  }
+    }
+}
 .main-nav {
   background: map-get($color-gob, "verde");
   box-shadow: 0 0 10px rgba(0,0,0,.7);
@@ -81,6 +104,20 @@ export default {
   margin-left: $gap * -1;
   z-index: 2;
 }
+.main-nav-current {
+  flex: 1;
+  font-size: 18px;
+  padding: $gap*.5;
+  color: map-get($color-gob, "beige");
+  .seccion {
+    font-size: 10px;
+    line-height: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    display: block;
+    // margin-bottom: -10px;
+  }
+}
 .main-nav-menu {
   background: map-get($color-gob, "verde");
   overflow-y: auto;
@@ -89,7 +126,6 @@ export default {
   height: calc((100 * var(--vh)) - 100px);
   width: 100%;
   margin-right: $gap * -1;
-  margin-left: $gap * -1;
   transition: top .3s ease-in-out;
   z-index: 1;
   &.open {
@@ -124,7 +160,7 @@ export default {
   &:active,
   &:focus,
   &:hover {
-    background: darken(map-get($color-gob, "verde"), 2%);
+    background: map-get($color-gob , "verde-hover" );
     color: map-get($color-gob, "beige");
   }
 }
@@ -139,7 +175,6 @@ export default {
     height: inherit;
     top: 0;
     margin-right: $gap * -.5;
-    margin-left: $gap * -.5;
     &.open {
       top: 0;
     }

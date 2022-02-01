@@ -65,11 +65,11 @@ export default {
 <style scoped lang="scss">
 .header-mx {
   background: map-get($color-gob, "verde-obscuro");
+  position: relative;
   .flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row-reverse;
   }
   .nav-gob-top {
     background: map-get($color-gob, "verde-obscuro");
