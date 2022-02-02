@@ -91,6 +91,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#navegacion-principal {
+  z-index: -1;
+}
 .nav-gob-top.flex {
     display: flex;
     justify-content: space-between;
@@ -227,9 +230,7 @@ export default {
       .main-nav-link {
         background: transparent;
         border-bottom: 1px solid transparent;
-        margin: 0 $gap*.5;
-        padding-left: 0;
-        padding-right: 0;
+        padding: $gap*.5;
         display: block;
         white-space: inherit;
         .nowrap,
@@ -239,7 +240,8 @@ export default {
         &:active,
         &:focus,
         &:hover {
-          background: transparent;
+
+          background: map-get($color-gob , 'verde-hover' );
           color: white;
           font-weight: 600;
         }
