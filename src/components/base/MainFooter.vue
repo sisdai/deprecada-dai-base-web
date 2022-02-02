@@ -90,7 +90,7 @@ export default {
 
 <style scoped lang="scss">
 .footer-mx {
-  background: map-get($color-gob, "verde");
+  background: map-get($color-gob, "verde-gob");
   background-image: url('../../assets/img/base/gobmxpleca.svg');
   background-position: bottom;
   background-repeat: repeat-x;

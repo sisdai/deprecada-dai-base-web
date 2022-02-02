@@ -6,15 +6,26 @@
 
 <script>
 export default {
-  name: 'MainContainer',
+  name: 'MainContainerTxt',
 };
 </script>
 
 <style scoped lang="scss">
 .main-container {
-  margin-left: 0;
-  margin-right: 0;
   padding: 0;
-  max-width: map-get($width, "max-main");
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 60px);
+  max-width: 1400px;
+
+  @media (max-width: map-get($media-queries-limit, "tablet")) {
+    
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+      
+    }
 }
 </style>
