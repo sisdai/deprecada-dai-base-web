@@ -3,24 +3,39 @@
     <MainContainerTxt class="flex">
       <nav class="nav-gob-top flex">
         <div class="main-nav-current">
-          <span class="seccion">Seccion</span>
-          {{currentRouteName}}
+          <span class="seccion">Seccion: {{currentRouteName}}</span>
+          
         </div>
         <BtnTxtNavMob
-          aria-expanded="false"
-          aria-controls="navegacion-gobierno"
           @click.native="toggleMenu"
-          :class="{'open':isOpenGobNav}" />
+          :class="{'open':isOpenMainNav}" 
+          aria-expanded="false"
+          aria-controls="navegacion-principal"/>
       </nav>
+        <div class="main-nav-submenu">
+          <a class="main-nav-external-link" >
+            Ir a ENI {{obtenerNombreEni}}
+          </a>
+          <div class="submenu">
+            <router-link class="main-nav-link nowrap" to="/ayuda">Salud</router-link>
+            <router-link class="main-nav-link nowrap" to="/ayuda">Agentes tóxicos y procesos contaminantes</router-link>
+            <router-link class="main-nav-link nowrap" to="/ayuda">Agua</router-link>
+            <router-link class="main-nav-link nowrap" to="/ayuda">Cultura</router-link>
+            <router-link class="main-nav-link nowrap" to="/ayuda">Educación</router-link>
+            <router-link class="main-nav-link nowrap" to="/ayuda">Energía y cambio climático</router-link>
+            <router-link class="main-nav-link nowrap" to="/ayuda">Tecnología e innovación abierta</router-link>
+            <router-link class="main-nav-link nowrap" to="/ayuda">Seguridad humana</router-link>
+            <router-link class="main-nav-link nowrap" to="/ayuda">Sistemas socioecológicos</router-link>
+            <router-link class="main-nav-link nowrap" to="/ayuda">Soberanía alimentaria</router-link>
+            <router-link class="main-nav-link nowrap" to="/ayuda">Vivienda</router-link>
+          </div>
+        </div>
       <div
         aria-label="Navegación principal"
         id="navegacion-principal"
         class="main-nav-menu"
         :class="{'open':isOpenMainNav}"
         @click="toggleMenu">
-        <a class="main-nav-external-link" :href="domain" target="_blank" rel="noopener">
-          Ir a ENI {{obtenerNombreEni}}
-        </a>
         <router-link class="main-nav-link" to="/" exact>Inicio</router-link>
         <router-link class="main-nav-link" to="/guia-estilos">Guia de estilos</router-link>
 
@@ -76,9 +91,19 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#navegacion-principal {
+  z-index: -1;
+}
 .nav-gob-top.flex {
     display: flex;
     justify-content: space-between;
+    z-index: 1;
+    width: 100%;
+
+  @media (min-width: map-get($media-queries-limit, "navegacion")) {
+    display: none;
+    
+  }
 
     .nombre-seccion {
       color: white;
@@ -86,10 +111,6 @@ export default {
       align-items: center;
       padding-left: 20px;
 
-  @media (min-width: map-get($media-queries-limit, "navegacion")) {
-    display: none;
-    
-  }
     }
 }
 .main-nav {
@@ -107,15 +128,17 @@ export default {
 .main-nav-current {
   flex: 1;
   font-size: 18px;
-  padding: $gap*.5;
+  padding:4px $gap*.5;
   color: map-get($color-gob, "beige");
   .seccion {
-    font-size: 10px;
+    font-size: 14px;
+    font-weight: bold;
     line-height: 10px;
     color: #fff;
     text-transform: uppercase;
-    display: block;
-    // margin-bottom: -10px;
+    display: flex;
+    align-items: center;
+    height: 100%;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
   }
 }
 .main-nav-menu {
@@ -127,11 +150,18 @@ export default {
   width: 100%;
   margin-right: $gap * -1;
   transition: top .3s ease-in-out;
-  z-index: 1;
+  z-index: 2;
   &.open {
     top: 50px;
   }
 }
+  .main-nav-submenu {
+    position: relative;
+    @media (max-width: map-get($media-queries-limit, "tablet")) {
+      display: none;
+      
+    }
+  }
 .submenu {
   background: map-get($color-gob, "verde-claro");
   border-radius: 5px;
@@ -139,10 +169,11 @@ export default {
 }
 .main-nav-external-link {
   font-size: map-get($fuente, "size-notas");
-  color: map-get($color-gob, "dorado");
+  color: white;
   text-transform: uppercase;
   display: block;
   padding: $gap*.5;
+  font-weight: bold;
 }
 .main-nav-link {
   font-size: map-get($fuente, "size-secundario");
@@ -157,11 +188,12 @@ export default {
   padding: $gap*.5;
   line-height: 20px;
   &.router-link-active,
-  &:active,
+  &:active {
+    color: white;
+  }
   &:focus,
   &:hover {
     background: map-get($color-gob , "verde-hover" );
-    color: map-get($color-gob, "beige");
   }
 }
 
@@ -175,6 +207,7 @@ export default {
     height: inherit;
     top: 0;
     margin-right: $gap * -.5;
+    justify-content: flex-end;
     &.open {
       top: 0;
     }
@@ -197,9 +230,7 @@ export default {
       .main-nav-link {
         background: transparent;
         border-bottom: 1px solid transparent;
-        margin: 0 $gap*.5;
-        padding-left: 0;
-        padding-right: 0;
+        padding: $gap*.5;
         display: block;
         white-space: inherit;
         .nowrap,
@@ -209,9 +240,10 @@ export default {
         &:active,
         &:focus,
         &:hover {
-          background: transparent;
-          border-bottom: 1px solid map-get($color-gob, "beige");
-          color: map-get($color-gob, "beige");
+
+          background: map-get($color-gob , 'verde-hover' );
+          color: white;
+          font-weight: 600;
         }
       }
     }
