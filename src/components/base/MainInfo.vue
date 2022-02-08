@@ -1,11 +1,11 @@
 <template>
   <MainContainer v-if="entornoProyecto !== 'production'">
     <dl class="info-entorno">
-      <dt>Versión:</dt>
+      <dt>V</dt>
       <dd>{{versionProyecto}}</dd>
-      <dt>Ambiente:</dt>
+      <dt>Ambiente: </dt>
       <dd>{{entornoProyecto}}</dd>
-      <dt>Compilación:</dt>
+      <dt>Actualización: </dt>
       <dd>{{actualizacionProyecto}}</dd>
     </dl>
   </MainContainer>
@@ -35,28 +35,30 @@ export default {
 
 <style scoped lang="scss">
 .info-entorno {
-  margin-bottom: -30px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: $gap * -1;
+  z-index: 9999;
+  background: rgba(0,0,0,.5);
+  pointer-events: none;
+  user-select: none;
   dt, dd {
-    color: #999;
+    color: #fff;
     font-size: 10px;
     line-height: 12px;
     padding: 0;
     margin: 0;
     text-align: left;
+    display: inline-block;
   }
   dt {
-    text-transform: uppercase;
+    padding-left: 4px;
   }
   dd {
-    padding-bottom: 10px;
-  }
-  @media (min-width: map-get($media-queries-limit, "mobile")) {
-    dt, dd {
-      display: inline-block;
-    }
-    dd {
-      padding-left: 5px;
-      padding-right: 30px;
+    padding-left: 4px;
+    &:not(:last-child) {
+      padding-right: 8px;
     }
   }
 }

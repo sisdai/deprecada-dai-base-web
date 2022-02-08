@@ -64,10 +64,6 @@
           <link-social url="https://www.facebook.com/gobmx" icono="social-facebook" spanglish="feisbuk " />
           <link-social url="https://twitter.com/gobmx" icono="social-twitter" spanglish=" y tuiter." />
         </p>
-        <img
-          src="@/assets/img/base/gobmx-2021.png"
-          alt="México 2021. Año de la independencia."
-          class="footer-2021">
       </nav>
     </MainContainer>
   </footer>
@@ -90,14 +86,13 @@ export default {
 
 <style scoped lang="scss">
 .footer-mx {
-  background: map-get($color-gob, "verde-gob");
+  background: map-get($color-gob, "verde");
   background-image: url('../../assets/img/base/gobmxpleca.svg');
   background-position: bottom;
   background-repeat: repeat-x;
   background-size: auto 50px;
   box-sizing: border-box;
   overflow: hidden;
-  margin-top: $gap * 1.25;
   padding-top: $gap;
   padding-bottom: $gap * 1.5;
   color: #fff;
@@ -112,16 +107,9 @@ export default {
   .footer-descripcion {
     margin-bottom: $gap * .5;
   }
-  .footer-2021 {
-    float: right;
-    margin: -100px -15px 20px 0;
-  }
   @media (min-width: map-get($media-queries-limit, "mobile")) {
     padding-top: $gap * .25;
     padding-bottom: $gap * 2.5;
-    .footer-2021 {
-      margin: 5px -10px 0 0;
-    }
     .footer-flex {
       display: flex;
       gap: $gap;
