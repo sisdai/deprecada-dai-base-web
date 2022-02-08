@@ -1,9 +1,9 @@
 <template>
   <div id="app" :class="appClass">
     <A11yMenu />
-    <MainHeader class="header" :class="{'show':showNav}" />
+    <MainHeader class="header" />
     <MainNav class="navigation" :class="{'show':showNav}" />
-    <router-view class="view" />
+    <router-view />
     <MainInfo />
     <MainFooter />
   </div>
@@ -28,14 +28,14 @@ export default {
   data() {
     return {
       showNav: false,
-      scrollingNav: true,
+      // scrollingNav: true,
     };
   },
   computed: {
     appClass() {
       return {
-        'scrolling-nav': this.scrollingNav,
-        'normal-nav': !this.scrollingNav,
+        // 'scrolling-nav': this.scrollingNav,
+        // 'normal-nav': !this.scrollingNav,
         'a11y-contraste': this.$store.getters.tieneAltoContraste,
         'a11y-simplificada': this.$store.getters.tieneVistaSimplificada,
         'a11y-enlace': this.$store.getters.tieneEnlacesSubrayados,
@@ -44,17 +44,23 @@ export default {
   },
   methods: {
     onScroll() {
-      if (window.pageYOffset < (window.innerHeight - 150)) {
-        this.showNav = false;
-        if (this.$store.getters.isOpenGobNav) {
-          this.$store.commit('closeGobNav');
-        }
-        if (this.$store.getters.isOpenMainNav) {
-          this.$store.commit('closeMainNav');
-        }
-      } else {
-        this.showNav = true;
+      if (this.$store.getters.isOpenGobNav) {
+        this.$store.commit('closeGobNav');
       }
+      if (this.$store.getters.isOpenMainNav) {
+        this.$store.commit('closeMainNav');
+      }
+      // if (window.pageYOffset < (window.innerHeight - 150)) {
+      //   this.showNav = false;
+      //   if (this.$store.getters.isOpenGobNav) {
+      //     this.$store.commit('closeGobNav');
+      //   }
+      //   if (this.$store.getters.isOpenMainNav) {
+      //     this.$store.commit('closeMainNav');
+      //   }
+      // } else {
+      //   this.showNav = true;
+      // }
     },
     calHeight() {
       const innerheight = window.innerHeight / 100;
@@ -64,13 +70,13 @@ export default {
   created() {
     this.calHeight();
   },
-  updated() {
-    if (this.$route.name === 'Inicio') {
-      this.scrollingNav = true;
-    } else {
-      this.scrollingNav = false;
-    }
-  },
+  // updated() {
+  //   if (this.$route.name === 'Inicio') {
+  //     this.scrollingNav = true;
+  //   } else {
+  //     this.scrollingNav = false;
+  //   }
+  // },
   mounted() {
     window.addEventListener('scroll', this.onScroll);
     window.addEventListener('resize', this.calHeight);
@@ -84,47 +90,54 @@ export default {
 
 <style lang="scss">
 @import '@/scss/app.scss';
-.scrolling-nav {
-  .header {
-    width: calc(100% - .01px);
-    z-index: 9999;
-    transition: top .2s ease-in-out;
-    &.show {
-      top: 0;
-    }
-  }
-  .navigation {
-    position: sticky;
-    top: 0px;
-    width: calc(100% - .01px);
-    z-index: 9998;
-    transition: top .2s ease-in-out;
-    &.show {
-      top: 0;
-    }
-  }
+.navigation {
+  position: sticky;
+  top: 0;
+  z-index: 9998;
 }
-.normal-nav {
-  .header {
-    top: 0;
-    width: calc(100% - .01px);
-    z-index: 9999;
-    transition: top .2s ease-in-out;
-    &.show {
-      top: 0;
-    }
-  }
-  .navigation {
-    position: sticky;
-    top: 0px;
-    width: calc(100% - .01px);
-    z-index: 9998;
-    transition: top .2s ease-in-out;
-    &.show {
-      top: 0;
-    }
-  }
-}
+// .scrolling-nav {
+//   .header {
+//     position: fixed;
+//     left: 0;
+//     right: 0;
+//     top: -50px;
+//     z-index: 9999;
+//     transition: top .2s ease-in-out;
+//     &.show {
+//       top: 0;
+//     }
+//   }
+//   .navigation {
+//     position: fixed;
+//     left: 0;
+//     right: 0;
+//     top: -50px;
+//     z-index: 9998;
+//     transition: top .2s ease-in-out;
+//     &.show {
+//       top: 50px;
+//     }
+//   }
+// }
+// .normal-nav {
+//   .header {
+//     top: 0;
+//     z-index: 9999;
+//     transition: top .2s ease-in-out;
+//     &.show {
+//       top: 0;
+//     }
+//   }
+//   .navigation {
+//     position: sticky;
+//     top: 0;
+//     z-index: 9998;
+//     transition: top .2s ease-in-out;
+//     &.show {
+//       top: 0;
+//     }
+//   }
+// }
 
 .overflow-hidden {
   overflow: hidden;

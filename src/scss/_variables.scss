@@ -1,9 +1,7 @@
 $color-gob: (
-  "verde": #1F5D50,
-  "verde-gob": #13322B,
+  "verde": #13322B,
   "verde-obscuro": #0b231e,
   "verde-claro": #285C4D,
-  "verde-hover": #277564,
   "dorado": #B38E5D,
   "beige": #D4C19C,
   "tinto": #9D2446,
@@ -12,12 +10,20 @@ $color-gob: (
 $color: (
   "fondo": #fff,
   "texto": #141414,
-  "borde": #ddd
+  "borde": #ddd,
+);
+
+$color-nav: (
+  "fondo": #285C4D,
+  "fondo-hover": #277564,
+  "texto": #fff,
+  "texto-hover": #fff,
+  "borde": #0007
 );
 
 $a11y-contraste: (
   "fondo": #222,
-  "texto": #ccc
+  "texto": #fff
 );
 
 $color-link: (
@@ -63,7 +69,8 @@ $fuente: (
   "size-alto": 18px,
   "size-primario": 16px,
   "size-secundario": 14px,
-  "size-notas": 12px
+  "size-notas": 12px,
+  "size-boton": 10px,
 );
 
 $gap: 30px;
