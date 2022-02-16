@@ -13,7 +13,7 @@
           aria-expanded="false"
           aria-controls="navegacion-gobierno"
           @click.native="toggleMenu"
-          :class="{'open':isOpenGobNav}" />
+          :class="{'open':isOpenGobNav, 'no-text':true}" />
       </nav>
       <nav
         id="navegacion-gobierno"
@@ -65,22 +65,23 @@ export default {
 <style scoped lang="scss">
 .header-mx {
   background: map-get($color-gob, "verde-obscuro");
+  position: relative;
+  z-index: 9999;
   .flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row-reverse;
   }
   .nav-gob-top {
     background: map-get($color-gob, "verde-obscuro");
-    margin-right: - ($gap);
-    margin-left: - ($gap);
+    margin-right: $gap * -1;
+    margin-left: $gap * -1;
     flex: 1;
     position: relative;
     z-index: 2;
   }
   .logo-gob {
-    padding: $gap*.25 $gap*.5;
+    padding: $gap*.25;
   }
   .nav-gob {
     background: map-get($color-gob, "verde-obscuro");

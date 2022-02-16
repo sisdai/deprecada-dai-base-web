@@ -29,12 +29,6 @@
         Ecosistema Nacional Informático de {{obtenerNombreEni}}
         <br>(este titulo solo va en portadas de ENIs)*
       </h2>
-      <!--p class="texto-alto">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Dolor modi molestiae a similique, quae cumque. Rerum vitae,
-        animi architecto eligendi quibusdam hic, dolor delectus
-        dignissimos doloribus reprehenderit maxime, cupiditate nobis.
-      </p-->
       <LeerMasMenos>
         <template v-slot:texto-corto>
           <p>
@@ -49,7 +43,6 @@
             Dolores, nobis! Odit atque veniam cumque porro tempore odio, fuga pariatur nulla 
             natus veritatis <small>sint temporibus error</small> <strong>ducimus ut explicabo?</strong> 🤓
           </p>
-          <img src="@/assets/img/base/gobmx-2021.png" alt="Gobierno de México.">
         </template>
       </LeerMasMenos>
       <GridLinkCoverImg class="m-t-1 m-t-2-md m-b-4-md">

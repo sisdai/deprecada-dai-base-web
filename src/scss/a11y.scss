@@ -48,31 +48,6 @@
   .a11y-simplificada-block {
     display: block;
   }
-  &.scrolling-nav {
-    .header {
-      position: sticky;
-      top: 0;
-      width: 100%;
-      z-index: 9999;
-      transition: top .2s ease-in-out;
-      &.show {
-        top: 0;
-      }
-    }
-    .navigation {
-      position: fixed;
-      top: 50px;
-      z-index: 9998;
-      width: 100%;
-      transition: top .2s ease-in-out;
-      &.show {
-        top: 50px;
-      }
-    }
-    .view {
-      padding-top: 50px;
-    }
-  }
   .cover {
     display: none;
   }
