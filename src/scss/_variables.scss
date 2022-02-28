@@ -25,10 +25,14 @@ $color: (
 
 $color-nav: (
   "fondo": #fff,
+  "fondo-hover-cel": #002663,
   "fondo-hover": linear-gradient(to bottom, #fff 0%, #fff 90%,#001c4a 90%, #001c4a 100%),
   "sub-fondo": #002663,
   "texto": #002663,
+  "texto-gob": #fff,
+  "texto-conacyt": #002663,
   "texto-hover": #003384,
+  "texto-hover-cel": #fff,
   "borde": #0007
 );
 

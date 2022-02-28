@@ -13,7 +13,7 @@
           aria-expanded="false"
           aria-controls="navegacion-gobierno"
           @click.native="toggleMenu"
-          :class="{'open':isOpenGobNav, 'no-text':true}" />
+          :class="{'open':isOpenGobNav, 'no-text':true, 'color-gob':true}" />
       </nav>
       <nav
         id="navegacion-gobierno"

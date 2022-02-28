@@ -22,7 +22,7 @@ const routes = [
   },
   {
     path: '**',
-    name: 'Página no encontrada',
+    name: 'Página no encontrada titulo grandotototototote',
     component: () => import('@/views/404.vue'),
   },
 ];

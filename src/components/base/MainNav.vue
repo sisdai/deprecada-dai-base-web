@@ -2,14 +2,21 @@
   <nav v-if="hasMainNav" class="main-nav">
     <MainContainer class="flex">
       <div class="main-nav-top">
-        <div class="main-nav-current">
-          Seccion: {{currentRouteName}}
-        </div>
+        <a href="https://conacyt.mx/" class="logo-cel-conacyt">
+          <img
+          src="@/assets/img/base/conacyt-azul.svg"
+          alt="Gobierno de México."
+          height="36px">
+        </a>
         <BtnNavMob
           @click.native="toggleMenu"
-          :class="{'open':isOpenMainNav}" 
+          :class="{'open':isOpenMainNav, 'color-conacyt':true}" 
           aria-expanded="false"
           aria-controls="navegacion-principal"/>
+      </div>
+      <div class="main-nav-current">
+        Sección:
+        <b>{{currentRouteName}}</b>
       </div>
       <div
         aria-label="Navegación principal"
@@ -19,27 +26,27 @@
         @click="toggleMenu">
 
         <div class="main-nav-menu-seccion">
-          <a class="main-nav-external-link" :href="domain" target="_blank" rel="noopener">
-            Ir a ENI {{obtenerNombreEni}}
+          <a href="https://conacyt.mx/" class="logo-conacyt">
+            <img
+            src="@/assets/img/base/conacyt-azul.svg"
+            alt="Gobierno de México."
+            height="36px">
           </a>
-          <div class="main-nav-submenu">
-            <span class="main-nav-link">Submenu</span>
-            <div class="submenu">
-              <router-link class="main-nav-link nowrap" to="/guia-estilos">Link en el submenu</router-link>
-              <router-link class="main-nav-link" to="/guia-estilos">Otro link con un texto larguisimo para probar que se pueda ir a varias lineas</router-link>
-            </div>
-          </div>
         </div>
         
         <div class="main-nav-menu-seccion">
+          <a class="main-nav-external-link" :href="domain" target="_blank" rel="noopener">
+            Ir a ENI {{obtenerNombreEni}}
+          </a>
+
           <router-link class="main-nav-link" to="/" exact>Inicio</router-link>
           <router-link class="main-nav-link" to="/guia-estilos">Guia de estilos</router-link>
 
           <div class="main-nav-submenu">
             <span class="main-nav-link">Submenu</span>
             <div class="submenu">
-              <router-link class="main-nav-link nowrap" to="/ayuda">Link en el submenu</router-link>
-              <router-link class="main-nav-link" to="/ayuda">Otro link con un texto larguisimo para probar que se pueda ir a varias lineas</router-link>
+              <router-link class="main-nav-link nowrap" to="/adf">Link en el submenu</router-link>
+              <router-link class="main-nav-link" to="/as">Otro link con un texto larguisimo para probar que se pueda ir a varias lineas</router-link>
             </div>
           </div>
 
@@ -88,6 +95,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.logo-cel-conacyt {
+  padding: $gap*.25;
+}
+.logo-conacyt {
+  display: none;
+}
 .main-nav {
   background: map-get($color-nav, "fondo");
   box-shadow: 0 0 5px rgba(0,0,0,.5);
@@ -101,13 +114,14 @@ export default {
   z-index: 3;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .main-nav-current {
-  flex: 1;
+  background: map-get($color-nav, "fondo");
   font-size: map-get($fuente, "size-secundario");
   color: map-get($color-nav, "texto");
-  padding-left: $gap * .5;
-  padding-right: $gap * .5;
+  padding: $gap*.25 0;
+  text-align: center;
 }
 .main-nav-menu {
   background: map-get($color-nav, "fondo");
@@ -116,7 +130,7 @@ export default {
   position: absolute;
   top: -100vh;
   height: calc((100 * var(--vh)) - 50px);
-  width: 100%;
+  width: calc(100%);
   margin-right: $gap * -1;
   margin-left: $gap * -1;
   transition: top .3s ease-in-out;
@@ -155,12 +169,24 @@ export default {
   &:active,
   &:focus,
   &:hover {
-    background: map-get($color-nav, "fondo-hover");
-    color: map-get($color-nav, "texto-hover");
+    background: map-get($color-nav, "fondo-hover-cel");
+    color: map-get($color-nav, "texto-hover-cel");
   }
 }
 
 @media (min-width: map-get($media-queries-limit, "navegacion")) {
+  .logo-conacyt {
+    display: inline-block;
+    padding: $gap*.25 $gap 0;
+    margin-left: $gap * -1;
+    &.router-link-active,
+    &:active,
+    &:focus,
+    &:hover {
+      background: map-get($color-nav, "fondo-hover");
+      color: map-get($color-nav, "texto-hover");
+    }
+  }
   .main-nav-menu {
     border-top: none;
     position: relative;
@@ -171,9 +197,9 @@ export default {
     justify-content: space-between;
     height: inherit;
     top: 0;
-    width: calc(100% + $gap);
-    margin-left: $gap * -.5;
-    margin-right: $gap * -.5;
+    width: calc(100% + $gap*.5);
+    margin-left: 0;
+    margin-right: 0;
     &.open {
       top: 0;
     }
@@ -185,8 +211,16 @@ export default {
   .main-nav-link {
     display: inline-block;
     white-space: nowrap;
+    &.router-link-active,
+    &:active,
+    &:focus,
+    &:hover {
+      background: map-get($color-nav, "fondo-hover");
+      color: map-get($color-nav, "texto-hover");
+    }
   }
-  .main-nav-top {
+  .main-nav-top,
+  .main-nav-current {
     display: none;
   }
   .main-nav-submenu {
