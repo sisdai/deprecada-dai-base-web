@@ -5,6 +5,7 @@
     <MainNav class="navigation" :class="{'show':showNav}" />
     <router-view />
     <MainInfo />
+    <ConacytFooter />
     <MainFooter />
   </div>
 </template>
@@ -14,6 +15,7 @@ import MainHeader from '@/components/base/MainHeader.vue';
 import MainNav from '@/components/base/MainNav.vue';
 import A11yMenu from '@/components/base/A11yMenu.vue';
 import MainInfo from '@/components/base/MainInfo.vue';
+import ConacytFooter from '@/components/base/ConacytFooter.vue';
 import MainFooter from '@/components/base/MainFooter.vue';
 
 export default {
@@ -23,6 +25,7 @@ export default {
     MainNav,
     A11yMenu,
     MainInfo,
+    ConacytFooter,
     MainFooter,
   },
   data() {
