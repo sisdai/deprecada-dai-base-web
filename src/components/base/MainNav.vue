@@ -45,8 +45,8 @@
           <div class="main-nav-submenu">
             <span class="main-nav-link">Submenu</span>
             <div class="submenu">
-              <router-link class="main-nav-link nowrap" to="/adf">Link en el submenu</router-link>
-              <router-link class="main-nav-link" to="/as">Otro link con un texto larguisimo para probar que se pueda ir a varias lineas</router-link>
+              <router-link class="main-nav-link nowrap" to="/adf">Link en el submenu 404</router-link>
+              <router-link class="main-nav-link" to="/as">Otro link con un texto larguisimo para probar que se pueda ir a varias lineas 404</router-link>
             </div>
           </div>
 
@@ -145,26 +145,19 @@ export default {
     padding-left: $gap * 1.5;
   }
 }
-.main-nav-external-link {
-  font-size: map-get($fuente, "size-notas");
-  color: map-get($color-nav, "texto");
-  text-transform: uppercase;
-  display: block;
-  padding: $gap*.5;
-  font-weight: bold;
-}
+.main-nav-external-link,
+.main-nav-external-link:focus,
+.main-nav-external-link:hover,
 .main-nav-link {
   font-size: map-get($fuente, "size-secundario");
   color: map-get($color-nav, "texto");
   display: block;
-  padding: $gap*.5;
-}
-.main-nav-external-link,
-.main-nav-link {
   border-radius: 0;
   display: block;
   padding: $gap*.5;
   line-height: 20px;
+}
+.main-nav-link {
   &.router-link-active,
   &:active,
   &:focus,
@@ -179,9 +172,11 @@ export default {
     display: inline-block;
     padding: $gap*.25 $gap 0;
     margin-left: $gap * -1;
-    &.router-link-active,
-    &:active,
     &:focus,
+    &:active {
+      background: transparent;
+      color: map-get($color-nav, "texto-hover");
+    }
     &:hover {
       background: map-get($color-nav, "fondo-hover");
       color: map-get($color-nav, "texto-hover");
@@ -207,7 +202,20 @@ export default {
       display: flex;
     }
   }
-  .main-nav-external-link,
+  .main-nav-external-link{
+    display: inline-block;
+    white-space: nowrap;
+    &:focus,
+    &:active {
+      background: transparent;
+      color: map-get($color-nav, "texto-hover");
+    }
+    &:hover {
+      background: map-get($color-nav, "fondo-hover");
+      color: map-get($color-nav, "texto-hover");
+    }
+  }
+
   .main-nav-link {
     display: inline-block;
     white-space: nowrap;

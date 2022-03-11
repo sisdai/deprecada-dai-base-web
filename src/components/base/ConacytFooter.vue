@@ -70,7 +70,7 @@ export default {
   box-sizing: border-box;
   overflow: hidden;
   padding-top: $gap;
-  padding-bottom: $gap * 1.5;
+  padding-bottom: $gap * .5;
   color: map-get($color-conacyt, "texto");
   font-size: 14px;
   .footer-titulo {
@@ -97,7 +97,7 @@ export default {
   }
   @media (min-width: map-get($media-queries-limit, "mobile")) {
     padding-top: $gap * .25;
-    padding-bottom: $gap * 2.5;
+    padding-bottom: $gap;
     .footer-flex {
       display: flex;
       gap: $gap;
