@@ -252,6 +252,7 @@ export default {
         .nowrap,
         &.nowrap {
           white-space: nowrap;
+          word-break: normal;
         }
         &:active,
         &:focus,
