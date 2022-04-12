@@ -396,6 +396,19 @@
           :elementos=minutas
         />
       </div>
+      <hr>
+      <h2>Pie de componentes</h2>
+      <div>
+        <PieComponenteLibreria/>
+        <div class="contenedor-grafica">
+          <div class="caja-prueba">
+
+          </div>
+          <PieComponenteLibreria/>
+
+        </div>
+        
+      </div>
     
     </div>
   </div>
@@ -408,6 +421,7 @@ import Modal from '@/components/base/Modal.vue';
 import LinkCoverImgButton from '@/components/base/LinkCoverImgButton.vue';
 import Carousel from '@/components/base/Carousel.vue';
 import TarjetaLista from '@/components/base/TarjetaLista.vue';
+import PieComponenteLibreria from '@/components/base/PieComponenteLibreria.vue';
 
 export default {
   name: 'GuiaEstilos',
@@ -418,6 +432,7 @@ export default {
     LinkCoverImgButton,
     Carousel,
     TarjetaLista,
+    PieComponenteLibreria
   },
   data() {
     return {
@@ -481,5 +496,17 @@ export default {
   @media (min-width: map-get($media-queries-limit, "mobile")) {
     background-image: url(https://picsum.photos/1600/1000);
   }
+}
+div.contenedor-grafica{
+    margin: 24px 0;
+    background: #fff;
+	  width: 100%;
+    border: solid black 1px;
+    border-radius: 10px;
+    position: relative;
+    div.caja-prueba{
+      height: 400px;
+      width: 100%;
+    }
 }
 </style>

@@ -22,7 +22,6 @@ export default {
   height: 50px;
   width: 50px;
   .btn-text {
-    color: map-get($color-nav, "texto");
     font-size: map-get($fuente, "size-boton");
     position: relative;
     bottom: -12px;
@@ -34,7 +33,7 @@ export default {
     width: 20px;
     height: 1px;
     display: block;
-    background: map-get($color-nav, "texto");
+    
     transition: all .3s ease-in-out;
     position: absolute;
     top: 18px;
@@ -44,7 +43,6 @@ export default {
       width: 20px;
       height: 1px;
       display: block;
-      background: map-get($color-nav, "texto");
       position: absolute;
       transition: all .3s ease-in-out;
     }
@@ -55,6 +53,30 @@ export default {
       top: -5px;
     }
   }
+  &.color-gob {
+    .btn-text {
+      color: map-get($color-nav, "texto-gob");
+    }
+    .btn-icon {
+      background: map-get($color-nav, "texto-gob");
+      &::after,
+      &::before {
+        background: map-get($color-nav, "texto-gob");
+      }
+    }
+  }
+  &.color-conacyt{
+    .btn-text {
+      color: map-get($color-nav, "texto-conacyt");
+    }
+    .btn-icon {
+      background: map-get($color-nav, "texto-conacyt");
+      &::after,
+      &::before {
+        background: map-get($color-nav, "texto-conacyt");
+      }
+    }
+  }
   &.no-text {
     .btn-text {
       display: none;
@@ -63,7 +85,6 @@ export default {
       top: 25px;
     }
   }
-
   &.open {
     .btn-icon {
       width: 0;
@@ -83,8 +104,21 @@ export default {
   &:hover {
     background: transparent;
   }
-  &:focus {
+  &.color-gob:focus {
     background: map-get($color-gob, "dorado");
+  }
+  &.color-conacyt:focus {
+    background: map-get($color-conacyt, "azul");
+    .btn-icon {
+      background: map-get($color-conacyt, "texto");
+      &::after,
+      &::before {
+        background: map-get($color-conacyt, "texto");
+      }
+    }
+    .btn-text {
+      color: map-get($color-conacyt, "texto");
+    }
   }
   @media (min-width: map-get($media-queries-limit, "navegacion")) {
     display: none;
