@@ -36,14 +36,8 @@ export default {
     margin-top: 24px;
   }
   .bloque-negativo {
-    background-color: #fff;
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
     height: 10px;
     margin-top: -10px;
-    width: 100%;
-    position: relative;
-    z-index: 5;
   }
   .link-conacyt {
     background-color: #F7F7F7;
@@ -55,27 +49,43 @@ export default {
     width: 100%;
     img {
       width: 102px;
-      opacity: .5;
-      transition: opacity .2s ease-in-out;
+      opacity: .6;
+      filter: grayscale(100%);
+      margin: auto;
+      transition: all .2s ease-in-out;
     }
     &.absoluto {
       position: absolute;
       bottom: 0;
     }
     &.negative {
-      border-left: 1px solid #000;
-      border-right: 1px solid #000;
-      border-bottom: 1px solid #000;
-      margin: 0;
+      border: 1px solid #000;
+      border-top-color: #F7F7F7;
+      margin-top: -10px;
+      position: relative;
+      z-index: 5;
     }
     &:hover,
     &:focus {
       background-color: #F7F7F7;
       img {
-        opacity: 1;
+        opacity: .6;
+        filter: grayscale(100%);
       }
     }
-      
+    @media (min-width: map-get($media-queries-limit, "mobile")) {
+      img {
+        margin: 0;
+      }
+      &:hover,
+      &:focus {
+        background-color: #F7F7F7;
+        img {
+          opacity: 1;
+          filter: grayscale(0%);
+        }
+      }
+    } 
   }
 }
 </style>
