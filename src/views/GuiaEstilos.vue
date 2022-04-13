@@ -399,13 +399,17 @@
       <hr>
       <h2>Pie de componentes</h2>
       <div>
-        <PieComponenteLibreria/>
-        <div class="contenedor-grafica">
-          <div class="caja-prueba">
 
+        <div class="contenedor-grafica">
+            <div class="caja-prueba">
+            </div>
+        </div>
+        <PieComponenteLibreria :afuera="true" />
+
+        <div class="contenedor-grafica m-y-1">
+          <div class="caja-prueba">
           </div>
           <PieComponenteLibreria/>
-
         </div>
         
       </div>
@@ -497,14 +501,13 @@ export default {
     background-image: url(https://picsum.photos/1600/1000);
   }
 }
-div.contenedor-grafica{
-    margin: 24px 0;
+.contenedor-grafica{
     background: #fff;
 	  width: 100%;
     border: solid black 1px;
     border-radius: 10px;
     position: relative;
-    div.caja-prueba{
+    .caja-prueba{
       height: 400px;
       width: 100%;
     }
