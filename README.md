@@ -1,5 +1,16 @@
 # base-web
 
+Este repositorio contiene la base para levantar un dominio con los requerimientos mínimos para un proyecto dentro del ecositema de los ENIs. 
+
+Es desarrollada y mantenida por la Dirección de Análisis de Datos y Sistemas de Información Geográfica (Dadsig) perteneciente a [Conacyt](https://conacyt.mx/). 
+
+
+**_Limitación de responsabilidad_** 
+El presente es un proyecto en construcción, por tanto Conacyt no es responsable del uso y contenido del presente recurso, toda vez que se trata de una versión en su modalidad prueba, y no de una versión pública, por lo que una vez que sea lanzada la versión final, se invita a la persona usuaria a consultarla y validar sus requisitos.
+
+___
+
+
 ## Requerimientos
 Para utilizar este proyecto necesitas tener previamente instalado
 * [node](https://nodejs.org/en/download/) v14.16.1
@@ -13,7 +24,7 @@ Para utilizar este proyecto necesitas tener previamente instalado
 3. Cambiar el nombre del proyecto en el package.json
 4. `git remote rename origin baseweb` para cambiar el nombre del link del repo 
   * Este repo remoto solo se utilizará para jalar cambios del proyecto base con `git pull baseweb main`, nunca para subir.
-5. `git remote add origin https://scm.crip.conacyt.mx/grupo/repo.git` para agregar a origin el repo del proyecto 
+5. `git remote add origin git@github.com:usuario/repositorio.git` para agregar a origin el repo del proyecto 
   * en este repositorio se debe actualizar el proyecto normal como siempre
   * para subir cambios `git push origin main` 
   * para jalar cambios `git pull origin main` 
