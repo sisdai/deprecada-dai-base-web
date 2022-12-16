@@ -1,12 +1,12 @@
 # base-web
 
-Este repositorio contiene la base para levantar un dominio con los requerimientos mínimos para un proyecto dentro del ecositema de los ENIs. 
+Este repositorio contiene la primera versión de la base para levantar un dominio con los requerimientos mínimos para un 
+proyecto que utilice el Sistema de Diseño y Accesibilidad para la Investigación. Esta primera versión actualmente se 
+encuentra deprecada y este repositorio se mudará al grupo de Salsa, donde se podrá encontrar en esta
+[liga](https://github.com/salsa-community/sisdai-baseweb-uno). Así mismo se puede encontrar una segunda versión en funcionamiento en
+[este repositorio](https://github.com/salsa-community/sisdai-baseweb).
 
-Es desarrollada y mantenida por la Dirección de Análisis de Datos y Sistemas de Información Geográfica (Dadsig) perteneciente a [Conacyt](https://conacyt.mx/). 
-
-
-**_Limitación de responsabilidad_** 
-El presente es un proyecto en construcción, por tanto Conacyt no es responsable del uso y contenido del presente recurso, toda vez que se trata de una versión en su modalidad prueba, y no de una versión pública, por lo que una vez que sea lanzada la versión final, se invita a la persona usuaria a consultarla y validar sus requisitos.
+**Debido a lo anterior en diciembre del 2022 este repositorio será archivado.**
 
 ___
 
